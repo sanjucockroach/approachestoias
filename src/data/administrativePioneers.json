@@ -1,326 +1,474 @@
 [
   {
-    "officerName": "T. N. Seshan (Former CEC of India)",
-    "initiative": "The “Seshan Effect” - Electoral Reform",
-    "impact": "As Chief Election Commissioner (1990-96), elevated the Model Code of Conduct, required voter IDs, limited campaign spending, canceled flawed elections, reviewed ~40,000 accounts, disqualified ~14,000 candidates; won Ramon Magsaysay Award 1996",
-    "values": "Integrity, Public Accountability, Institutional Strengthening"
+    "officerName": "T.N. Seshan",
+    "designation": "Former Chief Election Commissioner of India",
+    "initiative": "Enforcing Electoral Discipline \u2014 Activating the Model Code of Conduct and Mandating Voter IDs",
+    "impact": "From 1990 to 1996, Seshan turned the Model Code of Conduct from a toothless guideline into a real enforcement instrument. He made voter ID cards compulsory, imposed strict caps on campaign expenditure, ordered fresh elections wherever violations were found, audited close to 40,000 candidate financial accounts, and cancelled the candidacies of nearly 14,000 persons who failed scrutiny. His six-year tenure fundamentally changed how elections were conducted in India. The international recognition came in the form of the Ramon Magsaysay Award in 1996.",
+    "values": "Integrity, Public Accountability, Institutional Strengthening, Rule of Law, Democratic Values, Fearless Governance",
+    "category": "Electoral Integrity"
   },
   {
-    "officerName": "Vinod Rai (CAG)",
-    "initiative": "Audit investigations into 2G & Coal block allocations",
-    "impact": "Exposed loss of ₹1.76 lakh crore; reinforced role of institutional checks on executive action",
-    "values": "Objectivity, Professional Integrity, Transparency"
+    "officerName": "Vinod Rai",
+    "designation": "Comptroller and Auditor General of India",
+    "initiative": "Independent Statutory Audits of 2G Spectrum Allocation and Coal Block Assignments",
+    "impact": "Vinod Rai's statutory audits brought into public view a notional revenue loss of \u20b91.76 lakh crore \u2014 arising from how spectrum and coalfields were handed out without transparent processes. His reports set off parliamentary debates, Supreme Court intervention, and criminal proceedings against policymakers. More than the numbers, his work demonstrated that the CAG's role extends beyond checking legality \u2014 it must also question whether public resources were used in the public interest.",
+    "values": "Objectivity, Professional Integrity, Transparency, Institutional Independence, Accountability",
+    "category": "Electoral Integrity"
   },
   {
     "officerName": "Sanjiv Chaturvedi",
-    "initiative": "AIIMS Scam exposure; Forest restoration in Haryana",
-    "impact": "Saved ₹400 crore (AIIMS); reforested 1,200 acres of degraded land in Haryana",
-    "values": "Integrity, Moral Courage"
+    "designation": "Indian Forest Service Officer (Haryana cadre)",
+    "initiative": "Exposing Corruption at AIIMS and Restoring Degraded Forest Land in Haryana",
+    "impact": "Working against considerable institutional resistance, Chaturvedi unearthed financial irregularities at AIIMS Delhi that prevented a loss of approximately \u20b9400 crore to the public exchequer. Simultaneously, during his Haryana posting, he led a forest restoration effort that brought back vegetation across 1,200 acres of land that had been stripped or degraded. He was transferred multiple times as a consequence of his investigations. His case is cited as a textbook example of moral courage in public service.",
+    "values": "Integrity, Moral Courage, Environmental Stewardship, Whistleblower Ethics, Resilience under Pressure",
+    "category": "Integrity & Anti-Corruption"
   },
   {
-    "officerName": "Ashok Khemka, IAS",
-    "initiative": "Anti-corruption transfers & land deal cancellation (Haryana)",
-    "impact": "Cancelling a ₹150-cr Robert Vadra-DLF land mutation in Gurgaon in 2012 led to 57 transfers over career, average tenure ~6 months; remained unwavering in fairness.",
-    "values": "Integrity, Resilience, Moral Courage, Professionalism"
+    "officerName": "Ashok Khemka",
+    "designation": "IAS, Haryana Cadre",
+    "initiative": "Cancelling a Controversial Land Mutation and Sustaining Ethical Conduct Despite Career-Long Transfers",
+    "impact": "In 2012, Khemka cancelled a land mutation in Gurgaon involving a \u20b9150 crore deal that raised serious questions about due process. This single act \u2014 taken strictly on grounds of procedural correctness \u2014 triggered 57 transfers over the course of his career, giving him an average tenure of just six months per post. Despite this sustained institutional resistance, he continued to discharge his duties without compromise. His career is a living study of what it costs to be truly committed to fairness in public service.",
+    "values": "Integrity, Resilience, Moral Courage, Professionalism, Rule-Based Governance, Impartiality",
+    "category": "Integrity & Anti-Corruption"
   },
   {
-    "officerName": "Raju Narayanaswamy, IAS",
-    "initiative": "Anti-corruption land reform - Idukki, Kerala; Rejected political pressure in awarding contracts; exposed food scam",
-    "impact": "Exposed ₹6.5 crore land scam; served 30+ transfers across 32 years",
-    "values": "Anti-corruption, Integrity, Resisting undue influence"
+    "officerName": "Raju Narayanaswamy",
+    "designation": "IAS, Kerala Cadre",
+    "initiative": "Land Scam Exposure, Contract Integrity, and Resistance to Political Pressure Across Multiple Postings",
+    "impact": "Over a 32-year career that involved more than 30 transfers, Narayanaswamy consistently refused to bend to political and commercial pressure. In Idukki, he exposed a \u20b96.5 crore land scam. He declined to award contracts based on political recommendations, and uncovered a food adulteration racket during another posting. His repeated transfers \u2014 one of the clearest signals of what honest civil servants face \u2014 never shifted his stance. His career is frequently cited in public administration discourse as a case study in sustained ethical uprightness.",
+    "values": "Anti-Corruption, Integrity, Resistance to Undue Influence, Public Interest, Moral Consistency",
+    "category": "Integrity & Anti-Corruption"
   },
   {
-    "officerName": "Tukaram Mundhe, IAS",
-    "initiative": "Maintained strict administration despite being transferred over 40 times",
-    "impact": "Transferred over 40 times; became a symbol of fearless governance and ethical uprightness",
-    "values": "Fearless governance, Ethical uprightness"
+    "officerName": "Tukaram Mundhe",
+    "designation": "IAS (various Maharashtra cadre postings)",
+    "initiative": "Maintaining Strict, Rule-Bound Administration Across Postings Despite Constant Transfers",
+    "impact": "Mundhe was transferred more than 40 times in his career \u2014 almost always because he refused to accommodate interests that conflicted with established rules and procedures. Rather than breaking him, the cycle of transfers made him a public symbol of what principled governance looks like under sustained pressure. He is widely discussed in UPSC preparation circles as a contemporary example of an officer who chose systemic correctness over personal security.",
+    "values": "Fearless Governance, Ethical Uprightness, Resistance to Political Pressure, Rule of Law, Consistency",
+    "category": "Integrity & Anti-Corruption"
   },
   {
-    "officerName": "U. Sagayam, IAS",
-    "initiative": "Asset disclosure & anti-corruption enforcement, various Tamil Nadu districts initiated Farmer Food Court in Tamil Nadu",
-    "impact": "Publicly posted assets voluntarily - ₹7,172 bank balance and ₹9 lakh house. Becoming TN's first officer to do so; led crackdown on illegal granite-mining estimated to cost state ₹16,000 crore and confiscated 5,000 illegal LPG cylinders, sealing bottling plant with contaminated bottles. Transferred 26+ times in 29 years due to integrity.",
-    "values": "Transparency, Moral Courage, Anti-corruption, Integrity"
+    "officerName": "U. Sagayam",
+    "designation": "IAS, Tamil Nadu Cadre",
+    "initiative": "Voluntary Asset Disclosure, Crackdown on Illegal Granite Mining, and Initiating Tamil Nadu's First Farmer Food Court",
+    "impact": "Sagayam became the first officer in Tamil Nadu to publicly declare his assets voluntarily \u2014 posting a bank balance of just \u20b97,172 and a house valued at \u20b99 lakh, setting a benchmark for personal probity. During his postings, he led an aggressive crackdown on illegal granite mining operations estimated to have caused the state a loss of \u20b916,000 crore. He also seized 5,000 illegally filled LPG cylinders from a bottling plant using contaminated containers. He paid for this commitment with over 26 transfers in 29 years of service.",
+    "values": "Transparency, Moral Courage, Anti-Corruption, Integrity, Voluntary Accountability",
+    "category": "Integrity & Anti-Corruption"
   },
   {
-    "officerName": "Shah Faesal, IAS",
-    "initiative": "Issued show-cause notice for anti-government tweets; resigned later",
-    "impact": "Highlighted limits of bureaucratic expression under service rules",
-    "values": "Voice of Dissent, Civil Liberty, Risk-taking"
+    "officerName": "Shah Faesal",
+    "designation": "IAS (J&K cadre, first Kashmiri to top UPSC)",
+    "initiative": "Bureaucratic Expression and the Limits of Dissent \u2014 Resignation Over Policy Disagreement",
+    "impact": "Faesal's story spans two contrasting arcs. As an officer, he received a show-cause notice for social media expression critical of government positions \u2014 a case that illuminated how far service conduct rules can reach. He later resigned from the IAS in protest against what he saw as unconstitutional state action in Jammu and Kashmir. His case \u2014 whatever one's political reading \u2014 is a live example of the tension between an officer's conscience, their oath of service, and the boundaries of permissible dissent. He was later reinstated and rejoined service.",
+    "values": "Voice of Dissent, Civil Liberty, Conscience in Public Life, Risk-Taking, Institutional Loyalty vs Moral Autonomy",
+    "category": "Conscience & Ethical Dilemmas"
   },
   {
-    "officerName": "Kannan Gopinathan, IAS",
-    "initiative": "Resigned over restrictions in J&K post Article 370 abrogation",
-    "impact": "Sparked national debate on civil liberties and administrative conscience",
-    "values": "Moral Conscience, Integrity, Democratic Values"
+    "officerName": "Kannan Gopinathan",
+    "designation": "IAS (Dadra & Nagar Haveli cadre)",
+    "initiative": "Resignation as an Act of Administrative Conscience \u2014 Protest Against Civil Liberty Restrictions Post Article 370 Abrogation",
+    "impact": "In August 2019, following the abrogation of Article 370 and the imposition of a prolonged communications blackout in Jammu and Kashmir, Gopinathan resigned from the IAS \u2014 citing his inability to continue serving while civil liberties were being curtailed. His resignation triggered a national debate about the moral obligations of civil servants when state action conflicts with fundamental rights. His case is a reference point for discussions on administrative conscience, democratic values, and the ethical limits of obedience.",
+    "values": "Moral Conscience, Integrity, Democratic Values, Civil Liberties, Personal Ethics over Institutional Loyalty",
+    "category": "Conscience & Ethical Dilemmas"
   },
   {
-    "officerName": "Harsh Mander, IAS",
-    "initiative": "Resigned in protest against 2002 Gujarat riots; worked for communal harmony",
-    "impact": "Demonstrated ethical accountability and moral stand against communal violence",
-    "values": "Ethical accountability, Moral stand, Communal harmony"
+    "officerName": "Harsh Mander",
+    "designation": "IAS (resigned), Social Activist and Writer",
+    "initiative": "Resignation in the Aftermath of the 2002 Gujarat Riots and Lifelong Commitment to Communal Harmony",
+    "impact": "Following the 2002 communal violence in Gujarat, Mander resigned from the IAS, stating that the administrative machinery had been complicit in the failure to protect lives. His resignation was accompanied by a widely read essay that became a document of moral reckoning for Indian civil servants. Post-resignation, he established organisations focused on communal harmony, rights of the homeless, and food security. His case demonstrates that ethical accountability can sometimes lead a public servant beyond the boundaries of the service itself.",
+    "values": "Ethical Accountability, Moral Stand Against Communal Violence, Compassion, Social Justice, Courage of Conviction",
+    "category": "Conscience & Ethical Dilemmas"
   },
   {
-    "officerName": "S. Manjunath (IOC Officer)",
-    "initiative": "Sealed Fuel Adulteration Racket (Martyr Whistleblower)",
-    "impact": "He sealed a petrol pump in Lakhimpur Kheri for selling adulterated fuel (~3,000 L). He was shot dead on November 19, 2005, triggering national outrage and fueling legislation for whistleblower protection",
-    "values": "Whistleblower Integrity"
+    "officerName": "S. Manjunath",
+    "designation": "Sales Officer, Indian Oil Corporation (Martyr Whistleblower)",
+    "initiative": "Sealing a Petrol Pump Found to be Selling Adulterated Fuel \u2014 and Paying the Ultimate Price",
+    "impact": "Manjunath, a young Indian Oil officer, discovered that a petrol pump in Lakhimpur Kheri, Uttar Pradesh, was dispensing around 3,000 litres of adulterated fuel daily. He sealed the outlet in strict adherence to his duty. On November 19, 2005, he was shot dead by those whose business interests he had disrupted. His murder ignited national outrage. The public response to his death was a significant catalyst for the eventual passage of the Whistle Blowers Protection Act in 2014. He became a symbol of the cost honest officers sometimes pay.",
+    "values": "Whistleblower Integrity, Professional Duty, Courage, Public Safety, Rule of Law",
+    "category": "Whistleblowers & Martyrs"
   },
   {
-    "officerName": "Satyendra Dubey (IES Officer)",
-    "initiative": "Golden Quadrilateral Corruption Exposure (Martyr Whistleblower)",
-    "impact": "As Project Director at NHAI (Golden Quadrilateral), he exposed substandard road work and contractor corruption, prompting rework and suspension of staff; he was murdered leading to reforms and the eventual Whistle Blowers Protection Act 2014",
-    "values": "Whistleblower Integrity"
+    "officerName": "Satyendra Dubey",
+    "designation": "Project Director, National Highways Authority of India \u2014 Indian Engineering Service (Martyr Whistleblower)",
+    "initiative": "Exposing Contractor Corruption and Substandard Road Construction on the Golden Quadrilateral Project",
+    "impact": "Posted as Project Director on the Golden Quadrilateral highway project, Dubey found evidence of rampant contractor fraud and dangerously substandard construction. He reported the corruption internally and wrote directly to the Prime Minister's Office \u2014 requesting anonymity \u2014 but was identified. Contractors whose work had been exposed faced scrutiny; implicated staff were suspended. Dubey was murdered in Gaya in November 2003. His death was the principal trigger for the public conversation that eventually led to the Whistle Blowers Protection Act 2014.",
+    "values": "Whistleblower Integrity, Professional Courage, Public Accountability, Rule of Law",
+    "category": "Whistleblowers & Martyrs"
   },
   {
-    "officerName": "Vikram Misri (Foreign Secretary, IFS)",
-    "initiative": "Locked X Account amid Online Trolling",
-    "impact": "Made his X (formerly Twitter) account private after facing abusive and doxxing attacks—including targeting his daughter—following India-Pakistan ceasefire announcement; civil servants’ bodies and opposition leaders publicly defended him.",
-    "values": "Digital Resilience"
+    "officerName": "Vikram Misri",
+    "designation": "Foreign Secretary of India, Indian Foreign Service",
+    "initiative": "Maintaining Professional Dignity While Facing Organised Online Abuse Following a Policy Announcement",
+    "impact": "After India announced a ceasefire agreement with Pakistan, Foreign Secretary Vikram Misri was subjected to intense, organised online targeting \u2014 including harassment directed at his family members. In response, he made his social media account private. The episode attracted public statements of support from serving officers' associations, opposition leaders, and civil society, placing the issue of cyberbullying of civil servants squarely in the national conversation. His measured, non-retaliatory response is cited as an example of emotional intelligence and professional dignity under personal attack.",
+    "values": "Digital Resilience, Professional Composure, Emotional Intelligence, Personal Integrity, Institutional Dignity",
+    "category": "Contemporary Governance Challenges"
   },
   {
-    "officerName": "Mahesh M. Bhagwat (IPS, Telangana)",
-    "initiative": "Major Anti-Human Trafficking Operations",
-    "impact": "Led Rachakonda police; rescued 1000+ women, 800 children from sex trafficking and forced labor, closed 25 brothels in < 1 year; honored by US State Dept TIP Hero Award (2017)",
-    "values": "Human Trafficking"
+    "officerName": "Mahesh M. Bhagwat",
+    "designation": "IPS, Telangana (then Andhra Pradesh) cadre",
+    "initiative": "Large-Scale Anti-Human Trafficking Operations Across Rachakonda Police Commissionerate",
+    "impact": "As Commissioner of Rachakonda Police, Bhagwat led a sustained, systematic campaign against human trafficking and forced labour networks. Within a single year of focused operations, his team rescued over 1,000 women and 800 children from sexual exploitation and bonded labour, and shut down 25 commercial sex establishments. The results were recognised internationally \u2014 the United States Department of State honoured him with the Trafficking in Persons Hero Award in 2017. His work is a model of how administrative determination can dismantle deep-rooted criminal networks.",
+    "values": "Human Rights, Courage, Anti-Trafficking, Compassion, Professional Excellence, Law Enforcement Ethics",
+    "category": "Human Rights & Social Justice"
   },
   {
-    "officerName": "Chanchal Rana (IAS, Odisha)",
-    "initiative": "Project Sweekruti - Transgender Workforce Integration",
-    "impact": "Employed 300+ transgender persons in municipal roles (waste collection, parking management, sanitation); organized 400-500 self-help groups, providing seed capital and dignity of work across Balangir district.",
-    "values": "Inclusivity, Gender Justice"
+    "officerName": "Chanchal Rana",
+    "designation": "IAS, Odisha Cadre (Balangir District)",
+    "initiative": "Project Sweekruti \u2014 Integrating Transgender Persons into Municipal Workforce and Economic Life",
+    "impact": "In Balangir district, Rana created formal employment for over 300 transgender individuals in municipal functions including solid waste management, parking administration, and sanitation. Beyond employment, the initiative organised 400 to 500 self-help groups among transgender persons, extended seed capital, and gave participants what they had long been denied \u2014 a sense of economic agency and social dignity. The project is held up as a model of inclusive district governance.",
+    "values": "Inclusivity, Gender Justice, Social Dignity, Community Empowerment, Compassionate Governance",
+    "category": "Inclusivity & Social Justice"
   },
   {
-    "officerName": "Sakshi Sawhney (IAS, Punjab)",
-    "initiative": "Future Tycoons Challenge - Inclusive Innovation & Entrepreneurship Drive",
-    "impact": "Launched in 2022 in Patiala and Ludhiana, it received 1,526+ applications over two editions; supported marginalized youth, SHGs, and women via mentorship, pitching, and a ₹4 lakh prize pool.",
-    "values": "Inclusive Development, SHG"
+    "officerName": "Sakshi Sawhney",
+    "designation": "IAS, Punjab Cadre (Patiala and Ludhiana Districts)",
+    "initiative": "Future Tycoons Challenge \u2014 An Inclusive Innovation and Entrepreneurship Drive for Marginalised Youth",
+    "impact": "Launched in 2022 across Patiala and Ludhiana, the Future Tycoons Challenge invited young people \u2014 particularly from marginalised backgrounds, women's self-help groups, and first-generation entrepreneurs \u2014 to pitch business ideas for a prize pool of \u20b94 lakh. Over two editions, the challenge received more than 1,526 applications and created a mentorship pipeline for participants who had no prior access to business support systems. The initiative demonstrates how district administration can act as an enabler of grassroots enterprise.",
+    "values": "Inclusive Development, Youth Empowerment, Entrepreneurship, Gender Sensitivity, Innovative Governance",
+    "category": "Innovation & Inclusive Development"
   },
   {
-    "officerName": "Pradeep Kumar Jena (IAS, Odisha)",
-    "initiative": "Odisha Cyclone Model - Zero Casualty Strategy",
-    "impact": "Led Odisha’s cyclone response (Fani, Phailin, Titli, Amphan) through early warning, mass evacuation (~1.2 million in Fani), 24x7 coordination, and prepositioning, earning UN & World Bank praise.",
-    "values": "Disaster Preparedness"
+    "officerName": "Pradeep Kumar Jena",
+    "designation": "IAS, Odisha Cadre (Special Relief Commissioner)",
+    "initiative": "Odisha's Zero Casualty Cyclone Response Model \u2014 Mass Evacuation with Precision Coordination",
+    "impact": "Jena is the architect of Odisha's globally recognised disaster preparedness system. During Cyclone Fani in 2019, his office coordinated the evacuation of approximately 1.2 million people from the coast within 48 hours \u2014 an operation widely described as one of the most efficient mass evacuations in disaster management history. The same pre-positioned response framework was deployed for Cyclones Phailin, Titli, and Amphan. The United Nations and the World Bank have both formally cited Odisha's model as a global benchmark.",
+    "values": "Disaster Preparedness, Responsive Leadership, Pre-emptive Planning, Coordination, Saving Lives",
+    "category": "Disaster Management"
   },
   {
-    "officerName": "Armstrong Pame (IAS, Manipur)",
-    "initiative": "Built ‘People's Road’ - 100km road in Manipur",
-    "impact": "Online crowdfunding (₹40 lakh donations) within 7 months, connecting Manipur to Assam/Nagaland.",
-    "values": "Community Ownership"
+    "officerName": "Armstrong Pame",
+    "designation": "IAS, Manipur Cadre",
+    "initiative": "Building the 'People's Road' \u2014 A 100-km Road Through Crowdfunding and Community Ownership",
+    "impact": "When official funds for a critical road linking Manipur to Assam and Nagaland were unavailable, Pame turned to the internet. He raised \u20b940 lakh through online crowdfunding within seven months, mobilised local communities, and built a 100-km road through difficult terrain that government machinery had not been able to provide. The road gave connectivity to a previously cut-off population and became a celebrated example of what a determined officer with community backing can achieve without waiting for institutional approval.",
+    "values": "Community Ownership, Initiative, Resource Mobilisation, Public Service Innovation, Can-Do Leadership",
+    "category": "Innovation & Inclusive Development"
   },
   {
-    "officerName": "Bhupesh Chaudhary (IAS, Siaha, Mizoram)",
-    "initiative": "Bird's-Eye Chilli Value Chain Transformation",
-    "impact": "Transformed chilli farming in Siaha: organised 280 farmers into 25 SHGs, built processing & packaging infrastructure with ₹15 Lakh spend, increasing farmer income by ~14x in 2 years",
-    "values": "Rural Income Boost, Agro-entrepreneurship"
+    "officerName": "Bhupesh Chaudhary",
+    "designation": "IAS, Mizoram Cadre (Siaha District)",
+    "initiative": "Bird's Eye Chilli Value Chain Transformation \u2014 Organising Farmers and Building Processing Infrastructure",
+    "impact": "In Siaha, one of Mizoram's most remote districts, Chaudhary organised 280 chilli farmers into 25 self-help groups and used \u20b915 lakh to build basic processing and packaging infrastructure. The result was an approximately 14-fold increase in farmer income within two years \u2014 achieved not through subsidy but through supply chain organisation. The initiative is cited as a case study in how district administration can catalyse agro-entrepreneurship at the last mile.",
+    "values": "Rural Income Enhancement, Agro-Entrepreneurship, Farmer Welfare, Supply Chain Development, Administrative Innovation",
+    "category": "Agriculture & Rural Development"
   },
   {
-    "officerName": "Sushant Gaurav (IAS, Jharkhand)",
-    "initiative": "Ragi Revolution - Millet Adoption in Gumla",
-    "impact": "Gumla as the Ragi capital. Promoted finger millet cultivation from ~1,600 to ~30,000 acres, boosting net yield by ~300%; recognized with PM's Excellence Award 2023; featured as a Harvard Business School case study.",
-    "values": "Rural Income Boost, Agro-entrepreneurship"
+    "officerName": "Sushant Gaurav",
+    "designation": "IAS, Jharkhand Cadre (Gumla District)",
+    "initiative": "The Ragi Revolution \u2014 Scaling Finger Millet Cultivation as a Nutritional and Economic Intervention",
+    "impact": "Under Gaurav's sustained push, the cultivated area under finger millet (ragi) in Gumla grew from approximately 1,600 acres to nearly 30,000 acres \u2014 an expansion that boosted net yields by around 300 per cent. Gumla became known as the ragi capital of Jharkhand. The initiative earned Gaurav the Prime Minister's Excellence Award 2023 and became a Harvard Business School case study \u2014 an indicator of the scalability and replicability of the model.",
+    "values": "Rural Income Enhancement, Nutritional Security, Agro-Entrepreneurship, Tribal Welfare, Innovation in Administration",
+    "category": "Agriculture & Rural Development"
   },
   {
-    "officerName": "Lakshmi Priya M S (IAS, Bongaigaon, Assam)",
-    "initiative": "Mission Sampoorna - Tackling Malnutrition",
-    "impact": "In Bongaigaon: 2,416 SAM/MAM children identified; 2,416 “Buddy Mother” pairs formed, nutrition kits (milk & egg) provided to 100% for 3 months; by 12 months 92.3% SAM and 98.9% MAM children became normal; ~1,200 cases prevented",
-    "values": "Nutritional Improvement, Community-led Health"
+    "officerName": "Lakshmi Priya M S",
+    "designation": "IAS, Assam Cadre (Bongaigaon District)",
+    "initiative": "Mission Sampoorna \u2014 A Community-Led Buddy Mother Model to Tackle Child Malnutrition",
+    "impact": "In Bongaigaon, Lakshmi Priya identified 2,416 children suffering from severe or moderate acute malnutrition. She then created an equal number of 'Buddy Mother' pairs \u2014 community women matched one-to-one with each malnourished child \u2014 and provided nutrition kits including milk and eggs for a three-month period. Within 12 months, 92.3% of severely malnourished and 98.9% of moderately malnourished children had returned to normal nutritional status. Approximately 1,200 new cases were simultaneously prevented through community surveillance.",
+    "values": "Nutritional Security, Community-Led Health, Empathy, Innovative Problem-Solving, Child Welfare",
+    "category": "Health, Nutrition & Social Welfare"
   },
   {
-    "officerName": "Prasanth Nair (IAS, Kozhikode)",
-    "initiative": "Compassionate Kozhikode & Operation Sulaimani",
-    "impact": "Introduced Operation Sulaimani to ensure free meals with dignity via coupons redeemable at restaurants; mobilised volunteers via social media for sanitation drives, homelessness support, lake & beach cleanups (~14-acre lake cleaned by citizens with biryani-incentive)",
-    "values": "Civic Engagement, Empathy, Community Mobilization"
+    "officerName": "Prasanth Nair",
+    "designation": "IAS, Kerala Cadre (Kozhikode District Collector)",
+    "initiative": "Compassionate Kozhikode and Operation Sulaimani \u2014 Dignified Meal Access and Citizen-Led Sanitation",
+    "impact": "Nair launched Operation Sulaimani, a system through which people unable to afford a meal could receive a coupon redeemable at participating restaurants \u2014 removing the stigma associated with seeking food aid. He simultaneously mobilised citizen volunteers through social media for large-scale sanitation drives, lake cleaning operations, and homeless support. A 14-acre lake was cleaned by citizen volunteers incentivised with a community biryani \u2014 a detail that captures the spirit of participatory governance this initiative represented. Kozhikode became a reference for how district administration can build empathy-driven civic culture.",
+    "values": "Civic Engagement, Empathy, Community Mobilisation, Human Dignity, Compassionate Governance",
+    "category": "Health, Nutrition & Social Welfare"
   },
   {
     "officerName": "Imran Khan",
-    "initiative": "Adopted Pulwama Orphans",
-    "impact": "Adopted and cared for children orphaned in the 2019 Pulwama terror attack, setting a public example of compassion and personal sacrifice (no formal initiative title)",
-    "values": "Compassion, Exceptional Duty, Moral Leadership"
+    "designation": "IPS Officer, Jammu & Kashmir",
+    "initiative": "Providing a Family Home to Children Orphaned in the 2019 Pulwama Terror Attack",
+    "impact": "After the February 2019 Pulwama suicide bombing killed 40 CRPF personnel, several children were left without one or both parents. Imran Khan personally took in and cared for children orphaned in the attack. This was not a formal government scheme \u2014 it was a deeply personal decision to absorb another family's grief into his own life. The act drew national attention to the human cost borne by the families of those in uniform and became a frequently cited illustration of compassionate leadership going beyond the call of duty.",
+    "values": "Compassion, Exceptional Personal Duty, Moral Leadership, Empathy, Sacrifice",
+    "category": "Compassion & Human Values"
   },
   {
-    "officerName": "Vamsi Andra, IAS",
-    "initiative": "Cleared ~50,000 pending court cases in ~4 months under streamlined judicial process. DM of Basti district.",
-    "impact": "Improved access to justice; sped up court processes; reduced backlog",
-    "values": "Access to justice, Backlog reduction"
+    "officerName": "Vamsi Andra",
+    "designation": "IAS (District Magistrate, Basti District, Uttar Pradesh)",
+    "initiative": "Systematic Clearance of Approximately 50,000 Pending Court Cases Within Four Months",
+    "impact": "As District Magistrate, Vamsi Andra identified the massive backlog of pending judicial matters as a governance failure with real human cost \u2014 delayed settlements, stalled property transfers, unresolved family disputes. By streamlining processes, coordinating with the judiciary, and creating a time-bound disposal mechanism, his administration cleared roughly 50,000 pending cases in approximately four months. The exercise improved access to justice for tens of thousands of citizens and demonstrated that judicial delay at the local level is, in significant part, an administrative problem that administrative will can help solve.",
+    "values": "Access to Justice, Efficiency, Systemic Thinking, Citizen-Centric Governance, Responsive Administration",
+    "category": "Innovation & Inclusive Development"
   },
   {
-    "officerName": "Parikipandla (P.) Narahari (IAS)",
-    "initiative": "Barrier-Free Gwalior & “Hamari Ladli” Campaign (Beti Bachao Beti Padhao precursor)",
-    "impact": "Transformed Gwalior into a 95%-barrier-free city within 2 years; launched Hamari Ladli scheme (inspired MP’s Ladli Laxmi, later Beti Bachao Beti Padhao), raising child-sex-ratio from ~840 to ~891 in 2½ years, mobilized social media for citizen grievances and redressal.",
-    "values": "Women and Girls' Empowerment"
+    "officerName": "Parikipandla (P.) Narahari",
+    "designation": "IAS (Various postings, including Gwalior, Madhya Pradesh)",
+    "initiative": "Barrier-Free Gwalior and the Hamari Ladli Campaign \u2014 Precursors to National-Level Policy",
+    "impact": "In Gwalior, Narahari transformed 95% of the city into an accessible, barrier-free space for persons with disabilities within two years \u2014 one of the most ambitious accessibility drives undertaken at the district level in India at that time. Separately, the Hamari Ladli scheme he launched to address the declining child sex ratio in his district directly inspired Madhya Pradesh's Ladli Laxmi Yojana and became a conceptual template for what later became the national Beti Bachao Beti Padhao campaign. In his district, the child sex ratio moved from around 840 to approximately 891 in two and a half years.",
+    "values": "Women and Girls' Empowerment, Disability Rights, Inclusive Governance, Gender Justice, Policy Innovation",
+    "category": "Inclusivity & Social Justice"
   },
   {
-    "officerName": "Pranjal Lahensingh Patil (IAS)",
-    "initiative": "Inclusive Public Infrastructure for Visually Impaired",
-    "impact": "India's first visually impaired woman IAS officer, promoted barrier-free government access—advocating tactile signage, Braille notice boards, and accessible counters—to institutionalize administrative accessibility.",
-    "values": "Administrative Accessibility, Inclusive Governance, Role Modeling"
+    "officerName": "Pranjal Lahensingh Patil",
+    "designation": "IAS \u2014 India's first visually impaired woman IAS officer",
+    "initiative": "Championing Accessible Public Administration \u2014 Tactile Signage, Braille Notice Boards, and Accessible Counters",
+    "impact": "As India's first visually impaired woman to serve in the IAS, Patil used her own experience to push for systematic administrative accessibility. She advocated for tactile pathways, Braille-enabled notice boards, and physically accessible government counters across her postings \u2014 working to make public offices genuinely usable by persons with visual disabilities. Her work is both a policy contribution and an act of role modelling, demonstrating that the civil services can be \u2014 and must be \u2014 inclusive of every kind of capable person.",
+    "values": "Administrative Accessibility, Inclusive Governance, Role Modelling, Disability Rights, Personal Courage",
+    "category": "Inclusivity & Social Justice"
   },
   {
-    "officerName": "Raja Gopal Sunkara (IAS, Erode District, Tamil Nadu)",
-    "initiative": "“iNeer” IoT-Driven Water & Electricity Management Model",
-    "impact": "Installed IoT sensors in 63 overhead water tanks across ~50 villages, improving rural water reliability by ~20%, halving motor runtime, cutting electricity bills by ~40-50%, and saving ~1 lakh/month per cluster.",
-    "values": "Smart Governance"
+    "officerName": "Raja Gopal Sunkara",
+    "designation": "IAS (Erode District, Tamil Nadu)",
+    "initiative": "iNeer \u2014 IoT-Based Smart Management of Rural Water Supply and Motor Electricity Consumption",
+    "impact": "By installing IoT sensors in 63 overhead water tanks across approximately 50 villages, Sunkara created a system that monitored water levels and motor operations in real time. Rural water reliability improved by around 20 per cent. More significantly, motor runtime was cut in half and electricity bills per cluster fell by 40 to 50 per cent \u2014 saving approximately \u20b91 lakh per month per cluster. The initiative shows how a modest technology investment at the local level can compound into significant operational and financial savings over time.",
+    "values": "Smart Governance, Resource Efficiency, Technology for Rural Development, Frugal Innovation, Accountability",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "Saumya Jha (IAS, Tonk District, Rajasthan)",
-    "initiative": "Padhai with AI - AI-Powered Learning Drive in Government Schools",
-    "impact": "Rolled out across ~350 government schools, the AI-based platform uplifted Class X pass rate to 96.4% within six weeks, and raised first-division marks from ~23% to ~28%, boosting confidence and learning equity.",
-    "values": "Education Outcomes, AI Integration"
+    "officerName": "Saumya Jha",
+    "designation": "IAS (Tonk District, Rajasthan)",
+    "initiative": "Padhai with AI \u2014 Rolling Out AI-Powered Learning Tools Across Government Schools",
+    "impact": "Jha's initiative deployed an AI-based learning platform across approximately 350 government schools in Tonk district. Within six weeks of implementation, the Class X pass rate climbed to 96.4 per cent. The proportion of students securing first division marks rose from approximately 23 per cent to 28 per cent. The programme showed that AI-assisted learning, when introduced with teacher training and student engagement, can create measurable learning equity gains in under-resourced schools in a very short time.",
+    "values": "Education Outcomes, AI Integration, Learning Equity, Innovation in Governance, Digital Empowerment",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "Aditya Ranjan (IAS, Jharkhand)",
-    "initiative": "Building as Learning Aid (BaLA) - Model Anganwadi Initiative",
-    "impact": "Launched in over 650 Anganwadi centres in Jharkhand (e.g. Shingbhum), transforming facilities into learning-rich spaces with colorful, tactile walls and structured pedagogy; improved attendance, child engagement, early learning outcomes; over 2,100 children trained in digital skills, rising enrolment and cognitive readiness.",
-    "values": "Education Quality"
+    "officerName": "Aditya Ranjan",
+    "designation": "IAS, Jharkhand Cadre (East Singhbhum)",
+    "initiative": "Building as Learning Aid (BaLA) \u2014 Transforming Anganwadi Centres into Stimulating Early Learning Environments",
+    "impact": "Over 650 Anganwadi centres in Jharkhand were transformed from bare, unstimulating rooms into learning-rich spaces \u2014 with colourful, tactile walls, structured daily pedagogy, and child-friendly physical environments. The result was improved attendance, higher engagement, better early learning outcomes, and a measurable boost in cognitive readiness. Over 2,100 children were also trained in basic digital skills. The programme was built without large additional budgets \u2014 it used design intelligence to multiply the impact of existing infrastructure.",
+    "values": "Education Quality, Child Development, Creative Administration, Early Childhood Investment, Innovative Resource Use",
+    "category": "Education"
   },
   {
-    "officerName": "Sandip Jacques (IAS, Goa)",
-    "initiative": "St. Francis Xavier Exposition Crowd Management using AI",
-    "impact": "Managed ~8 million pilgrims between Nov 2024-Jan 2025 at Goa’s Exposition using AI-powered crowd control, real-time monitoring of footfall, and multi-team coordination—no major incidents.",
-    "values": "Crowd Safety"
+    "officerName": "Sandip Jacques",
+    "designation": "IAS, Goa Cadre",
+    "initiative": "AI-Driven Crowd Management for the St. Francis Xavier Exposition 2024\u201325",
+    "impact": "The Goa Exposition of St. Francis Xavier, held from November 2024 to January 2025, drew approximately 8 million pilgrims. Jacques deployed AI-powered crowd monitoring systems that tracked real-time footfall, identified bottlenecks, and coordinated multi-team responses on the ground. The event concluded without any major incidents \u2014 a remarkable outcome for a gathering of that scale. The initiative demonstrates how AI-based systems can be operationally integrated into large-scale event management in Indian public administration.",
+    "values": "Crowd Safety, Technological Innovation, Proactive Governance, Risk Management, AI in Administration",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "Minal Karanwal (IAS, Maharashtra)",
-    "initiative": "Balika Panchayat (girls’ governance cells)",
-    "impact": "Initiated Balika Panchayats across ~60 gram panchayats in Nanded, engaging ~300 adolescent girls to resolve issues like child marriage and substance abuse locally.",
-    "values": "Girls’ Empowerment"
+    "officerName": "Minal Karanwal",
+    "designation": "IAS, Maharashtra Cadre (Nanded District)",
+    "initiative": "Balika Panchayat \u2014 Adolescent Girls' Governance Cells in Gram Panchayats",
+    "impact": "Across approximately 60 gram panchayats in Nanded, Karanwal established Balika Panchayats \u2014 parallel local governance forums exclusively for adolescent girls. Around 300 girls participated in these platforms, using them to collectively address issues including child marriage, substance abuse among peers, school dropout, and sanitation. The initiative gave young women a structured space to exercise civic voice before they were formally eligible to vote \u2014 embedding democratic participation at the earliest possible life stage.",
+    "values": "Girls' Empowerment, Democratic Participation, Child Rights, Social Change, Gender-Sensitive Governance",
+    "category": "Inclusivity & Social Justice"
   },
   {
-    "officerName": "Saju Vaheed (IAS, Tripura DM)",
-    "initiative": "Balika Manch - Reviving girls’ school councils",
-    "impact": "Revived 158 school-based girls’ clubs, prevented 90 planned child marriages in one year, bolstering girls’ education and agency.",
-    "values": "Girls’ Empowerment"
+    "officerName": "Saju Vaheed",
+    "designation": "IAS (District Magistrate, Tripura)",
+    "initiative": "Balika Manch \u2014 Reviving School-Based Girls' Councils to Prevent Child Marriage",
+    "impact": "Vaheed revived 158 dormant school-based girls' clubs across his district, creating active platforms for adolescent girls to discuss and respond to issues affecting them. Within a single year, the functioning of these clubs is credited with preventing 90 planned child marriages by mobilising peer pressure, family counselling, and administrative intervention in time. The initiative shows that child marriage prevention requires a social ecosystem \u2014 not just legal enforcement.",
+    "values": "Girls' Empowerment, Child Rights, Social Leadership, Education Equity, Community-Based Change",
+    "category": "Inclusivity & Social Justice"
   },
   {
-    "officerName": "Shubham Gupta (IAS, Etapalli, Maharashtra)",
-    "initiative": "AI-Based Meal Quality Monitoring in Tribal Schools",
-    "impact": "Deployed an AI-powered machine at one tribal ashram school; measured BMI of 222 girls, found 27% malnourished, enabled corrective nutrition interventions—marking tech-driven public health surveillance in remote areas.",
-    "values": "Public Health, Technology for Nutrition, Innovation, Integrity"
+    "officerName": "Shubham Gupta",
+    "designation": "IAS (Etapalli, Gadchiroli District, Maharashtra)",
+    "initiative": "AI-Based Nutritional Monitoring in Tribal Ashram Schools \u2014 Technology for Last-Mile Health",
+    "impact": "Gupta deployed an AI-powered machine at a tribal ashram school to measure and track the Body Mass Index of 222 girls. The system identified that 27 per cent of the students were malnourished \u2014 data that would otherwise have gone unrecorded in a remote tribal area. Corrective nutrition interventions were then targeted at exactly the children who needed them. The initiative is an early example of technology-driven public health surveillance being operationalised in areas where conventional health infrastructure is minimal.",
+    "values": "Public Health, Technology for Nutrition, Tribal Welfare, Data-Driven Governance, Inclusive Innovation",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "H. Krishnanunni (IAS, Tamil Nadu)",
-    "initiative": "Punnagai (Smile) Tele-Facilitation Project in Kathirimalai tribal hamlet",
-    "impact": "Connected 25 villages (12,000 tribal residents; 32 students) via solar-powered 5GHz WiFi for tele-education and tele-medicine; reduced school dropout from ~50% to 0, improved health access.",
-    "values": "Education Equity"
+    "officerName": "H. Krishnanunni",
+    "designation": "IAS, Tamil Nadu Cadre (Kathirimalai tribal hamlet area)",
+    "initiative": "Punnagai (Smile) Tele-Facilitation Project \u2014 Solar-Powered WiFi Connectivity for Tribal Education and Healthcare",
+    "impact": "Krishnanunni connected 25 villages with a combined population of 12,000 tribal residents \u2014 including 32 students \u2014 using solar-powered 5GHz WiFi infrastructure. Where connectivity arrived, schools could access online learning and telemedicine became a reality. The school dropout rate in the connected area fell from approximately 50 per cent to zero. The initiative demonstrates that the last-mile digital divide is a solvable problem \u2014 and that bridging it requires an officer willing to think beyond conventional budget lines.",
+    "values": "Education Equity, Digital Inclusion, Tribal Welfare, Health Access, Technology as Equaliser",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "OM Kasera, IAS",
-    "initiative": "Stranded students safety & return in Kota during COVID",
-    "impact": "Safely returned 25,000 stranded students to their home states under high-risk pandemic conditions.",
-    "values": "Responsive crisis leadership, Public safety"
+    "officerName": "OM Kasera",
+    "designation": "IAS (District Collector, Kota, Rajasthan)",
+    "initiative": "Safe Return of 25,000 Stranded Coaching Students During the COVID-19 Lockdown",
+    "impact": "When the national lockdown was announced in March 2020, Kota \u2014 India's coaching capital \u2014 had over 25,000 outstation students suddenly stranded without transport, running low on resources, and facing psychological distress far from their families. Kasera coordinated a large-scale, logistically complex relief and return operation that safely transported all of them back to their home states. The operation was widely praised as a model of crisis administration that prioritised people over procedure.",
+    "values": "Responsive Crisis Leadership, Public Safety, Empathy, Logistical Competence, Student Welfare",
+    "category": "Disaster Management"
   },
   {
-    "officerName": "IAS Iqbal Singh Chahal",
-    "initiative": "Designed Dharavi COVID-19 model (isolation + community care)",
-    "impact": "Minimized deaths in one of Asia's largest slums through screening, tracing, and systematic community support.",
-    "values": "Crisis management"
+    "officerName": "Iqbal Singh Chahal",
+    "designation": "IAS (Municipal Commissioner, Brihanmumbai Municipal Corporation)",
+    "initiative": "Dharavi COVID-19 Containment Model \u2014 Isolation with Community-Centred Care in a Dense Urban Slum",
+    "impact": "Dharavi, with over a million residents in one of Asia's most densely populated settlements, was considered one of the most dangerous potential COVID-19 hotspots in India. The BMC under Chahal adopted a strategy of aggressive testing, rapid isolation, door-to-door surveillance, and community-coordinated care that successfully flattened the infection curve. The mortality rate in Dharavi remained remarkably low, earning the model international recognition and coverage as a case study in low-resource epidemic containment.",
+    "values": "Crisis Management, Community Trust, Administrative Agility, Public Health Leadership, Urban Governance",
+    "category": "Disaster Management"
   },
   {
-    "officerName": "Jitendra Kumar Soni (IAS, Rajasthan)",
-    "initiative": "Charan Paduka Abhiyan - Free Shoes Campaign",
-    "impact": "Distributed 30,000+ shoes to barefoot schoolchildren under the “Charan Paduka” campaign, later scaled statewide; improved attendance and comfort across weather extremes.",
-    "values": "Public Welfare, Equity in Access"
+    "officerName": "Jitendra Kumar Soni",
+    "designation": "IAS (Rajasthan Cadre)",
+    "initiative": "Charan Paduka Abhiyan \u2014 Providing Footwear to Barefoot Schoolchildren",
+    "impact": "Soni identified that thousands of children in his district walked to school barefoot \u2014 particularly in winter and monsoon months \u2014 which affected attendance, health, and dignity. He launched the Charan Paduka (footwear) campaign and distributed over 30,000 pairs of shoes to children who had none. The campaign was later adopted at the state level. It is a simple, human example of how an officer's personal observation of ground-level hardship can be turned into a scalable welfare intervention.",
+    "values": "Public Welfare, Equity in Access, Empathy, Compassionate Governance, Child Welfare",
+    "category": "Health, Nutrition & Social Welfare"
   },
   {
-    "officerName": "Sangeeta Balwant (MSRLM CEO)",
-    "initiative": "Real-Time Digital Monitoring of MGNREGS",
-    "impact": "As CEO, implemented a live dashboard that tracked wage disbursals, attendance & job cards across districts in real time—significantly reducing work delays and leakage.",
-    "values": "Accountability"
+    "officerName": "Sangeeta Balwant",
+    "designation": "CEO, Maharashtra State Rural Livelihoods Mission (MSRLM)",
+    "initiative": "Real-Time Digital Dashboard for MGNREGS Monitoring \u2014 Eliminating Delay and Leakage",
+    "impact": "As CEO of MSRLM, Balwant implemented a live digital monitoring dashboard that tracked MGNREGS wage disbursals, attendance records, and job card status across districts in real time. The visibility created by the system significantly reduced both delays in wage payment and leakage in programme delivery \u2014 two chronic failures that had long eroded the scheme's effectiveness. The initiative shows how a technology layer over an existing welfare programme can dramatically improve last-mile accountability.",
+    "values": "Accountability, Transparency, Technology-Enabled Governance, Beneficiary-Centric Administration, Anti-Leakage",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "Sanjay Kumar (Education Secretary, Bihar)",
-    "initiative": "Unnayan Bihar - Digital Learning Access in Rural Schools",
-    "impact": "Led community-engaged digital education drive in rural Bihar under Unnayan Bihar - leveraged local volunteers and basic digital tools to bridge learning gaps in over 200 schools.",
-    "values": "Digital Learning"
+    "officerName": "Sanjay Kumar",
+    "designation": "Education Secretary, Bihar",
+    "initiative": "Unnayan Bihar \u2014 Community-Supported Digital Learning in Rural Government Schools",
+    "impact": "Working with limited infrastructure in rural Bihar, Kumar built a model that leveraged local volunteers and basic digital tools to bridge learning gaps across more than 200 schools. Rather than waiting for expensive infrastructure, the initiative worked within existing resource constraints \u2014 using volunteer engagement and community trust as the primary enabler. The Unnayan Bihar programme became a reference for low-cost, high-engagement digital education models in under-resourced settings.",
+    "values": "Digital Learning, Community Partnership, Education Equity, Resource-Efficient Governance, Rural Empowerment",
+    "category": "Education"
   },
   {
-    "officerName": "Rajeev Chawla (IAS, Karnataka)",
-    "initiative": "Bhoomi Digital Land Records Project",
-    "impact": "Spearheaded Bhoomi, digitizing rural land records across Karnataka (scanned lakhs of RTCs); dramatically reduced corruption and delays, empowered millions of farmers by enabling instant access to transparent records.",
-    "values": "Transparency, Digitalization, Citizen Empowerment"
+    "officerName": "Rajeev Chawla",
+    "designation": "IAS, Karnataka Cadre",
+    "initiative": "Bhoomi Project \u2014 Digitalising Rural Land Records Across Karnataka",
+    "impact": "Chawla spearheaded the digitisation of Karnataka's rural land records system \u2014 scanning millions of Record of Rights, Tenancy and Cultivation (RTC) documents and making them accessible online to farmers and landholders. The reform dismantled a corrupt intermediary ecosystem that had thrived on information asymmetry. Farmers no longer needed to bribe revenue officials to access their own land records. The Bhoomi project became a national model for land records modernisation and was replicated by other states.",
+    "values": "Transparency, Digital Governance, Citizen Empowerment, Anti-Corruption, Land Rights",
+    "category": "Technology & Digital Governance"
   },
   {
-    "officerName": "Manoj Satyawan Mahajan (IAS, Odisha)",
-    "initiative": "Aama Sundargarh Swachh Sundargarh - Plastic-to-Road Circular Economy",
-    "impact": "Mobilised 470 women Swachhta Sathis across ~1,600 villages to collect 360 MT of plastic, generating ₹17 lakh revenue and building eco-roads.",
-    "values": "Circular Economy, Income Generation, Sanitation Awareness"
+    "officerName": "Manoj Satyawan Mahajan",
+    "designation": "IAS, Odisha Cadre (Sundargarh District)",
+    "initiative": "Aama Sundargarh, Swachh Sundargarh \u2014 Plastic-to-Road Circular Economy Initiative",
+    "impact": "Mahajan mobilised 470 women Swachhta Sathis (sanitation champions) across approximately 1,600 villages to systematically collect plastic waste. The campaign gathered 360 metric tonnes of plastic, which was then converted into road-building material \u2014 generating \u20b917 lakh in revenue and producing eco-roads from waste. The initiative achieved three things simultaneously: cleaner villages, women's economic participation, and circular resource use \u2014 making it a model for sustainable district governance.",
+    "values": "Circular Economy, Environmental Sustainability, Women's Economic Empowerment, Sanitation, Community Mobilisation",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Divya Mittal (IAS, UP)",
-    "initiative": "Water Access Restoration to Lahuria Dah Village",
-    "impact": "Facilitated piped water supply to Lahuria Dah after nearly 76 years’ drought; enabled access for ~1,200 residents, reinstating governance trust.",
-    "values": "Drought Relief, Water Resilience"
+    "officerName": "Divya Mittal",
+    "designation": "IAS, Uttar Pradesh Cadre",
+    "initiative": "Restoring Piped Water Supply to a Village That Had Gone Without It for 76 Years",
+    "impact": "Divya Mittal's intervention in Lahuria Dah village resulted in the first piped water connection the approximately 1,200 residents had ever received \u2014 76 years after independence. The achievement is not simply an infrastructure milestone; it is a reflection of how administrative follow-through on a long-neglected grievance can restore a community's faith in governance. The case is also a study in what persistent local advocacy, combined with an officer willing to act on it, can achieve.",
+    "values": "Water Access, Drought Relief, Equity in Infrastructure, Governance Accountability, Citizen Trust",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Vikranth Raja (IAS, Karaikal)",
-    "initiative": "Nam Neer (Water Revival) - Pond & Channel Rejuvenation",
-    "impact": "Rejuvenated 178 ponds and ~750 water bodies in ~80 days in Karaikal; planted ~36,000 saplings, restoring channels and aquifers.",
-    "values": "Water Resilience"
+    "officerName": "Vikranth Raja",
+    "designation": "IAS (Karaikal District, Puducherry)",
+    "initiative": "Nam Neer (Our Water) \u2014 Rejuvenating Ponds and Water Channels Across 80 Days",
+    "impact": "In a concentrated 80-day effort, Vikranth Raja oversaw the rejuvenation of 178 ponds and approximately 750 water bodies in Karaikal, along with the planting of around 36,000 saplings to restore channel banks and recharge aquifers. The pace and scale of the effort \u2014 covering a small Union Territory comprehensively in under three months \u2014 made it a demonstrator of what focused administrative urgency can deliver in water restoration work.",
+    "values": "Water Resilience, Environmental Restoration, Groundwater Recharge, Community Ecology, Urgency in Governance",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Jitendra Pratap Singh (DM, UP)",
-    "initiative": "One District - One River: Noon River Revival",
-    "impact": "Restored 48km of Noon River with 6,000 workers over 23,000 man-days, planted 40,000 native trees; improved groundwater & biodiversity.",
-    "values": "River Restoration"
+    "officerName": "Jitendra Pratap Singh",
+    "designation": "IAS (District Magistrate, Unnao, Uttar Pradesh)",
+    "initiative": "One District\u2013One River: Reviving the Noon River Through Mass Community Mobilisation",
+    "impact": "Singh mobilised 6,000 workers across 23,000 man-days to restore 48 km of the Noon river. The restoration work included planting 40,000 native trees along the riverbanks. The results included improved groundwater levels, regenerated biodiversity along the river corridor, and a model for how 'One District\u2013One River' as a planning concept can be operationalised at the ground level.",
+    "values": "River Restoration, Biodiversity Conservation, Community Mobilisation, Groundwater Management, Environmental Leadership",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "BN Varaprasad Reddy (KAS, Karnataka)",
-    "initiative": "Lake Revival in Gauribidanur",
-    "impact": "Rejuvenated 12 lakes without government funding in 2021, raised ₹50+ lakh via donations/silt sales; resulted in groundwater recharge and enabled double cropping on farm fields.",
-    "values": "Water Resilience"
+    "officerName": "BN Varaprasad Reddy",
+    "designation": "Karnataka Administrative Service (KAS), Gauribidanur",
+    "initiative": "Reviving 12 Lakes in Gauribidanur Without Any Government Budget \u2014 Fully Crowd-Funded",
+    "impact": "In 2021, Reddy rejuvenated 12 lakes in and around Gauribidanur without spending a single rupee from government funds. He raised over \u20b950 lakh through donations and silt sales, then used the proceeds to carry out desilting and embankment strengthening. The restored lakes resulted in measurable groundwater recharge, with nearby farmers reporting the ability to take a second crop annually where previously only one had been possible. The initiative is a powerful example of civic financing and community ownership of public assets.",
+    "values": "Water Resilience, Community Partnership, Civic Financing, Environmental Restoration, Agricultural Support",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Gajendra Singh (IAS, MP)",
-    "initiative": "River Revival & Jal Ganga Samvardhan Abhiyan, Singrauli",
-    "impact": "Recognized with Jal Prahari Samman. Revived eight rivers, including near-extinct Kanchan River, using ridge-to-valley restoration.",
-    "values": "River Restoration"
+    "officerName": "Gajendra Singh",
+    "designation": "IAS, Madhya Pradesh Cadre (Singrauli District)",
+    "initiative": "Jal Ganga Samvardhan Abhiyan \u2014 Ridge-to-Valley River Revival Including a Near-Extinct River",
+    "impact": "Singh led the revival of eight rivers in Singrauli district, including the Kanchan River which had been nearly completely dry. The restoration used a ridge-to-valley watershed approach \u2014 treating the river's entire catchment rather than just the riverbed. He was honoured with the Jal Prahari Samman for this work. The initiative is notable for its methodological rigour \u2014 river restoration without addressing the catchment is addressing symptoms, not causes.",
+    "values": "River Restoration, Watershed Management, Environmental Leadership, Holistic Problem-Solving",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Ramveer Tanwar (Social Activist)",
-    "initiative": "Jal Chaupal & #SelfieWithPond Campaign (Pond Man of India)",
-    "impact": "Rejuvenated ~80 ponds across six states; engaged youth via 10,000+ #SelfieWithPond posts; triggered urban forests and environmental stewardship.",
-    "values": "Water Resilience"
+    "officerName": "Ramveer Tanwar",
+    "designation": "Social Activist (Pond Man of India)",
+    "initiative": "Jal Chaupal and #SelfieWithPond Campaign \u2014 Youth-Led Pond Rejuvenation Across Six States",
+    "impact": "Tanwar, a grassroots environmental activist who left formal employment to focus on water conservation, has rejuvenated approximately 80 ponds across six states. His digital engagement strategy \u2014 mobilising young people through the #SelfieWithPond campaign \u2014 generated over 10,000 social media posts that created both awareness and community accountability for pond maintenance. The campaign shows that environmental conservation can be made participatory and even aspirational through smart civic communication.",
+    "values": "Water Resilience, Youth Engagement, Environmental Citizenship, Community Stewardship, Social Innovation",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Heera Lal (IAS, Uttar Pradesh)",
-    "initiative": "Kuan-Talab Jivao Abhiyaan - Wells & Ponds Revival Campaign",
-    "impact": "Mobilized 470 drought-hit panchayats in Banda to revive wells and ponds across 471 gram panchayats, achieving district-wide water self-sufficiency.",
-    "values": "Drought Relief, Water Resilience"
+    "officerName": "Heera Lal",
+    "designation": "IAS, Uttar Pradesh Cadre (Banda District)",
+    "initiative": "Kuan-Talab Jivao Abhiyan \u2014 Reviving Wells and Ponds to Achieve Water Self-Sufficiency in Drought-Hit Banda",
+    "impact": "Banda, a chronically drought-prone district in Bundelkhand, was the setting for Heera Lal's campaign to revive traditional water bodies. He mobilised 470 drought-affected panchayats to collectively restore wells and ponds across 471 gram panchayats \u2014 effectively creating a district-wide decentralised water management system. The result was measurable movement toward water self-sufficiency in an area long considered beyond recovery. The initiative draws on the logic of reviving indigenous water storage as a climate adaptation strategy.",
+    "values": "Drought Relief, Water Resilience, Traditional Knowledge Integration, Community Leadership, Climate Adaptation",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Umakant Umrao (IAS, Madhya Pradesh)",
-    "initiative": "Dewas Model",
-    "impact": "In 2011-12, it was selected by the United Nations as one of the 3 top water management practices globally. Its success motivated the Madhya Pradesh government to adopt the Dewas model under the name, Balram Talab Yojana.",
-    "values": "Water Resilience"
+    "officerName": "Umakant Umrao",
+    "designation": "IAS, Madhya Pradesh Cadre (Dewas District)",
+    "initiative": "The Dewas Model \u2014 A Groundwater and Surface Water Management System Recognised by the United Nations",
+    "impact": "In 2011\u201312, the water management approach developed under Umrao in Dewas district was selected by the United Nations as one of three top water management practices globally. The model integrated surface water restoration with groundwater recharge and community participation in a way that was replicable at scale. The Madhya Pradesh government subsequently formalised and scaled the approach under the Balram Talab Yojana \u2014 giving it state-wide reach and a budgetary foundation.",
+    "values": "Water Resilience, Global Best Practice, Policy Innovation, Replicable Governance, Community Participation",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Akshat Verma (IAS, Varanasi)",
-    "initiative": "Eco-bag Initiative from Ganga Ghats Waste",
-    "impact": "Upcycled 100,000+ discarded cloth pieces from Varanasi ghats into eco-bags via local women's groups, reducing textile waste and empowering 50+ women.",
-    "values": "Waste Reduction"
+    "officerName": "Akshat Verma",
+    "designation": "IAS (Varanasi District)",
+    "initiative": "Eco-Bag Initiative \u2014 Upcycling Discarded Cloth from Ganga Ghats into Livelihood for Women",
+    "impact": "Verma identified the Ganga ghats as a source of large volumes of discarded cloth \u2014 offerings and ceremonial fabric left behind by pilgrims. Working with local women's self-help groups, he created a supply chain that upcycled over 1,00,000 discarded cloth pieces into eco-friendly bags. The intervention reduced textile waste at a heritage site while empowering over 50 women with a sustainable livelihood \u2014 connecting environmental management to economic inclusion.",
+    "values": "Waste Reduction, Circular Economy, Women's Economic Empowerment, Environmental Stewardship, Creative Governance",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Vikram Yadav (IAS, Ambala, Haryana)",
-    "initiative": "Stubble Burning Reduction Campaign",
-    "impact": "Reduced stubble burning incidents in Ambala by 80% within one year by providing alternative technologies (seeders, shredders) and farmer awareness programs.",
-    "values": "Air Pollution"
+    "officerName": "Vikram Yadav",
+    "designation": "IAS (Ambala District, Haryana)",
+    "initiative": "Stubble Burning Reduction Campaign \u2014 Achieving 80% Reduction Through Technology and Awareness",
+    "impact": "Stubble burning in Ambala was reduced by 80 per cent within a single agricultural year under Yadav's intervention. The approach combined two elements: making available alternative technologies \u2014 happy seeders, crop shredders \u2014 that gave farmers a practical option to burning, alongside targeted awareness programmes that shifted farmer attitudes. The result was a dramatic improvement in local air quality and a model that demonstrated effective stubble burning mitigation does not require punitive enforcement \u2014 it requires viable alternatives.",
+    "values": "Air Quality, Environmental Stewardship, Farmer Sensitivity, Technology Adoption, Persuasion over Coercion",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Himanshu Nagpal (IAS, Varanasi)",
-    "initiative": "Groundwater Rejuvenation Initiative",
-    "impact": "Spearheaded rejuvenation of Varuna and Nad rivers; installed rainwater-harvesting on ~1,000 public buildings and schools; raised groundwater levels by ~0.8-1m, reducing waterborne diseases.",
-    "values": "River Restoration"
+    "officerName": "Himanshu Nagpal",
+    "designation": "IAS (Varanasi District, Uttar Pradesh) \u2014 Initiative 1 of 2",
+    "initiative": "Groundwater Rejuvenation Through River Restoration and Rooftop Rainwater Harvesting on Public Buildings",
+    "impact": "Nagpal oversaw the restoration of the Varuna and Nad rivers in Varanasi and installed rainwater harvesting systems on approximately 1,000 public buildings and schools. The cumulative effect was a measurable rise in groundwater levels of 0.8 to 1 metre in the surrounding areas, with documented reduction in waterborne diseases attributed to improved water quality. The programme combined structural river rehabilitation with decentralised water capture \u2014 addressing both cause and symptom.",
+    "values": "River Restoration, Groundwater Management, Public Health, Integrated Environmental Planning",
+    "category": "Environment & Water"
   },
   {
-    "officerName": "Himanshu Nagpal (IAS, Varanasi)",
-    "initiative": "10-Point Kashi Strategy / Operation Parivartan - Malnutrition Elimination",
-    "impact": "Implemented a comprehensive 10-point plan across ~3,914 Anganwadi centres. Distributing millet-based nutrition to approximately 24,820 children, reducing Severe Acute Malnutrition (SAM) from ~13.3% to 0.6% and Moderate Acute Malnutrition (MAM) to ~2% within 3 years.",
-    "values": "Nutrition Security"
+    "officerName": "Himanshu Nagpal",
+    "designation": "IAS (Varanasi District, Uttar Pradesh) \u2014 Initiative 2 of 2",
+    "initiative": "10-Point Kashi Strategy / Operation Parivartan \u2014 Eliminating Severe Acute Malnutrition Through Millet-Based Nutrition at Anganwadi Scale",
+    "impact": "Working across 3,914 Anganwadi centres in Varanasi, Nagpal implemented a comprehensive 10-point strategy that distributed millet-based nutrition packs to approximately 24,820 children. Over three years, Severe Acute Malnutrition (SAM) dropped from 13.3 per cent to just 0.6 per cent, and Moderate Acute Malnutrition (MAM) fell to approximately 2 per cent. This is one of the most dramatic documented reductions in child malnutrition achieved at district scale anywhere in India.",
+    "values": "Nutrition Security, Child Health, Systematic Planning, Millet Promotion, Evidence-Based Governance",
+    "category": "Health, Nutrition & Social Welfare"
   },
   {
-    "officerName": "Dinesh Chandra Singh (DM, Jaunpur, UP)",
-    "initiative": "Pili River Revival - One District - One River",
-    "impact": "Revived 61.2km of the Pili river (Gomti tributary) in Jaunpur via community campaigns; planted ~11,000 saplings (target 51,000), rejuvenated a 25km stretch and restored temple precincts.",
-    "values": "River Restoration"
+    "officerName": "Dinesh Chandra Singh",
+    "designation": "IAS (District Magistrate, Jaunpur, Uttar Pradesh)",
+    "initiative": "Pili River Revival Under the One District\u2013One River Framework",
+    "impact": "Singh led a community-based river revival campaign that restored 61.2 km of the Pili river \u2014 a tributary of the Gomti \u2014 in Jaunpur. The work included planting approximately 11,000 saplings along the riverbank (with a target of 51,000), rejuvenating a 25-km stretch of the river, and restoring the temple complexes along its banks. The integration of heritage restoration with ecological revival gave the campaign strong community support.",
+    "values": "River Restoration, Heritage Conservation, Community Mobilisation, Environmental Governance",
+    "category": "Environment & Water"
+  },
+  {
+    "officerName": "Durga Shakti Nagpal",
+    "designation": "IAS, Uttar Pradesh Cadre (Gautam Buddh Nagar District)",
+    "initiative": "Crackdown on Illegal Sand Mining Along the Yamuna Riverbed \u2014 Defying an Entrenched Extraction Mafia",
+    "impact": "In 2013, as Sub-Divisional Magistrate in Greater Noida, Nagpal led a determined crackdown on illegal sand mining operations along the Yamuna riverbed \u2014 an industry controlled by politically connected groups. She sealed machinery, filed complaints, and refused to look the other way. The response was swift and political: she was suspended within days on a flimsy pretext. The suspension triggered a national outcry, forcing her reinstatement within weeks. Her case became a landmark reference for the risk honest officers take when they act against entrenched interests \u2014 and for why institutional protection of such officers is a governance imperative.",
+    "values": "Integrity, Moral Courage, Environmental Protection, Resistance to Mafia Capture, Fearless Governance, Rule of Law",
+    "category": "Integrity & Anti-Corruption"
+  },
+  {
+    "officerName": "Smita Sabharwal",
+    "designation": "IAS, Telangana Cadre \u2014 First Woman Officer Posted in the Chief Minister's Office, Telangana",
+    "initiative": "Citizen-Centric Governance and Proactive District Development \u2014 Earned the Title 'People's Officer'",
+    "impact": "Smita Sabharwal is one of the most publicly recognised serving IAS officers in India. Across her postings \u2014 from Warangal to the Chief Minister's Office \u2014 she built a reputation for direct, accessible, and innovative administration. She has been the public face of multiple citizen-centric programmes, consistently used social media to create accountability channels between administration and residents, and has been recognised as an officer who bridges the gap between official processes and real public need. She is frequently cited in discussions on gender in public service and the modernisation of district administration.",
+    "values": "Citizen-Centric Governance, Accessibility, Gender Leadership, Transparency, Social Media for Accountability, Proactive Administration",
+    "category": "Innovation & Inclusive Development"
+  },
+  {
+    "officerName": "D. Roopa Moudgil",
+    "designation": "IPS, Karnataka Cadre (Superintendent, Parappana Agrahara Central Prison, Bengaluru)",
+    "initiative": "Exposing Alleged VIP Privilege in Prison \u2014 Upholding Equal Treatment Under the Law",
+    "impact": "In 2017, as Superintendent of Karnataka's largest central prison, D. Roopa submitted a formal report to the Director General of Prisons alleging that a high-profile convict was receiving special privileges inside prison \u2014 including a private kitchen \u2014 in violation of prison rules and judicial orders. The report immediately became a major national story and triggered a political storm. It led to the removal of the DGP who had allegedly enabled the privilege and renewed national focus on whether criminal justice in India truly applies equally to the powerful. D. Roopa's act \u2014 filing a report within the system rather than leaking it \u2014 is a case study in institutional courage and proper use of official channels.",
+    "values": "Equality Before Law, Institutional Integrity, Courage in Reporting, Probity, Anti-VIP Culture",
+    "category": "Integrity & Anti-Corruption"
+  },
+  {
+    "officerName": "D.K. Ravi",
+    "designation": "IAS, Karnataka Cadre \u2014 Martyr Officer",
+    "initiative": "Anti-Corruption and Anti-Land-Grabbing Enforcement in Bengaluru and Other Postings (2015)",
+    "impact": "D.K. Ravi built a reputation as an unusually active enforcement officer across his short career. In postings in Bengaluru, he conducted sustained action against illegal constructions and land encroachments \u2014 proceedings that disturbed interests with significant political connections. He was found dead at his Bengaluru residence in March 2015 under circumstances that were never satisfactorily resolved. His death generated sustained national debate about whether the state can \u2014 and will \u2014 protect honest civil servants from those they regulate. His memory has been invoked repeatedly in advocacy for officer protection legislation.",
+    "values": "Anti-Corruption, Integrity, Fearless Governance, Land Rights Enforcement, Martyrdom in Public Service",
+    "category": "Whistleblowers & Martyrs"
+  },
+  {
+    "officerName": "Munish Moudgil",
+    "designation": "IAS, Karnataka Cadre (COVID-19 War Room Nodal Officer)",
+    "initiative": "Karnataka's COVID-19 War Room \u2014 India's First Real-Time Contact Tracing and Case Management Dashboard",
+    "impact": "In March 2020, within days of India's first lockdown, Moudgil set up Karnataka's COVID-19 War Room \u2014 a centralised command and monitoring system that became a national model. The War Room provided real-time tracking of positive cases, contact tracing, quarantine monitoring, and resource deployment \u2014 running on a digital dashboard accessible to district and state administration simultaneously. Karnataka's early, data-driven COVID response kept its case growth rate below national averages in the critical first wave. The War Room concept was subsequently studied and replicated by multiple other states.",
+    "values": "Crisis Management, Technology in Emergency Response, Data-Driven Administration, Speed in Governance, Public Health Leadership",
+    "category": "Disaster Management"
   }
 ]

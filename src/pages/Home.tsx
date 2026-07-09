@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Handshake, ShieldCheck, Compass, Flame, Trophy, 
   ArrowRight, Sparkle, BookOpen, Quotes, Info, Check, X,
@@ -20,6 +20,10 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const container = React.useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Cockroachias: For Those Who Refused to Quit";
+  }, []);
   
   // Selected trait for philosophy viewer
   const [selectedTrait, setSelectedTrait] = useState<string>("resilience");

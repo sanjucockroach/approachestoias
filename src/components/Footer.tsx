@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.jpg";
 import lbsnaaImage from "../../assets/LBSNAA.png";
 import { useNavigate } from "react-router-dom";
+import { InstagramLogo, TelegramLogo, WhatsappLogo } from "@phosphor-icons/react";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -53,6 +54,37 @@ export default function Footer() {
             >
               Our Honest Story
             </button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-5 text-slate-400 py-1">
+            <a
+              href="https://www.instagram.com/cockroachiasacademy?igsh=MTIydTk2djgwcHI4cw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-red transition-colors duration-200 cursor-pointer"
+              title="Instagram"
+            >
+              <InstagramLogo className="w-5 h-5 sm:w-6 h-6" />
+            </a>
+            <a
+              href="https://t.me/Cockroachias"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-red transition-colors duration-200 cursor-pointer"
+              title="Telegram"
+            >
+              <TelegramLogo className="w-5 h-5 sm:w-6 h-6" />
+            </a>
+            <a
+              href="https://wa.me/917620811812"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-red transition-colors duration-200 cursor-pointer"
+              title="WhatsApp"
+            >
+              <WhatsappLogo className="w-5 h-5 sm:w-6 h-6" />
+            </a>
           </div>
 
           {/* SEO FOOTER INJECTION */}
