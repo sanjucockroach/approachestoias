@@ -17,7 +17,7 @@ interface Message {
 }
 
 // Replace this with your Google Sheet Web App URL after deploying the Apps Script
-const WEBHOOK_URL = "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbz74D9faE7YKfH0JARyIRLq9chxZhb8ZxhsJlI9-PdTCn3XQIgj7BBnjTM11zpR64Xupw/exec";
 
 export default function Chatbot() {
   const navigate = useNavigate();
