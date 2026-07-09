@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { 
   ChatTeardropText, X, PaperPlaneRight, ArrowLeft, 
   MapTrifold, BookOpen, MagnifyingGlass, Compass, 
-  Handshake, UserCheck, ShieldCheck 
+  Handshake, UserCheck, ShieldCheck, Phone, Calendar 
 } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 import chatbotIcon from "../../assets/chatbot.jpeg";
-
 import { useNavigate } from "react-router-dom";
 
 interface Message {
@@ -17,13 +16,26 @@ interface Message {
   actions?: { label: string; action: () => void; primary?: boolean }[];
 }
 
+// Replace this with your Google Sheet Web App URL after deploying the Apps Script
+const WEBHOOK_URL = "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL";
+
 export default function Chatbot() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+  
+  // States for user input buffers and profile data
   const [nameInput, setNameInput] = useState("");
   const [userName, setUserName] = useState("");
-  const [step, setStep] = useState<"name_input" | "guess_confirm" | "main_menu" | "resource_detail">("name_input");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const [userStage, setUserStage] = useState("");
+  
+  // State machine step indicator
+  const [step, setStep] = useState<
+    "name_input" | "guess_confirm" | "collect_stage" | "collect_phone" | "main_menu" | "resource_detail"
+  >("name_input");
+  
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +64,11 @@ export default function Chatbot() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  const simulateBotResponse = (text: string, delay = 800, actions?: { label: string; action: () => void; primary?: boolean }[]) => {
+  const simulateBotResponse = (
+    text: string, 
+    delay = 800, 
+    actions?: { label: string; action: () => void; primary?: boolean }[]
+  ) => {
     setIsTyping(true);
     setTimeout(() => {
       setIsTyping(false);
@@ -69,15 +85,38 @@ export default function Chatbot() {
     }, delay);
   };
 
+  // Validates if input looks like an actual name rather than a greeting or question
+  const isValidName = (name: string): boolean => {
+    const clean = name.trim().toLowerCase();
+    if (clean.length < 2 || clean.length > 30) return false;
+    
+    // Blacklisted keywords (common greetings, commands, and chatbot references)
+    const blacklist = [
+      "hi", "hello", "hey", "who are you", "what is this", "what is your name", 
+      "testing", "help", "bot", "how are you", "good morning", "good afternoon", 
+      "good evening", "yes", "no", "chatbot", "cockroach", "ias", "upsc", "guess"
+    ];
+    
+    if (blacklist.some(item => clean === item || clean.includes(item))) return false;
+
+    // Filter typical question structures
+    const questionWords = ["who", "what", "where", "how", "why", "are you", "is this"];
+    if (questionWords.some(qw => clean.includes(qw))) return false;
+
+    // Check if name contains digits
+    if (/\d/.test(clean)) return false;
+
+    return true;
+  };
+
   const handleNameSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!nameInput.trim()) return;
-
     const name = nameInput.trim();
-    setUserName(name);
+    if (!name) return;
+
     setNameInput("");
 
-    // Add user's name message
+    // Add user's message
     setMessages(prev => [
       ...prev,
       {
@@ -88,6 +127,16 @@ export default function Chatbot() {
       }
     ]);
 
+    // Perform validation check
+    if (!isValidName(name)) {
+      simulateBotResponse(
+        "I am your companion chatbot! But I'd love to know your actual name so we can converse properly. What should I call you?",
+        800
+      );
+      return;
+    }
+
+    setUserName(name);
     setStep("guess_confirm");
 
     // Bot response guessing name
@@ -134,16 +183,111 @@ export default function Chatbot() {
       }
     ]);
 
+    setStep("collect_stage");
+
+    // Transition directly to collecting attempt stage
+    simulateBotResponse(
+      `Excellent! Before I unlock full access to our interactive Syllabus Metro Map, Mains answers, and diagnostic libraries, tell me: when are you targeting your next attempt?`,
+      1000,
+      [
+        { label: "🎯 2026 Mains", action: () => handleStageSelect("2026 Mains") },
+        { label: "🎯 2027 Prelims/Mains", action: () => handleStageSelect("2027 Prelims/Mains") },
+        { label: "🎯 2028 or Later", action: () => handleStageSelect("2028 or Later") }
+      ]
+    );
+  };
+
+  const handleStageSelect = (stage: string) => {
+    // Add user message for attempt stage
+    setMessages(prev => [
+      ...prev,
+      {
+        id: Math.random().toString(),
+        sender: "user",
+        text: `Targeting: ${stage}`,
+        timestamp: new Date()
+      }
+    ]);
+
+    setUserStage(stage);
+    setStep("collect_phone");
+
+    // Ask for phone number
+    simulateBotResponse(
+      `Got it! And what is your WhatsApp/Phone Number? (We will use this to connect you to companion mentoring and customized support logs)`,
+      900
+    );
+  };
+
+  const handlePhoneSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const phone = phoneInput.trim();
+    if (!phone) return;
+
+    setPhoneInput("");
+
+    // Simple numeric cleanup & length validation
+    const digitsOnly = phone.replace(/\D/g, "");
+    if (digitsOnly.length < 10) {
+      setMessages(prev => [
+        ...prev,
+        {
+          id: Math.random().toString(),
+          sender: "user",
+          text: phone,
+          timestamp: new Date()
+        }
+      ]);
+      simulateBotResponse(
+        "Please enter a valid phone number (at least 10 digits) so we can reach you!",
+        600
+      );
+      return;
+    }
+
+    setUserPhone(phone);
+
+    // Add user's phone message
+    setMessages(prev => [
+      ...prev,
+      {
+        id: Math.random().toString(),
+        sender: "user",
+        text: `Phone: ${phone}`,
+        timestamp: new Date()
+      }
+    ]);
+
     setStep("main_menu");
 
-    // Bot introduces resources
-    simulateBotResponse(
-      `Welcome to the colony! 🪳 We survived asteroid strikes, and with the right resources, you will survive the UPSC syllabus.
+    // Perform background lead submission to Google Sheet App URL
+    submitLead(userName, userStage, phone);
 
-Our platform is built on ground-level empathy and total honesty. What would you like to explore first?`,
+    // Conclude sequence and unlock menu resources
+    simulateBotResponse(
+      `Profile registered! Welcome to the colony! 🪳 We survived asteroid strikes, and with the right resources, you will survive the UPSC syllabus.
+      
+What would you like to explore first?`,
       1000,
       getMainMenuActions()
     );
+  };
+
+  const submitLead = async (name: string, stage: string, phone: string) => {
+    if (WEBHOOK_URL === "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL") {
+      console.log("Mock Lead Logging:", { name, stage, phone });
+      return;
+    }
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, stage, phone })
+      });
+    } catch (e) {
+      console.error("Lead submission failed:", e);
+    }
   };
 
   const getMainMenuActions = () => [
@@ -151,7 +295,7 @@ Our platform is built on ground-level empathy and total honesty. What would you 
     { label: "📝 Mains Cockroach Answers", action: () => selectResource("mains_answers") },
     { label: "🔍 Prelims PYQ Analysis", action: () => selectResource("prelims_pyq") },
     { label: "🏛️ Constitution Explorer", action: () => selectResource("constitution") },
-    { label: "📖 Trial Courses (₹249)", action: () => selectResource("courses") },
+    { label: "📖 Trial Courses", action: () => selectResource("courses") },
     { label: "💬 Talk to a Mentor", action: () => selectResource("mentor") }
   ];
 
@@ -200,7 +344,7 @@ Our platform is built on ground-level empathy and total honesty. What would you 
         break;
       case "courses":
         userText = "What are the Trial Courses?";
-        botResponse = `We don't charge ₹1.5 Lakhs upfront. You can unlock premium 3-day hand-holding cohorts (GS Foundation, Editorial Linkages, Ethics/Essay companion rooms) starting at just **₹249**! Log in and check them out to try our empathetic trial methodology today.`;
+        botResponse = `We don't charge ₹1.5 Lakhs upfront. You can unlock premium 3-day hand-holding cohorts (GS Foundation, Editorial Linkages, Ethics/Essay companion rooms)! Log in and check them out to try our empathetic trial methodology today.`;
         routeLabel = "📖 Explore Trial Courses";
         routeAction = () => {
           navigate("/");
@@ -214,11 +358,10 @@ Our platform is built on ground-level empathy and total honesty. What would you 
         break;
       case "mentor":
         userText = "How do I reach a mentor?";
-        botResponse = `Need an emotional anchor, a study planner check-in, or syllabus clarity? Our mentors are ex-aspirants who have lived the struggle. We will support you. Head to our Contact page to send a query or check our resources!`;
-        routeLabel = "💬 Go to Contact Page";
+        botResponse = `Need an emotional anchor, a study planner check-in, or syllabus clarity? Our mentors are ex-aspirants who have lived the struggle. We will support you. You can connect with our mentors directly on WhatsApp at **+91 7620811812** for a companion audit session!`;
+        routeLabel = "💬 Open WhatsApp Chat";
         routeAction = () => {
-          navigate("/contact");
-          setIsOpen(false);
+          window.open("https://wa.me/917620811812", "_blank");
         };
         break;
     }
@@ -283,6 +426,9 @@ Our platform is built on ground-level empathy and total honesty. What would you 
     ]);
     setUserName("");
     setNameInput("");
+    setPhoneInput("");
+    setUserPhone("");
+    setUserStage("");
     setStep("name_input");
   };
 
@@ -377,7 +523,7 @@ Our platform is built on ground-level empathy and total honesty. What would you 
 
                   {/* Render inline action choices if this is the last message and has actions */}
                   {msg.actions && msg.actions.length > 0 && messages[messages.length - 1].id === msg.id && (
-                    <div className="mt-2 flex flex-wrap gap-1.5 w-full justify-start">
+                    <div className="mt-2 flex flex-wrap gap-1.5 w-full justify-start animate-fade-in">
                       {msg.actions.map((act, index) => (
                         <button
                           key={index}
@@ -406,7 +552,7 @@ Our platform is built on ground-level empathy and total honesty. What would you 
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input area - dynamically shown in name_input stage */}
+            {/* Input area */}
             <div className="p-2 border-t border-slate-200 bg-white shrink-0">
               {step === "name_input" ? (
                 <form onSubmit={handleNameSubmit} className="flex gap-1.5 items-center">
@@ -427,15 +573,36 @@ Our platform is built on ground-level empathy and total honesty. What would you 
                     <PaperPlaneRight className="w-3.5 h-3.5" />
                   </button>
                 </form>
+              ) : step === "collect_phone" ? (
+                <form onSubmit={handlePhoneSubmit} className="flex gap-1.5 items-center">
+                  <input
+                    type="tel"
+                    value={phoneInput}
+                    onChange={(e) => setPhoneInput(e.target.value)}
+                    placeholder="Enter WhatsApp / Phone..."
+                    maxLength={15}
+                    className="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-[11px] focus:outline-hidden focus:border-brand-red text-navy-950 font-sans"
+                    id="chatbot-phone-input"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-navy-950 hover:bg-slate-900 text-white p-2 rounded-lg flex items-center justify-center transition-colors cursor-pointer"
+                    aria-label="Send phone"
+                  >
+                    <PaperPlaneRight className="w-3.5 h-3.5" />
+                  </button>
+                </form>
               ) : (
                 <div className="flex items-center justify-between text-[9px] font-mono text-slate-400 px-0.5 py-0.5">
                   <span>Conversation is guiding resources</span>
-                  <button 
-                    onClick={goToMainMenu}
-                    className="text-brand-red hover:underline uppercase font-bold tracking-wider cursor-pointer"
-                  >
-                    Main Menu
-                  </button>
+                  {step === "main_menu" || step === "resource_detail" ? (
+                    <button 
+                      onClick={goToMainMenu}
+                      className="text-brand-red hover:underline uppercase font-bold tracking-wider cursor-pointer"
+                    >
+                      Main Menu
+                    </button>
+                  ) : null}
                 </div>
               )}
             </div>
