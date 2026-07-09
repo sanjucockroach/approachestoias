@@ -20,7 +20,7 @@ CockroachIAS is a premium, empathy-driven companion platform engineered specific
 - **UPSC Prelims PYQ Analysis Engine (`/pyq-analysis`):** Decodifies 12 years (2014-2025) of Prelims questions by cognitive demand levels (factual, conceptual, analytical), trap types (extreme word traps, dual options), and detailed ex-aspirant logical diagnoses.
 - **Constitution Explorer (`/constitution-explorer`):** An interactive catalog detailing the parts, schedules, and key articles of the Constitution of India, designed for quick retrieval and syllabus correlation.
 - **India Samvad Map (`/samvad`):** A GeoJSON-driven interactive map depicting regional preparation realities and connecting aspirants nationwide to customized mentoring threads.
-- **Integrity Quiz:** A gamified self-assessment enabling students to evaluate their resilience quotient and receive helpful mental support signals.
+- **Indigenous 3D Atlas (3d-atlas.cockroachias.com):** An interactive 3D WebGL-based visualization mapping critical geographical regions, environmental hotspots, and historical mapping parameters.
 
 ### 🤝 Mental & Navigational Support
 - **Aspirant SOS Portal:** A 24/7 emergency support panel offering grounding exercises, mindfulness timers, and reassuring guidance during high-stakes preparation pressure.

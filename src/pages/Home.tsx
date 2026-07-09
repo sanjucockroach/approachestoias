@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { 
   Handshake, ShieldCheck, Compass, Flame, Trophy, 
   ArrowRight, Sparkle, BookOpen, Quotes, Info, Check, X,
-  Question, CaretRight, CheckCircle, Warning, Play
+  Question, CaretRight, CheckCircle, Warning, Play, Globe
 } from "@phosphor-icons/react";
 import { SURVIVAL_TRAITS, CONTROVERSY_DETAILS, SURVIVOR_QUIZ_QUESTIONS } from "../data";
 import { Course, SurvivalTrait } from "../types";
@@ -204,17 +204,14 @@ export default function Home() {
             <ArrowRight className="w-5 h-5 animate-bounce-right" />
           </button>
           
-          <button
-            onClick={() => {
-              const element = document.getElementById("quiz-section");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
+          <a
+            href="https://3d-atlas.cockroachias.com"
             className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-semibold text-base px-8 py-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition duration-200 flex items-center justify-center space-x-2 cursor-pointer"
             id="hero-secondary-cta"
           >
-            <Question className="w-5 h-5 text-slate-400" />
-            <span>Test Your Survival Quotient</span>
-          </button>
+            <Globe className="w-5 h-5 text-slate-400" />
+            <span>Indigenous 3D Atlas</span>
+          </a>
         </div>
  
         {/* Handholding reassuring ribbon */}
@@ -227,7 +224,7 @@ export default function Home() {
           <div>
             <h4 className="text-sm font-bold text-navy-950">Our Absolute Shoulder Promise</h4>
             <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-              UPSC is a brutal marathon of isolation. We don't demand upfront lakhs or push pushy sales executives. Try or test any premium module starting from just ₹249. If you feel it holds your hand and clarifies concepts, stay. Otherwise, we still remain your companions.
+              UPSC is a brutal marathon of isolation. We don't demand upfront lakhs or push pushy sales executives. Try or test any premium module. If you feel it holds your hand and clarifies concepts, stay. Otherwise, we still remain your companions.
             </p>
           </div>
         </div>
