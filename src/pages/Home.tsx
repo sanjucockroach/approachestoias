@@ -195,7 +195,7 @@ export default function Home() {
         >
           <button
             onClick={() => {
-              window.open("https://web.classplusapp.com/login", "_blank");
+              window.open("https://login.cockroachias.com", "_blank");
             }}
             className="w-full sm:w-auto bg-brand-red hover:bg-brand-red-hover text-white font-medium text-base px-8 py-4 rounded-xl shadow-lg transition duration-200 hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center space-x-3 cursor-pointer"
             id="hero-primary-cta"

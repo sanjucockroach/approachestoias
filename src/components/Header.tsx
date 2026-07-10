@@ -152,7 +152,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
             {/* Login CTA (Desktop) */}
             <a
               id="header-login-btn"
-              href="https://classplusapp.com/diy"
+              href="https://login.cockroachias.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex bg-brand-red hover:bg-brand-red-hover text-white px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide uppercase transition-all duration-200 shadow-md hover:shadow-lg active:translate-y-0.5 items-center space-x-2 border border-brand-red"
@@ -206,7 +206,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
               
               <div className="pt-4 mt-2 border-t border-slate-100">
                 <a
-                  href="https://classplusapp.com/diy"
+                  href="https://login.cockroachias.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full bg-brand-red hover:bg-brand-red-hover text-white px-5 py-3 rounded-lg text-sm font-semibold tracking-wide uppercase transition-all duration-200 shadow-sm"
