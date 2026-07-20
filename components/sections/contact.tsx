@@ -6,78 +6,52 @@ const methods = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    copy: "Best for a quick requirement brief.",
+    copy: "Quick briefs and first conversations.",
     href: whatsappUrl("working together"),
   },
   {
     icon: Mail,
     title: "Email",
-    copy: "Best for detailed proposals and documents.",
+    copy: "Detailed requirements and documents.",
     href: `mailto:${CONTACT_EMAIL}`,
   },
   {
     icon: Send,
     title: "Telegram",
-    copy: "Follow updates and connect with the community.",
+    copy: "Updates and community information.",
     href: TELEGRAM_URL,
   },
 ];
 
 export function Contact() {
   return (
-    <section
-      id="contact"
-      className="border-t border-hairline bg-surface-1 px-4 py-20 md:px-6 md:py-28"
-      aria-labelledby="contact-heading"
-    >
+    <section id="contact" className="section-shell-lg border-t border-hairline bg-surface-1" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-[1200px]">
-        <Reveal className="grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-end">
-          <div>
-            <h2
-              id="contact-heading"
-              className="max-w-[14ch] text-[38px] font-bold leading-[1.06] tracking-[-2px] text-ink md:text-[52px] md:tracking-[-2.6px]"
-            >
-              Start with the problem you need solved.
-            </h2>
-          </div>
-          <p className="max-w-[48ch] text-lg leading-8 text-ink-muted">
-            You do not need a perfect brief. Share the current challenge and we
-            will help shape the right next step.
+        <Reveal className="mx-auto max-w-[760px] text-center">
+          <p className="eyebrow">Begin with the challenge</p>
+          <h2 id="contact-heading" className="display-lg mt-4 text-ink">
+            You do not need a perfect brief to start.
+          </h2>
+          <p className="lead mx-auto mt-5 max-w-[52ch]">
+            Share what is difficult today. We will help shape a practical next step.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid border-t border-hairline md:grid-cols-3 md:divide-x md:divide-hairline">
+        <div className="mt-14">
           {methods.map((method, index) => {
             const Icon = method.icon;
             return (
-              <Reveal key={method.title} delay={index * 0.05}>
+              <Reveal key={method.title} delay={index * 0.04}>
                 <a
                   href={method.href}
                   target={method.href.startsWith("http") ? "_blank" : undefined}
-                  rel={
-                    method.href.startsWith("http")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  className="group flex min-h-44 flex-col justify-between border-b border-hairline px-1 py-7 md:border-b-0 md:px-7"
+                  rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="contact-row"
                 >
-                  <Icon
-                    aria-hidden="true"
-                    className="h-6 w-6 text-primary"
-                    strokeWidth={1.8}
-                  />
-                  <div className="mt-8">
-                    <div className="flex items-center justify-between gap-4">
-                      <h3 className="font-semibold text-ink">{method.title}</h3>
-                      <ArrowUpRight
-                        aria-hidden="true"
-                        className="h-4 w-4 text-primary"
-                      />
-                    </div>
-                    <p className="mt-2 text-sm leading-6 text-ink-muted">
-                      {method.copy}
-                    </p>
-                  </div>
+                  <Icon className="h-5 w-5 text-primary" strokeWidth={1.7} aria-hidden="true" />
+                  <h3 className="font-semibold tracking-[-0.4px] text-ink">{method.title}</h3>
+                  <p className="text-sm leading-6 text-ink-muted">{method.copy}</p>
+                  <ArrowUpRight className="h-4 w-4 text-primary" aria-hidden="true" />
                 </a>
               </Reveal>
             );

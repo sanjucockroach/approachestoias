@@ -1,99 +1,75 @@
-import {
-  ArrowRight,
-  BarChart3,
-  BookMarked,
-  CalendarDays,
-  PenTool,
-} from "lucide-react";
+import { ArrowRight, BarChart3, BookMarked, CalendarDays, PenTool } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 
 const products = [
   {
     icon: BookMarked,
     name: "Daily Prelims Capsule",
-    copy: "A short daily revision format designed to make recall a habit.",
-    featured: true,
+    verb: "Revise",
+    copy: "A focused daily recall routine.",
   },
   {
     icon: BarChart3,
     name: "Mains Answer Tracker",
-    copy: "A structured loop for writing practice, feedback, and reflection.",
+    verb: "Write",
+    copy: "A visible loop for practice and feedback.",
   },
   {
     icon: PenTool,
     name: "Essay Builder Kit",
-    copy: "Themes, frameworks, and evaluation cues for stronger essay practice.",
+    verb: "Structure",
+    copy: "Frameworks and cues for stronger essays.",
   },
   {
     icon: CalendarDays,
     name: "Current Affairs Digest",
-    copy: "A ready-to-use weekly bridge between important events and the syllabus.",
+    verb: "Connect",
+    copy: "A weekly bridge from events to syllabus.",
   },
 ];
 
 export function Products() {
   return (
-    <section
-      id="products"
-      className="border-y border-hairline bg-canvas-soft px-4 py-20 md:px-6 md:py-32"
-      aria-labelledby="products-heading"
-    >
+    <section id="products" className="section-shell-lg border-y border-hairline bg-surface-1" aria-labelledby="products-heading">
       <div className="mx-auto max-w-[1200px]">
-        <Reveal>
-          <h2
-            id="products-heading"
-            className="max-w-[17ch] text-[38px] font-bold leading-[1.06] tracking-[-2px] text-ink md:text-[52px] md:tracking-[-2.6px]"
-          >
-            Useful products, not more study clutter.
+        <Reveal className="mx-auto max-w-[760px] text-center">
+          <p className="eyebrow">Learning products</p>
+          <h2 id="products-heading" className="display-lg mt-4 text-ink">
+            Useful study behaviours, made easier to repeat.
           </h2>
-          <p className="mt-5 max-w-[58ch] text-lg leading-8 text-ink-muted">
-            Each product is built around a repeatable study behaviour: revise,
-            write, connect, or review.
+          <p className="lead mx-auto mt-5 max-w-[50ch]">
+            Each product has one clear job: help an aspirant revise, write, structure, or connect.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-12">
+        <div className="product-gallery mt-14">
           {products.map((product, index) => {
             const Icon = product.icon;
-            const spans = index === 0 ? "md:col-span-7" : index === 1 ? "md:col-span-5" : "md:col-span-6";
             return (
-              <Reveal
-                key={product.name}
-                delay={index * 0.05}
-                className={spans}
-              >
-                <article
-                  className={`product-tile h-full ${product.featured ? "featured" : ""}`}
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className={`h-7 w-7 ${product.featured ? "text-on-primary" : "text-primary"}`}
-                    strokeWidth={1.8}
-                  />
-                  <div className="absolute inset-x-6 bottom-6 z-10">
-                    <h3 className="max-w-[18ch] text-2xl font-semibold tracking-[-1px]">
-                      {product.name}
-                    </h3>
-                    <p
-                      className={`mt-3 max-w-[42ch] text-sm leading-6 ${
-                        product.featured
-                          ? "text-on-primary/80"
-                          : "text-ink-muted"
-                      }`}
-                    >
-                      {product.copy}
-                    </p>
-                  </div>
+              <Reveal key={product.name} delay={index * 0.04} className="bg-canvas">
+                <article className="product-panel">
+                  <div className="product-panel-orbit" aria-hidden="true" />
+                  <Icon className="relative z-10 h-7 w-7 text-primary" strokeWidth={1.7} aria-hidden="true" />
+                  <p className="relative z-10 mt-16 text-xs font-semibold text-primary">{product.verb}</p>
+                  <h3 className="relative z-10 mt-3 max-w-[15ch] text-2xl font-semibold tracking-[-1px] text-ink">
+                    {product.name}
+                  </h3>
+                  <p className="relative z-10 mt-3 max-w-[32ch] text-sm leading-6 text-ink-muted">
+                    {product.copy}
+                  </p>
+                  <span className="product-panel-number" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </article>
               </Reveal>
             );
           })}
         </div>
 
-        <Reveal className="mt-8">
+        <Reveal className="mt-8 text-center">
           <a href="/products" className="button button-secondary">
             Explore all products
-            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </Reveal>
       </div>

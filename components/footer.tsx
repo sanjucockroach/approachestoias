@@ -7,6 +7,7 @@ import {
   SITE_NAME,
   SITE_TAGLINE,
   TELEGRAM_URL,
+  whatsappUrl,
 } from "@/lib/site";
 
 export function Footer() {
@@ -53,8 +54,17 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold text-ink">Connect</p>
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 flex min-h-11 items-center gap-2 text-sm text-ink-muted hover:text-ink"
+            >
+              WhatsApp
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="flex min-h-11 items-center gap-2 text-sm text-ink-muted hover:text-ink"
             >
               {CONTACT_EMAIL}
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -72,7 +82,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-2 pt-6 text-xs text-ink-subtle sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {SITE_NAME}. All rights reserved.</p>
-          <p>Built for fast, accessible, static delivery.</p>
+          <p>Clear systems for serious coaching.</p>
         </div>
       </div>
     </footer>

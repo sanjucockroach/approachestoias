@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Compass, Handshake, Layers3, Target } from "lucide-react";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { PageHero } from "@/components/page-hero";
-import { TrustBar } from "@/components/trust-bar";
 import { ConversionBand } from "@/components/conversion-band";
+import { Footer } from "@/components/footer";
+import { GalleryVisual } from "@/components/gallery-visual";
+import { Navbar } from "@/components/navbar";
+import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
+import { TrustBar } from "@/components/trust-bar";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -23,12 +24,12 @@ const principles = [
   {
     icon: Handshake,
     title: "Work as one team",
-    copy: "Clear ownership, direct feedback, and a shared academic direction produce better work than a distant vendor relationship.",
+    copy: "Clear ownership, direct feedback, and shared academic direction produce better work than a distant vendor relationship.",
   },
   {
     icon: Layers3,
     title: "Connect the system",
-    copy: "Content, educators, community, products, and the website should reinforce one another, not operate as isolated activities.",
+    copy: "Content, educators, community, products, and the website should reinforce one another.",
   },
   {
     icon: Compass,
@@ -47,63 +48,57 @@ export default function AboutPage() {
           title="We make ambitious teaching easier to deliver."
           description="Approaches to IAS builds the content, people, systems, and products that support a serious UPSC academy."
           context="the team and approach"
-          index="IAS"
         />
         <TrustBar />
 
-        <section className="bg-canvas px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-[0.72fr_1.28fr]">
+        <section className="section-shell-lg bg-canvas">
+          <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-[0.78fr_1.22fr] md:gap-20">
             <Reveal>
-              <p className="text-sm font-semibold text-primary">Our premise</p>
-              <h2 className="mt-4 max-w-[12ch] text-[36px] font-bold leading-[1.08] tracking-[-2px] text-ink md:text-[48px]">
+              <p className="eyebrow">Our premise</p>
+              <h2 className="display-lg mt-4 max-w-[13ch] text-ink">
                 Coaching quality depends on what supports the classroom.
               </h2>
             </Reveal>
-            <Reveal delay={0.06} className="border-t border-hairline pt-7">
-              <p className="max-w-[54ch] text-xl leading-9 tracking-[-0.35px] text-ink">
-                Great educators should not have to spend their best hours
-                rebuilding notes, chasing operations, or managing fragmented
-                digital channels.
+            <Reveal delay={0.05} className="border-t border-hairline pt-7">
+              <p className="max-w-[52ch] text-xl leading-9 tracking-[-0.5px] text-ink">
+                Great educators should not spend their best hours rebuilding notes, chasing operations, or managing fragmented channels.
               </p>
-              <p className="mt-6 max-w-[62ch] text-base leading-7 text-ink-muted">
-                We bring those moving parts into a more coherent system. The
-                result is not infrastructure for its own sake. It is more time
-                for teaching, a clearer learner experience, and an academy that
-                can grow without losing academic intent.
+              <p className="lead mt-6 max-w-[58ch]">
+                We bring those moving parts into a coherent system. The result is more time for teaching, a clearer learner experience, and growth without losing academic intent.
               </p>
             </Reveal>
           </div>
         </section>
 
-        <section className="border-y border-hairline bg-surface-1 px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-[1200px]">
+        <section className="gallery-band">
+          <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-4 py-16 md:grid-cols-2 md:px-6 md:py-24">
             <Reveal>
-              <h2 className="max-w-[14ch] text-[36px] font-bold leading-[1.08] tracking-[-2px] text-ink md:text-[48px]">
-                Four principles guide the work.
-              </h2>
+              <GalleryVisual icon={Layers3} code="IAS" label="Connected academic system illustration" />
             </Reveal>
-            <div className="mt-12 grid gap-px border border-hairline bg-hairline md:grid-cols-2">
+            <Reveal delay={0.05}>
+              <p className="eyebrow">UPSC and Beyond</p>
+              <h2 className="display-lg mt-4 max-w-[14ch] text-ink">The exam is specific. The capability is broader.</h2>
+              <p className="lead mt-5 max-w-[48ch]">
+                Clarity, judgement, synthesis, and disciplined practice remain valuable beyond one examination. That belief sits inside our name and our work.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="section-shell-lg bg-canvas">
+          <div className="mx-auto max-w-[1100px]">
+            <Reveal className="max-w-[620px]">
+              <p className="eyebrow">The way we work</p>
+              <h2 className="display-lg mt-4 text-ink">Four principles keep the system honest.</h2>
+            </Reveal>
+            <div className="mt-12">
               {principles.map((principle, index) => {
                 const Icon = principle.icon;
                 return (
-                  <Reveal
-                    key={principle.title}
-                    delay={(index % 2) * 0.05}
-                    className="bg-canvas"
-                  >
-                    <article className="min-h-[280px] p-7 md:p-9">
-                      <Icon
-                        aria-hidden="true"
-                        className="h-7 w-7 text-primary"
-                        strokeWidth={1.8}
-                      />
-                      <h3 className="mt-10 max-w-[18ch] text-2xl font-semibold tracking-[-1px] text-ink">
-                        {principle.title}
-                      </h3>
-                      <p className="mt-4 max-w-[48ch] text-sm leading-6 text-ink-muted">
-                        {principle.copy}
-                      </p>
-                    </article>
+                  <Reveal key={principle.title} delay={index * 0.03} className="principle-row">
+                    <Icon className="h-6 w-6 text-primary" strokeWidth={1.7} aria-hidden="true" />
+                    <h3 className="font-semibold tracking-[-0.4px] text-ink">{principle.title}</h3>
+                    <p className="text-sm leading-6 text-ink-muted">{principle.copy}</p>
                   </Reveal>
                 );
               })}
@@ -111,25 +106,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-canvas px-4 py-20 md:px-6 md:py-28">
-          <Reveal className="mx-auto grid max-w-[1200px] gap-10 md:grid-cols-[1fr_1fr] md:items-center">
-            <div className="border-l-2 border-primary pl-6 md:pl-9">
-              <p className="text-sm font-semibold text-primary">UPSC and Beyond</p>
-              <h2 className="mt-4 max-w-[13ch] text-[36px] font-bold leading-[1.08] tracking-[-2px] text-ink md:text-[48px]">
-                The exam is specific. The capability is broader.
-              </h2>
-            </div>
-            <p className="max-w-[56ch] text-lg leading-8 text-ink-muted">
-              The habits behind good UPSC preparation, clarity, judgement,
-              synthesis, and disciplined practice, remain valuable beyond one
-              examination. That belief sits inside our name and our work.
-            </p>
-          </Reveal>
-        </section>
-
         <ConversionBand
           title="Build with a team that understands the ecosystem."
-          body="Start with your academy's current challenge. We will help turn it into a clear, useful engagement."
+          body="Start with your academy's current challenge. We will turn it into a clear, useful engagement."
           context="working with the Approaches to IAS team"
         />
       </main>

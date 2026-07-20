@@ -52,7 +52,7 @@ export function Navbar() {
         </ul>
 
         <Link href="/contact" className="button button-primary hidden md:inline-flex">
-          Start a conversation
+          Talk to us
         </Link>
 
         <button

@@ -11,31 +11,23 @@ export function ConversionBand({
   context?: string;
 }) {
   return (
-    <section className="bg-primary px-4 py-16 text-on-primary md:px-6 md:py-20">
-      <div className="mx-auto grid max-w-[1200px] gap-10 md:grid-cols-[1fr_auto] md:items-end">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold text-on-primary/75">
-            A clearer way forward
-          </p>
-          <h2 className="mt-4 max-w-[18ch] text-[36px] font-bold leading-[1.05] tracking-[-2px] md:text-[52px] md:tracking-[-2.6px]">
-            {title}
-          </h2>
-          <p className="mt-5 max-w-[62ch] text-base leading-7 text-on-primary/80 md:text-lg">
-            {body}
-          </p>
-        </div>
-        <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
+    <section className="border-t border-hairline bg-surface-1 section-shell">
+      <div className="mx-auto max-w-[760px] text-center">
+        <p className="eyebrow">A clearer way forward</p>
+        <h2 className="display-lg mt-4 text-ink">{title}</h2>
+        <p className="lead mx-auto mt-5 max-w-[55ch]">{body}</p>
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row">
           <a
             href={whatsappUrl(context)}
             target="_blank"
             rel="noopener noreferrer"
-            className="button button-inverse"
+            className="button button-primary"
           >
             <MessageCircle aria-hidden="true" className="h-4 w-4" />
             Start on WhatsApp
             <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
           </a>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="button button-on-blue">
+          <a href={`mailto:${CONTACT_EMAIL}`} className="button button-secondary">
             <Mail aria-hidden="true" className="h-4 w-4" />
             Send an email
           </a>

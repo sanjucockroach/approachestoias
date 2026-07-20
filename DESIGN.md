@@ -1,6 +1,6 @@
 ---
 name: Approaches to IAS
-description: A professional, trust-first website for an IAS/CSE coaching services company. Clean light canvas, single blue accent from the brand logo, technical precision radius, and a subtle 3D hero that frames the headline without competing.
+description: An academic product gallery for a UPSC coaching infrastructure company. Museum-like staging, a single cobalt interface accent, precise typography, and restrained 3D geometry turn an operational offer into a coherent brand system.
 
 colors:
   primary: "#0047CC"
@@ -15,67 +15,44 @@ colors:
   ink-subtle: "#737373"
   hairline: "#e5e5e5"
   hairline-strong: "#c2c2c2"
-  success: "#00AA44"
-  warning: "#FF6600"
   on-primary: "#ffffff"
 
 typography:
   display-xl:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
     fontSize: 56px
-    fontWeight: 700
+    fontWeight: 650
     lineHeight: 1.05
     letterSpacing: -2.8px
   display-lg:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
     fontSize: 40px
-    fontWeight: 700
+    fontWeight: 650
     lineHeight: 1.1
     letterSpacing: -2px
   display-md:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
-    fontSize: 28px
-    fontWeight: 600
-    lineHeight: 1.2
-    letterSpacing: -1px
+    fontSize: 32px
+    fontWeight: 620
+    lineHeight: 1.15
+    letterSpacing: -2px
   body-lg:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
     fontSize: 18px
     fontWeight: 400
-    lineHeight: 1.6
-    letterSpacing: 0px
+    lineHeight: 1.65
   body-md:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.6
-    letterSpacing: 0px
   body-sm:
     fontFamily: Inter, system-ui, -apple-system, sans-serif
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.5
-    letterSpacing: 0px
-  caption:
-    fontFamily: Inter, system-ui, -apple-system, sans-serif
-    fontSize: 12px
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: 0.04em
-  button:
-    fontFamily: Inter, system-ui, -apple-system, sans-serif
-    fontSize: 14px
-    fontWeight: 600
-    lineHeight: 1.0
-    letterSpacing: 0.01em
 
 rounded:
-  none: 0px
-  sm: 4px
-  md: 8px
-  lg: 12px
-  pill: 9999px
-  # Project grammar: technical precision — 4px everywhere.
   default: 4px
 
 spacing:
@@ -91,153 +68,110 @@ spacing:
   section: 128px
 
 motion:
-  duration: "0.33s"
-  easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+  quick: "140ms"
+  interface: "180ms"
+  entrance: "600ms"
+  easing: "cubic-bezier(0.23, 1, 0.32, 1)"
 ---
 
-## 1. Visual Theme & Atmosphere
+## 1. Brand identity
 
-A bright, credible, precision-built surface for a coaching-services company. The light canvas and single blue accent communicate trust and clarity; generous whitespace and negative tracking on headlines give a premium, editorial feel. Depth comes from a subtle 3D hero cluster and a surface ladder of hairline-bordered cards — no decorative drop shadows.
+The logo combines a blue triangle, orange circle, and green block. Their meaning is expressed through hierarchy, not a multi-colour interface:
 
-## 2. Color Palette & Roles
+- Blue communicates trust, administration, focus, and civic seriousness. It is the only interface accent.
+- Orange communicates energy and ambition. It remains inside the logo only.
+- Green communicates progress and positive outcomes. It remains inside the logo only.
+- Triangle, circle, and block form the spatial vocabulary. They reappear as blue or neutral geometry in the 3D hero and gallery illustrations.
 
-| Token | Hex | Role |
-|---|---|---|
-| primary | #0047CC | CTAs, focus rings, text links, key numbers — the ONLY accent |
-| primary-hover | #0039A8 | button hover / active states |
-| primary-focus | #0066FF | focus outline |
-| canvas | #ffffff | page background |
-| canvas-soft | #fafafa | alternating section bands |
-| surface-1 | #f5f5f7 | cards, panels |
-| surface-2 | #e8e8ed | pressed / nested surfaces |
-| ink | #0a0a0a | primary text |
-| ink-muted | #4a4a4a | secondary text |
-| ink-subtle | #737373 | captions, meta |
-| hairline | #e5e5e5 | borders, dividers |
-| hairline-strong | #c2c2c2 | emphasized borders |
-| success | #00AA44 | positive indicators only |
-| warning | #FF6600 | limited alerts only (from logo, never decorative) |
-| on-primary | #ffffff | text on primary buttons |
+This preserves logo recognition while keeping the application credible, consistent, and calm.
 
-## 3. Typography Rules
+## 2. Visual direction
 
-| Role | Size | Weight | Line Height | Letter-Spacing |
-|---|---|---|---|---|
-| Hero display | 56px / 40px mobile | 700 | 1.05 | -2.8px / -2px mobile |
-| Section heading | 40px / 32px mobile | 700 | 1.1 | -2px / -1.2px mobile |
-| Card title | 28px | 600 | 1.2 | -1px |
-| Lead body | 18px | 400 | 1.6 | 0 |
-| Body | 16px | 400 | 1.6 | 0 |
-| Small body | 14px | 400 | 1.5 | 0 |
-| Caption / label | 12px | 500 | 1.4 | 0.04em |
-| Button | 14px | 600 | 1.0 | 0.01em |
+The site behaves like an academic product gallery. Each service or product is staged with generous whitespace, an editorial explanation, and one restrained geometric visual. The influence of the Apple reference is compositional rather than imitative:
 
-All text uses Inter. Display text is tightly tracked; body text is neutral.
+- full-width neutral gallery bands;
+- centered hero and page introductions;
+- near-invisible translucent navigation;
+- large, tightly tracked display type;
+- functional motion and quiet material depth;
+- disciplined copy with one idea per stage.
 
-## 4. Component Stylings
+Apple-specific conventions that conflict with the project are not used. There are no pill controls, true-black surfaces, dark product tiles, multiple radius scales, decorative gradients, or interface shadows.
 
-**Primary button**
-- bg: primary, text: on-primary
-- padding: 12px 24px
-- radius: 4px
-- font: button
-- hover: bg primary-hover, translateY(-1px)
-- active: scale(0.98)
-- focus: 2px outline primary-focus, offset 2px
+## 3. Colour roles
 
-**Secondary button**
-- bg: canvas, text: ink
-- border: 1px hairline
-- padding: 12px 24px
-- radius: 4px
-- hover: bg surface-1
+| Token | Role |
+|---|---|
+| `#0047CC` | CTAs, text links, focus, key numerals, line illustration |
+| `#0039A8` | CTA hover |
+| `#0066FF` | focus outline |
+| `#ffffff` | primary canvas |
+| `#fafafa` | barely visible canvas variation |
+| `#f5f5f7` | gallery stage and footer |
+| `#e8e8ed` | nested neutral objects |
+| `#0a0a0a` | primary ink |
+| `#4a4a4a` | supporting copy |
+| `#737373` | tertiary labels |
+| `#e5e5e5` | hairline borders |
 
-**Card**
-- bg: surface-1
-- border: 1px hairline
-- radius: 4px
-- padding: 24px
-- hover: translateY(-2px), border hairline-strong
+Orange and green must not appear in CSS, components, charts, status badges, illustrations, or CTAs. They are permitted only inside the source logo artwork.
 
-**Eyebrow pill**
-- bg: surface-1
-- text: primary
-- border: 1px hairline
-- radius: 4px
-- padding: 6px 12px
-- font: caption
+## 4. Typography
 
-**Navbar**
-- bg: canvas with 80% opacity + blur when scrolled
-- border-bottom: 1px hairline
-- height: 64px
-- logo left, links center, CTA right
+- Inter across the product.
+- Hero display: 40px mobile to 56px desktop, weight 650, line-height 1.05, tracking -2.8px.
+- Section display: 32px mobile to 40px desktop, weight 650, line-height 1.1, tracking -2px.
+- Lead copy: 17px to 18px, line-height 1.65.
+- Display lines are balanced. Long explanatory copy remains left-aligned.
+- Eyebrows are concise navigation cues, never decorative pills.
 
-**Footer**
-- bg: surface-1
-- border-top: 1px hairline
-- padding: 48px 24px
-- text: ink-muted
+## 5. Layout
 
-## 5. Layout Principles
+- Maximum content width: 1200px.
+- Page gutters: 16px mobile, 24px desktop.
+- Section spacing: 80px mobile, 128px desktop.
+- Hero: centered copy; 3D geometry stays at the edges and leaves the reading field clear.
+- Detail pages: centered introduction followed by alternating two-column gallery bands.
+- Capabilities, principles, proof, and contact options use rows rather than card grids.
+- The footer remains at the bottom through the root flex layout.
 
-- Max content width: 1200px, centered.
-- Section padding: 128px vertical desktop, 80px mobile.
-- Grid: 12-column; common patterns: 2-col (1fr 1fr), 3-col (1fr 1fr 1fr), 4-col for feature cards.
-- Horizontal page padding: 24px desktop, 16px mobile.
-- Hero: centered text over a subtle 3D scene; 3D floats at the edges, center clear.
-- Left-align body content; center only hero and narrow CTAs.
+## 6. Components
 
-## 6. Depth & Elevation
+- Buttons: 4px radius, 44px minimum height, blue primary or hairline secondary.
+- Navbar: 64px, translucent white, one hairline, compact label and CTA.
+- Gallery visual: neutral stage, 4px frame, blue line or numeral, decorative orbital circle.
+- Lists: open rows separated by hairlines, with a 4px lateral hover response on fine pointers.
+- Cards are exceptional, not the default layout unit.
+- No drop shadows. Depth comes from surface changes, overlap, material lighting inside WebGL, and hairlines.
 
-**Surface ladder** (no drop shadows):
-- canvas #ffffff
-- surface-1 #f5f5f7
-- surface-2 #e8e8ed
-- Divided by 1px hairline borders.
+## 7. Motion and accessibility
 
-The 3D hero provides atmospheric depth; no UI shadows are needed.
+- Pointer-down response is immediate and reversible.
+- Interface transitions stay between 140ms and 220ms.
+- Page-load marketing entrances may run up to 760ms.
+- Section reveals animate only opacity and transform.
+- The 3D group responds subtly to pointer position and does not auto-rotate.
+- `prefers-reduced-motion` replaces WebGL with a static geometric composition and disables entrances.
+- `prefers-reduced-transparency` removes backdrop blur.
+- Interactive targets are at least 44px and have visible focus states.
 
-## 7. Do's and Don'ts
+## 8. Content and conversion
 
-**Do**
-- Use primary blue ONLY for CTAs, links, focus, and key numbers.
-- Use negative letter-spacing on every display headline.
-- Use 4px radius for every component.
-- Keep body text left-aligned.
-- Provide prefers-reduced-motion fallbacks for the 3D hero.
-- Use semantic HTML and 44px+ touch targets.
-- Make every image have descriptive alt text.
-- Keep the sticky footer at the bottom with mt-auto.
+- Every page presents the primary WhatsApp pathway.
+- Trust is conveyed through specific operating principles, not invented statistics.
+- Headlines state the outcome; supporting copy explains the system.
+- Each stage has one obvious next action.
+- Contact routes are WhatsApp, email, and Telegram. No backend or simulated form.
 
-**Don't**
-- Use orange or green from the logo as UI accents.
-- Add a second accent color "for variety."
-- Use gradient buttons or gradient text.
-- Add drop shadows on cards or buttons.
-- Mix rounded pills with sharp rects.
-- Auto-rotate anything.
-- Center long paragraphs of body text.
-- Use true black (#000000) — ink is #0a0a0a.
+## 9. Non-negotiables
 
-## 8. Responsive Behavior
-
-- Mobile-first: 390px → 768px → 1024px → 1440px+.
-- Touch targets: minimum 44px height for buttons and links.
-- Hero: 3D scene may simplify or hide on mobile; headline stacks.
-- Cards: 1 column on mobile, 2 on tablet, 3–4 on desktop.
-- Navbar: hamburger menu below 768px (or collapsed links).
-- Section padding: 80px vertical on mobile.
-- Hero display: 40px mobile / 56px desktop.
-
-## 9. Agent Prompt Guide
-
-When building components, pass these constraints every time:
-- "Light canvas (#ffffff), single accent #0047CC, ink #0a0a0a."
-- "All buttons and cards use 4px border radius; no pills."
-- "Display type has negative letter-spacing; body is neutral."
-- "No drop shadows; use surface ladder and hairline borders."
-- "3D hero floats at the edges; center stays clear for text."
-- "Every image needs alt text; every interactive element needs focus state."
-- "Prefers-reduced-motion must disable the 3D animation."
-- "Footer is sticky with mt-auto and respects env(safe-area-inset-bottom)."
+- One UI accent: `#0047CC`.
+- One radius: 4px.
+- No true black.
+- No orange or green UI accent.
+- No gradient button or gradient text.
+- No drop shadows.
+- No auto-rotating 3D.
+- Static HTML for every route.
+- All images require alt text.
+- Mobile 390px and desktop 1440px must be verified before shipping.

@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description:
-      "Build a stronger IAS academy with one focused partner for content, educators, community, websites, and products.",
+      "A coherent operating system for IAS coaching content, educators, community, websites, and learning products.",
     images: [
       {
-        url: "/images/og-v2.png",
+        url: "/images/og-gallery.png",
         width: 1200,
         height: 630,
-        alt: "Approaches to IAS. UPSC and Beyond. Build a stronger IAS academy.",
+        alt: "Approaches to IAS. UPSC and Beyond.",
       },
     ],
   },
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description:
-      "Build a stronger IAS academy with one focused partner for content, educators, community, websites, and products.",
-    images: ["/images/og-v2.png"],
+      "A coherent operating system for IAS coaching content, educators, community, websites, and learning products.",
+    images: ["/images/og-gallery.png"],
   },
   robots: {
     index: true,
