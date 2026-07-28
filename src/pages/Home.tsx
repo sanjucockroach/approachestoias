@@ -14,7 +14,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import confetti from "canvas-confetti";
 import { useNavigate } from "react-router-dom";
-import mainsDeckCards from "../../assets/mains_deck_cards.png";
+import deck1 from "../../assets/Deck of Cards/deck_1.png";
+import deck2 from "../../assets/Deck of Cards/deck_2.png";
+import deck3 from "../../assets/Deck of Cards/deck_3.png";
+import deck4 from "../../assets/Deck of Cards/deck_4.png";
+import deck5 from "../../assets/Deck of Cards/deck_5.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +32,7 @@ export default function Home() {
   
   // Selected trait for philosophy viewer
   const [selectedTrait, setSelectedTrait] = useState<string>("resilience");
+  const [activeProductImage, setActiveProductImage] = useState(deck1);
   
   // Trial Modal state
   const [activeTrialCourse, setActiveTrialCourse] = useState<Course | null>(null);
@@ -504,18 +509,18 @@ export default function Home() {
             <div className="md:col-span-5 flex flex-col sm:flex-row gap-4">
               {/* Thumbnail Gallery (Amazon Style) */}
               <div className="flex sm:flex-col gap-2 order-2 sm:order-1 overflow-x-auto justify-center sm:justify-start">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer shadow-sm">
-                  <img src={mainsDeckCards} alt="Mains Deck Main View" className="w-full h-full object-cover rounded-md" />
-                </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
-                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 1<br/>Facts</span>
-                </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
-                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 2<br/>Articles</span>
-                </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
-                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 3<br/>Data</span>
-                </div>
+                {[deck1, deck2, deck3, deck4, deck5].map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveProductImage(img)}
+                    onMouseEnter={() => setActiveProductImage(img)}
+                    className={`w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer shadow-sm transition-all border-2 ${
+                      activeProductImage === img ? "border-brand-red scale-102" : "border-slate-200 hover:border-brand-red/50"
+                    }`}
+                  >
+                    <img src={img} alt={`Mains Deck Thumbnail ${index + 1}`} className="w-full h-full object-cover rounded-md" />
+                  </button>
+                ))}
               </div>
               
               {/* Main Preview Container */}
@@ -524,7 +529,7 @@ export default function Home() {
                   Best Seller
                 </span>
                 <img 
-                  src={mainsDeckCards} 
+                  src={activeProductImage} 
                   alt="Mains Deck of Cards (facts) GS 1,2,3" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                 />
