@@ -33,35 +33,15 @@ export default function ZohoLeadModal() {
     }
   }, []);
 
-  // Dynamically load Zoho SalesIQ and Analytics script when modal opens
+  // Dynamically load Zoho CRM WebForm Analytics script when modal opens
   useEffect(() => {
     if (isOpen) {
-      // 1. Load Zoho SalesIQ
-      if (!document.getElementById("zsiqscript")) {
-        const d = document;
-        const s = d.createElement("script");
-        s.type = "text/javascript";
-        s.id = "zsiqscript";
-        s.defer = true;
-        s.src = "https://salesiq.zoho.in/widget";
-        window.$zoho = window.$zoho || {};
-        window.$zoho.salesiq = window.$zoho.salesiq || {
-          widgetcode: "siq6a42c7ab30ea25c05232ae89d8f04311db858239238bddf740b0aab46bf934ba",
-          values: {},
-          ready: function() {}
-        };
-        const t = d.getElementsByTagName("script")[0];
-        t.parentNode?.insertBefore(s, t);
-      }
-
-      // 2. Load Zoho Analytics
       if (!document.getElementById("wf_anal")) {
         const d = document;
         const s = d.createElement("script");
         s.id = "wf_anal";
         s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=4f9ef00b42b90488e81259600bff78cd51e36ef635fb92515b0da8f5bbc467c4231dd86c36bfda304a9f54b954535044gida126d57d7508fa8f58cfe4b4ce87b248aa19eb5dc944a420b70c7f37135359e6gid2622299e5504d62406250a7496b14ddb8987f12b2a0e0f91ccce07071f14880dgid1febb5549647ab10e34baefe1eb692951ffed9086d44677ab63c4810b51c0ca5&tw=764528abb51e0c058f06a6c546db48c01118aa03a7e3548804f57f0a716cf886&version=v2";
-        const t = d.getElementsByTagName("script")[0];
-        t.parentNode?.insertBefore(s, t);
+        d.head.appendChild(s);
       }
     }
   }, [isOpen]);
@@ -93,21 +73,6 @@ export default function ZohoLeadModal() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate() && formRef.current) {
-      // Execute visitor tracking hook
-      try {
-        if (window.$zoho && window.$zoho.salesiq) {
-          const uniqueId = window.$zoho.salesiq.visitor.uniqueid();
-          const ldtuvid = document.getElementById("LDTuvid") as HTMLInputElement;
-          if (ldtuvid) {
-            ldtuvid.value = uniqueId;
-          }
-          window.$zoho.salesiq.visitor.name(phone + " " + name);
-          window.$zoho.salesiq.visitor.email(email);
-        }
-      } catch (err) {
-        console.error("SalesIQ hook error:", err);
-      }
-      
       // Submit the form programmatically to Zoho
       formRef.current.submit();
     }
