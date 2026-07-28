@@ -14,7 +14,8 @@ export default function ZohoLeadModal() {
   const formRef = useRef<HTMLFormElement>(null);
   
   // States for inputs
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -41,7 +42,7 @@ export default function ZohoLeadModal() {
         const d = document;
         const s = d.createElement("script");
         s.id = "wf_anal";
-        s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=45f49069dfba160c5b6f71614b24290e6710529dbc9d6c8e1cda64a79536a4459a816942691500109c93ba64fb93fa11gid88253522f975b6a6136cd8a38ac1f1a2e71cfe6e20858a7f1a13c0a61f584e46gida9668c836b7cf2b2b68d6fcc9e3a3ae21c2ea4251f05b23b8aca1295206248c1gid743178d37b7584f8da1a72a9cfe9e961b756882a6bb08072ae4935fbede5c7a6&tw=9a3e32a5a5111886aa37686573ab4f7e7b06aee389e059fa1c3b7c6977e1a06c&version=v2";
+        s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=981b42627991c1e5cf1c0b768226c0221aab3e593c8ba97240fc0ca3a38da4a90e441e5a72f07d1b71aabc8dce526f87gid29e1e0b303ce74b9a21638a60c42644e2259b0a7d2f2475c573cda0e3de387afgidf6278ac6a21f0239b389c881e157208df83df9fb6f8eb3fb03ca5dc0e7ef1f06gid8b7df75ee67703fec194f6f2ed8e3b0bce8d6e4c81a5937d3ce6bb9d776feaf2&tw=c114042cabe11d19e9c1d3f97e34f82a7de9c4d67a481eb34a0b859d4835807d&version=v2";
         d.head.appendChild(s);
       }
     }
@@ -49,7 +50,8 @@ export default function ZohoLeadModal() {
 
   const validate = (): boolean => {
     const newErrors: { [key: string]: string } = {};
-    if (!name.trim()) newErrors.name = "Name cannot be empty";
+    if (!firstName.trim()) newErrors.firstName = "First Name cannot be empty";
+    if (!lastName.trim()) newErrors.lastName = "Last Name cannot be empty";
     
     const phoneDigits = phone.replace(/\D/g, "");
     if (!phone.trim()) {
@@ -89,7 +91,7 @@ export default function ZohoLeadModal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="absolute inset-0"
+            className="absolute inset-0 cursor-pointer"
           />
 
           {/* Modal Content */}
@@ -125,18 +127,18 @@ export default function ZohoLeadModal() {
             {/* Zoho Form Wrapper */}
             <form
               ref={formRef}
-              id="webform1355990000000603023"
+              id="webform1355990000000613187"
               action="https://crm.zoho.in/crm/WebToLeadForm"
-              name="WebToLeads1355990000000603023"
+              name="WebToLeads1355990000000613187"
               method="POST"
               onSubmit={handleSubmit}
               acceptCharset="UTF-8"
               className="p-6 space-y-4 font-sans text-slate-700"
             >
               {/* Zoho Mandatories */}
-              <input type="text" style={{ display: "none" }} name="xnQsjsdp" value="1af7a40c8c7e4f83cd2612317fc36e1605eb4dce8ce73ce70790e83954093600" readOnly />
+              <input type="text" style={{ display: "none" }} name="xnQsjsdp" value="e888b0547e92e99989d13cf419286fdcafad4c3283e5beab53c6566d922c0522" readOnly />
               <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-              <input type="text" style={{ display: "none" }} name="xmIwtLD" value="81357e124610702e51d19ec0f1b2b38d239e14cec94ca09865766582a1a89b326dba3a0ad619c855c4eaae90e8c349c9" readOnly />
+              <input type="text" style={{ display: "none" }} name="xmIwtLD" value="fbbbff3449d77d68c75998eb3287e7b7ef760264289aafd08f0b9c4e659d29863f9de932be4eebd6665f8d36e828dfa9" readOnly />
               <input type="text" style={{ display: "none" }} name="actionType" value="TGVhZHM=" readOnly />
               <input type="text" style={{ display: "none" }} name="returnURL" value="https://cockroachias.com" readOnly />
               <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" readOnly />
@@ -145,41 +147,64 @@ export default function ZohoLeadModal() {
 
               {/* Form Input fields */}
               
-              {/* Name */}
-              <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Designation">
-                  <User className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Name <span className="text-brand-red font-bold">*</span></span>
-                </label>
-                <input
-                  type="text"
-                  id="Designation"
-                  name="Designation"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Enter your full name"
-                  maxLength={100}
-                  className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
-                    errors.name ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                  }`}
-                />
-                {errors.name && <p className="text-[10px] text-brand-red font-semibold">{errors.name}</p>}
+              <div className="grid grid-cols-2 gap-4">
+                {/* First Name */}
+                <div className="space-y-1 text-left">
+                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="First_Name">
+                    <User className="w-3.5 h-3.5 text-slate-400" />
+                    <span>First Name <span className="text-brand-red font-bold">*</span></span>
+                  </label>
+                  <input
+                    type="text"
+                    id="First_Name"
+                    name="First Name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="First Name"
+                    maxLength={30}
+                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                      errors.firstName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                    }`}
+                  />
+                  {errors.firstName && <p className="text-[10px] text-brand-red font-semibold">{errors.firstName}</p>}
+                </div>
+
+                {/* Last Name */}
+                <div className="space-y-1 text-left">
+                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Last_Name">
+                    <User className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Last Name <span className="text-brand-red font-bold">*</span></span>
+                  </label>
+                  <input
+                    type="text"
+                    id="Last_Name"
+                    name="Last Name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Last Name"
+                    maxLength={30}
+                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                      errors.lastName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                    }`}
+                  />
+                  {errors.lastName && <p className="text-[10px] text-brand-red font-semibold">{errors.lastName}</p>}
+                </div>
               </div>
 
-              {/* Phone number */}
+              {/* Mobile */}
               <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Phone">
+                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Mobile">
                   <Phone className="w-3.5 h-3.5 text-slate-400" />
                   <span>Phone Number <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <input
                   type="tel"
-                  id="Phone"
-                  name="Phone"
+                  id="Mobile"
+                  name="Mobile"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Enter 10-digit WhatsApp number"
-                  maxLength={40}
+                  placeholder="Enter 10-digit mobile number"
+                  maxLength={30}
                   className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
                     errors.phone ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
                   }`}
@@ -200,7 +225,7 @@ export default function ZohoLeadModal() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email address"
-                  maxLength={200}
+                  maxLength={100}
                   className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
                     errors.email ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
                   }`}
@@ -210,13 +235,13 @@ export default function ZohoLeadModal() {
 
               {/* Message */}
               <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Last_Name">
+                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Description">
                   <ChatText className="w-3.5 h-3.5 text-slate-400" />
                   <span>Message <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <textarea
-                  id="Last_Name"
-                  name="Last Name"
+                  id="Description"
+                  name="Description"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write your suggestions/enquiries"
