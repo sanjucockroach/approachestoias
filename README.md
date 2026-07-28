@@ -10,6 +10,7 @@ CockroachIAS is a premium, empathy-driven companion platform engineered specific
 - **Mains PYQ Analysis Engine (`/mains-pyq`):** A sophisticated diagnostic library organizing UPSC Mains GS Questions (2013-2025). Classifies questions by paper (GS 1–4), year, and cognitive demand levels, with structured study tracks.
 - **Mains Theme-Wise Analysis (`/mains-themes`):** Aggregates and displays mains syllabus topics broken down by recurring themes, past year frequency, trend trajectories, and focus areas to optimize study prioritization.
 - **Mains Cockroach Answers (`/mains-answers`):** Features "Cockroach Answers" — high-scoring model answers crafted by ex-aspirants. Emphasizes structured frameworks (Introduction, Sub-headings, Body Arguments, Case Studies, and forward-looking Conclusions) with highlighted text markers for key concepts, data points, and committee quotes.
+- **Mains Deck of Cards (Facts) GS 1, 2, 3:** A premium physical study aid listing high-yield statistics, historical timelines, SC judgments, and active recall card diagrams for mains answer mapping.
 
 ### 💼 Administrative Integrity Workspace
 - **Governance Pioneers (`/administrative-pioneers`):** A curated library of 59 real-life case studies of exemplary civil servants (e.g., T. N. Seshan, Vinod Rai, U. Sagayam). Mapped directly to core ethical values (Integrity, Moral Courage, Rule of Law) and featuring searchable, filterable grid/table views with detailed slide-over briefing panels. Ideal for GS Paper IV and Essay substantiation.

@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import confetti from "canvas-confetti";
 import { useNavigate } from "react-router-dom";
+import mainsDeckCards from "../../assets/mains_deck_cards.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -493,6 +494,112 @@ export default function Home() {
           <p className="text-sm text-slate-500 mt-2 leading-relaxed">
             We don't sell 2-year upfront packages. We don't employ aggressive counsellors who pester you. We are building companion modules designed to hold your hand through every stage of UPSC preparation.
           </p>
+        </div>
+
+        {/* Product Listing Card - Amazon/Flipkart Inspired Premium Layout */}
+        <div className="bg-white/70 backdrop-blur-2xl border border-white/80 rounded-3xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden max-w-5xl mx-auto mb-16 transition-all duration-300 hover:shadow-[0_30px_70px_rgba(0,0,0,0.08)]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            
+            {/* Left: Product Image & Gallery */}
+            <div className="md:col-span-5 flex flex-col sm:flex-row gap-4">
+              {/* Thumbnail Gallery (Amazon Style) */}
+              <div className="flex sm:flex-col gap-2 order-2 sm:order-1 overflow-x-auto justify-center sm:justify-start">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer shadow-sm">
+                  <img src={mainsDeckCards} alt="Mains Deck Main View" className="w-full h-full object-cover rounded-md" />
+                </div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
+                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 1<br/>Facts</span>
+                </div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
+                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 2<br/>Articles</span>
+                </div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 border border-slate-200 hover:border-brand-red rounded-lg overflow-hidden bg-slate-100 p-0.5 shrink-0 cursor-pointer transition-colors shadow-xs flex items-center justify-center">
+                  <span className="text-[10px] font-mono font-bold text-slate-500 text-center leading-none">GS 3<br/>Data</span>
+                </div>
+              </div>
+              
+              {/* Main Preview Container */}
+              <div className="flex-1 order-1 sm:order-2 border border-slate-100 rounded-2xl overflow-hidden bg-slate-50 relative group shadow-sm flex items-center justify-center min-h-[250px] sm:min-h-[300px]">
+                <span className="absolute top-3 left-3 bg-brand-red text-white text-[9px] font-mono font-bold px-2 py-0.5 rounded-md uppercase tracking-wider shadow-sm z-10">
+                  Best Seller
+                </span>
+                <img 
+                  src={mainsDeckCards} 
+                  alt="Mains Deck of Cards (facts) GS 1,2,3" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                />
+              </div>
+            </div>
+            
+            {/* Right: Product Details & Purchase CTA */}
+            <div className="md:col-span-7 space-y-5">
+              <div className="space-y-2">
+                <span className="text-[10px] font-mono font-bold text-brand-red bg-brand-red-light/50 border border-brand-red/10 px-2.5 py-0.5 rounded-full uppercase tracking-wider text-left block w-fit">
+                  UPSC MAINS 2026 SPECIAL
+                </span>
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-navy-950 leading-tight text-left">
+                  Mains Deck of Cards (Facts) GS 1, 2, 3
+                </h3>
+              </div>
+              
+              {/* Rating & Social Proof */}
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-500 border-b border-slate-150 pb-4">
+                <div className="flex items-center text-amber-500 font-bold gap-0.5">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span className="text-slate-800 ml-1">4.9</span>
+                </div>
+                <span className="text-slate-300">|</span>
+                <span className="font-medium">184 Ratings & Reviews</span>
+                <span className="text-slate-300">|</span>
+                <span className="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-md font-medium text-[10px]">
+                  ✓ Verified Companion Product
+                </span>
+              </div>
+              
+              {/* Pricing Section (Amazon/Flipkart Style) */}
+              <div className="space-y-1 text-left">
+                <div className="flex items-baseline space-x-3 justify-start">
+                  <span className="text-2xl sm:text-3xl font-display font-bold text-navy-950 font-mono">₹499</span>
+                  <span className="text-sm text-slate-400 line-through font-mono">₹999</span>
+                  <span className="text-sm font-bold text-emerald-600 font-mono">50% Off</span>
+                </div>
+                <p className="text-[10px] text-slate-400 font-medium">Inclusive of all local taxes • Premium box packaging</p>
+              </div>
+              
+              {/* Bullet Features */}
+              <ul className="space-y-2 text-xs text-slate-600 leading-relaxed border-t border-b border-slate-150 py-4 font-sans text-left">
+                <li className="flex items-start">
+                  <span className="text-brand-red font-bold mr-2">💡</span>
+                  <span><strong>GS 1, 2 & 3 Crucial Facts:</strong> Hand-crafted cards mapping high-yield statistics, historical timelines, and comparative indexes.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-red font-bold mr-2">⚖️</span>
+                  <span><strong>Constitutional Articles & Judgments:</strong> Memorize vital SC judgments, articles, and recommendation commissions in a structured layout.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-red font-bold mr-2">⚡</span>
+                  <span><strong>Spaced Repetition Ready:</strong> Pocket-sized decks optimized for active recall practice under 7-minute mains answer constraints.</span>
+                </li>
+              </ul>
+              
+              {/* Action Buttons */}
+              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://wa.me/917620811812?text=Hi!%20I%20want%20to%20buy%20the%20Mains%20Deck%20of%20Cards%20(facts)%20GS%201,2,3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-brand-red hover:bg-brand-red-hover text-white text-center font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition duration-200 shadow-md hover:shadow-lg active:scale-[0.99] flex items-center justify-center space-x-2 cursor-pointer"
+                >
+                  <span>⚡ Buy Now</span>
+                </a>
+              </div>
+            </div>
+            
+          </div>
         </div>
 
         {/* Emotional anchor section */}
