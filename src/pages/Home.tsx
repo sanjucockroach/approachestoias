@@ -201,12 +201,13 @@ export default function Home() {
         >
           <button
             onClick={() => {
-              window.open("https://login.cockroachias.com", "_blank");
+              const element = document.getElementById("trial-section");
+              element?.scrollIntoView({ behavior: "smooth" });
             }}
             className="w-full sm:w-auto bg-brand-red hover:bg-brand-red-hover text-white font-medium text-base px-8 py-4 rounded-xl shadow-lg transition duration-200 hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center space-x-3 cursor-pointer"
             id="hero-primary-cta"
           >
-            <span>Try a Course module</span>
+            <span>Try Our Products</span>
             <ArrowRight className="w-5 h-5 animate-bounce-right" />
           </button>
           
