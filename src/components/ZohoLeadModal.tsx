@@ -41,7 +41,7 @@ export default function ZohoLeadModal() {
         const d = document;
         const s = d.createElement("script");
         s.id = "wf_anal";
-        s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=4f9ef00b42b90488e81259600bff78cd51e36ef635fb92515b0da8f5bbc467c4231dd86c36bfda304a9f54b954535044gida126d57d7508fa8f58cfe4b4ce87b248aa19eb5dc944a420b70c7f37135359e6gid2622299e5504d62406250a7496b14ddb8987f12b2a0e0f91ccce07071f14880dgid1febb5549647ab10e34baefe1eb692951ffed9086d44677ab63c4810b51c0ca5&tw=764528abb51e0c058f06a6c546db48c01118aa03a7e3548804f57f0a716cf886&version=v2";
+        s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=45f49069dfba160c5b6f71614b24290e6710529dbc9d6c8e1cda64a79536a4459a816942691500109c93ba64fb93fa11gid88253522f975b6a6136cd8a38ac1f1a2e71cfe6e20858a7f1a13c0a61f584e46gida9668c836b7cf2b2b68d6fcc9e3a3ae21c2ea4251f05b23b8aca1295206248c1gid743178d37b7584f8da1a72a9cfe9e961b756882a6bb08072ae4935fbede5c7a6&tw=9a3e32a5a5111886aa37686573ab4f7e7b06aee389e059fa1c3b7c6977e1a06c&version=v2";
         d.head.appendChild(s);
       }
     }
@@ -134,9 +134,9 @@ export default function ZohoLeadModal() {
               className="p-6 space-y-4 font-sans text-slate-700"
             >
               {/* Zoho Mandatories */}
-              <input type="text" style={{ display: "none" }} name="xnQsjsdp" value="21b03a824ae65186102c395f1edb1be076551f7fae7bc4957572c78d174cd05d" readOnly />
+              <input type="text" style={{ display: "none" }} name="xnQsjsdp" value="1af7a40c8c7e4f83cd2612317fc36e1605eb4dce8ce73ce70790e83954093600" readOnly />
               <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-              <input type="text" style={{ display: "none" }} name="xmIwtLD" value="4548818a90bf5dc3f51bad6f73f08eba72f88db2f100f7ff1807b2fd1e10c99a51de753377c03c56d44b0788b2da1439" readOnly />
+              <input type="text" style={{ display: "none" }} name="xmIwtLD" value="81357e124610702e51d19ec0f1b2b38d239e14cec94ca09865766582a1a89b326dba3a0ad619c855c4eaae90e8c349c9" readOnly />
               <input type="text" style={{ display: "none" }} name="actionType" value="TGVhZHM=" readOnly />
               <input type="text" style={{ display: "none" }} name="returnURL" value="https://cockroachias.com" readOnly />
               <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" readOnly />
@@ -168,14 +168,14 @@ export default function ZohoLeadModal() {
 
               {/* Phone number */}
               <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="First_Name">
+                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Phone">
                   <Phone className="w-3.5 h-3.5 text-slate-400" />
                   <span>Phone Number <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <input
                   type="tel"
-                  id="First_Name"
-                  name="First Name"
+                  id="Phone"
+                  name="Phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="Enter 10-digit WhatsApp number"
@@ -189,14 +189,14 @@ export default function ZohoLeadModal() {
 
               {/* Email Address */}
               <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Company">
+                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Email">
                   <EnvelopeSimple className="w-3.5 h-3.5 text-slate-400" />
                   <span>Email Address <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <input
                   type="email"
-                  id="Company"
-                  name="Company"
+                  id="Email"
+                  name="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email address"
