@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { X, User, Phone, EnvelopeSimple, ChatText, ShieldCheck } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -78,7 +79,7 @@ export default function ZohoLeadModal() {
     }
   };
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-950/40 backdrop-blur-md">
@@ -255,6 +256,7 @@ export default function ZohoLeadModal() {
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
