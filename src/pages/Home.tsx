@@ -8,6 +8,7 @@ import { SURVIVAL_TRAITS, CONTROVERSY_DETAILS, SURVIVOR_QUIZ_QUESTIONS } from ".
 import { Course, SurvivalTrait } from "../types";
 import { motion, AnimatePresence } from "motion/react";
 import IndiaMapSection from "../components/IndiaMapSection";
+import ZohoLeadModal from "../components/ZohoLeadModal";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -915,6 +916,9 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Zoho CRM Web-to-Lead Popup Modal */}
+      <ZohoLeadModal />
 
     </div>
   );
