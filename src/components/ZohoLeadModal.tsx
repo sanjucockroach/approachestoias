@@ -73,11 +73,17 @@ export default function ZohoLeadModal() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validate() && formRef.current) {
-      // Submit the form programmatically to Zoho
-      formRef.current.submit();
+  const handleInputChange = (setter: (val: string) => void) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const val = e.target.value;
+    setter(val);
+    e.target.setAttribute("value", val);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (!validate()) {
+      e.preventDefault();
     }
   };
 
@@ -160,7 +166,7 @@ export default function ZohoLeadModal() {
                     id="First_Name"
                     name="First Name"
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    onChange={handleInputChange(setFirstName)}
                     placeholder="First Name"
                     maxLength={30}
                     className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
@@ -181,7 +187,7 @@ export default function ZohoLeadModal() {
                     id="Last_Name"
                     name="Last Name"
                     value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    onChange={handleInputChange(setLastName)}
                     placeholder="Last Name"
                     maxLength={30}
                     className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
@@ -199,11 +205,11 @@ export default function ZohoLeadModal() {
                   <span>Phone Number <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <input
-                  type="tel"
+                  type="text"
                   id="Mobile"
                   name="Mobile"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={handleInputChange(setPhone)}
                   placeholder="Enter 10-digit mobile number"
                   maxLength={30}
                   className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
@@ -220,11 +226,13 @@ export default function ZohoLeadModal() {
                   <span>Email Address <span className="text-brand-red font-bold">*</span></span>
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="Email"
+                  // @ts-ignore
+                  ftype="email"
                   name="Email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleInputChange(setEmail)}
                   placeholder="Enter email address"
                   maxLength={100}
                   className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
@@ -244,7 +252,7 @@ export default function ZohoLeadModal() {
                   id="Description"
                   name="Description"
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={handleInputChange(setMessage)}
                   placeholder="Write your suggestions/enquiries"
                   maxLength={80}
                   rows={2}
