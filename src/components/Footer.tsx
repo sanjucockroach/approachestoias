@@ -77,7 +77,7 @@ export default function Footer() {
               <TelegramLogo className="w-5 h-5 sm:w-6 h-6" />
             </a>
             <a
-              href="https://wa.me/917620811812"
+              href="https://wa.me/917026811812"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-red transition-colors duration-200 cursor-pointer"

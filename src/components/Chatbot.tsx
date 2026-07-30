@@ -358,10 +358,10 @@ What would you like to explore first?`,
         break;
       case "mentor":
         userText = "How do I reach a mentor?";
-        botResponse = `Need an emotional anchor, a study planner check-in, or syllabus clarity? Our mentors are ex-aspirants who have lived the struggle. We will support you. You can connect with our mentors directly on WhatsApp at **+91 7620811812** for a companion audit session!`;
+        botResponse = `Need an emotional anchor, a study planner check-in, or syllabus clarity? Our mentors are ex-aspirants who have lived the struggle. We will support you. You can connect with our mentors directly on WhatsApp at **+91 7026811812** for a companion audit session!`;
         routeLabel = "💬 Open WhatsApp Chat";
         routeAction = () => {
-          window.open("https://wa.me/917620811812", "_blank");
+          window.open("https://wa.me/917026811812", "_blank");
         };
         break;
     }

@@ -596,7 +596,7 @@ export default function Home() {
               {/* Action Buttons */}
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://wa.me/917620811812?text=Hi!%20I%20want%20to%20buy%20the%20Mains%20Deck%20of%20Cards%20(facts)%20GS%201,2,3" 
+                  href="https://wa.me/917026811812?text=Hi!%20I%20want%20to%20buy%20the%20Mains%20Deck%20of%20Cards%20(facts)%20GS%201,2,3" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex-1 bg-brand-red hover:bg-brand-red-hover text-white text-center font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition duration-200 shadow-md hover:shadow-lg active:scale-[0.99] flex items-center justify-center space-x-2 cursor-pointer"

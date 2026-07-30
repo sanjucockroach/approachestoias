@@ -32,7 +32,7 @@ export default function Contact() {
 *Message:*
 ${formData.message}`;
 
-    const waUrl = `https://wa.me/917620811812?text=${encodeURIComponent(waMessage)}`;
+    const waUrl = `https://wa.me/917026811812?text=${encodeURIComponent(waMessage)}`;
     window.open(waUrl, "_blank");
     
     setFormSubmitted(true);
@@ -88,7 +88,7 @@ ${formData.message}`;
                 <PhoneCall className="w-5 h-5 text-navy-700 shrink-0 mt-0.5" />
                 <div className="text-xs leading-relaxed space-y-1">
                   <h4 className="font-bold text-navy-950 text-sm">The 24/7 Aspirant Line</h4>
-                  <p className="text-slate-500">7620811812</p>
+                  <p className="text-slate-500">7026811812</p>
                   <p className="text-slate-400 font-mono text-[10px]">Speak to ex-aspirants who are trained listeners. Purely online companion mentoring.</p>
                 </div>
               </div>
