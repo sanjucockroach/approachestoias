@@ -144,6 +144,7 @@ export default function ZohoLeadModal() {
               <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" readOnly />
               <input type="text" style={{ display: "none" }} id="LDTuvid" name="LDTuvid" readOnly />
               <input type="text" style={{ display: "none" }} name="aG9uZXlwb3Q" value="" readOnly />
+              <input type="text" style={{ display: "none" }} name="Company" value="UPSC Aspirant" readOnly />
 
               {/* Form Input fields */}
               
