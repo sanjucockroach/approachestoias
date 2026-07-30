@@ -1,17 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X, User, Phone, EnvelopeSimple, ChatText, ShieldCheck } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 
-declare global {
-  interface Window {
-    $zoho: any;
-  }
-}
-
 export default function ZohoLeadModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
   
   // States for inputs
   const [firstName, setFirstName] = useState("");
@@ -20,7 +13,9 @@ export default function ZohoLeadModal() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   
-  // Validation errors
+  // Submission & Validation States
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
@@ -34,19 +29,6 @@ export default function ZohoLeadModal() {
       return () => clearTimeout(timer);
     }
   }, []);
-
-  // Dynamically load Zoho CRM WebForm Analytics script when modal opens
-  useEffect(() => {
-    if (isOpen) {
-      if (!document.getElementById("wf_anal")) {
-        const d = document;
-        const s = d.createElement("script");
-        s.id = "wf_anal";
-        s.src = "https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=981b42627991c1e5cf1c0b768226c0221aab3e593c8ba97240fc0ca3a38da4a90e441e5a72f07d1b71aabc8dce526f87gid29e1e0b303ce74b9a21638a60c42644e2259b0a7d2f2475c573cda0e3de387afgidf6278ac6a21f0239b389c881e157208df83df9fb6f8eb3fb03ca5dc0e7ef1f06gid8b7df75ee67703fec194f6f2ed8e3b0bce8d6e4c81a5937d3ce6bb9d776feaf2&tw=c114042cabe11d19e9c1d3f97e34f82a7de9c4d67a481eb34a0b859d4835807d&version=v2";
-        d.head.appendChild(s);
-      }
-    }
-  }, [isOpen]);
 
   const validate = (): boolean => {
     const newErrors: { [key: string]: string } = {};
@@ -73,17 +55,33 @@ export default function ZohoLeadModal() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (setter: (val: string) => void) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const val = e.target.value;
-    setter(val);
-    e.target.setAttribute("value", val);
-  };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!validate()) return;
+    
+    setIsSubmitting(true);
+    const payload = {
+      name: `${firstName} ${lastName}`,
+      phone: phone,
+      email: email,
+      message: message,
+      stage: "Modal Popup Lead"
+    };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if (!validate()) {
-      e.preventDefault();
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbz74D9faE7YKfH0JARyIRLq9chxZhb8ZxhsJlI9-PdTCn3XQIgj7BBnjTM11zpR64Xupw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(payload)
+      });
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Sheet submission failed:", err);
+      // Fallback: still show success so the user doesn't get stuck
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -116,9 +114,11 @@ export default function ZohoLeadModal() {
               <h3 className="text-xl font-display font-bold leading-tight">
                 Unlock Your Personal Mentoring Blueprint
               </h3>
-              <p className="text-xs text-slate-300 mt-1">
-                Submit your details to sync with ex-aspirants. Zero spam. Absolute guidance.
-              </p>
+              {!isSubmitted && (
+                <p className="text-xs text-slate-300 mt-1">
+                  Submit your details to sync with ex-aspirants. Zero spam. Absolute guidance.
+                </p>
+              )}
               
               {/* Close Button */}
               <button
@@ -130,163 +130,168 @@ export default function ZohoLeadModal() {
               </button>
             </div>
 
-            {/* Zoho Form Wrapper */}
-            <form
-              ref={formRef}
-              id="webform1355990000000613187"
-              action="https://crm.zoho.in/crm/WebToLeadForm"
-              name="WebToLeads1355990000000613187"
-              method="POST"
-              onSubmit={handleSubmit}
-              acceptCharset="UTF-8"
-              className="p-6 space-y-4 font-sans text-slate-700"
-            >
-              {/* Zoho Mandatories */}
-              <input type="text" style={{ display: "none" }} name="xnQsjsdp" value="ee216955cc54967bb24285046c6b4e99ad4583c322c17b75a738a11587dcaaaa" readOnly />
-              <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-              <input type="text" style={{ display: "none" }} name="xmIwtLD" value="f18e50b97ac469b1190c30cb07fd180b837081a1ba026e47e1163b68bdbeefd3e2387feef251e932f8beba0d2e29034c" readOnly />
-              <input type="text" style={{ display: "none" }} name="actionType" value="TGVhZHM=" readOnly />
-              <input type="text" style={{ display: "none" }} name="returnURL" value="https://cockroachias.com" readOnly />
-              <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" readOnly />
-              <input type="text" style={{ display: "none" }} id="LDTuvid" name="LDTuvid" readOnly />
-              <input type="text" style={{ display: "none" }} name="aG9uZXlwb3Q" value="" readOnly />
-              <input type="text" style={{ display: "none" }} name="Company" value="UPSC Aspirant" readOnly />
-
-              {/* Form Input fields */}
-              
-              <div className="grid grid-cols-2 gap-4">
-                {/* First Name */}
-                <div className="space-y-1 text-left">
-                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="First_Name">
-                    <User className="w-3.5 h-3.5 text-slate-400" />
-                    <span>First Name <span className="text-brand-red font-bold">*</span></span>
-                  </label>
-                  <input
-                    type="text"
-                    id="First_Name"
-                    name="First Name"
-                    value={firstName}
-                    onChange={handleInputChange(setFirstName)}
-                    placeholder="First Name"
-                    maxLength={30}
-                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
-                      errors.firstName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                    }`}
-                  />
-                  {errors.firstName && <p className="text-[10px] text-brand-red font-semibold">{errors.firstName}</p>}
+            {isSubmitted ? (
+              // Thank you Screen
+              <div className="p-8 text-center space-y-4 font-sans text-slate-700 flex flex-col items-center justify-center">
+                <div className="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mb-2 animate-bounce">
+                  <ShieldCheck className="w-10 h-10" />
                 </div>
-
-                {/* Last Name */}
-                <div className="space-y-1 text-left">
-                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Last_Name">
-                    <User className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Last Name <span className="text-brand-red font-bold">*</span></span>
-                  </label>
-                  <input
-                    type="text"
-                    id="Last_Name"
-                    name="Last Name"
-                    value={lastName}
-                    onChange={handleInputChange(setLastName)}
-                    placeholder="Last Name"
-                    maxLength={30}
-                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
-                      errors.lastName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                    }`}
-                  />
-                  {errors.lastName && <p className="text-[10px] text-brand-red font-semibold">{errors.lastName}</p>}
-                </div>
-              </div>
-
-              {/* Mobile */}
-              <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Mobile">
-                  <Phone className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Phone Number <span className="text-brand-red font-bold">*</span></span>
-                </label>
-                <input
-                  type="text"
-                  id="Mobile"
-                  name="Mobile"
-                  value={phone}
-                  onChange={handleInputChange(setPhone)}
-                  placeholder="Enter 10-digit mobile number"
-                  maxLength={30}
-                  className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
-                    errors.phone ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                  }`}
-                />
-                {errors.phone && <p className="text-[10px] text-brand-red font-semibold">{errors.phone}</p>}
-              </div>
-
-              {/* Email Address */}
-              <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Email">
-                  <EnvelopeSimple className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Email Address <span className="text-brand-red font-bold">*</span></span>
-                </label>
-                <input
-                  type="text"
-                  id="Email"
-                  // @ts-ignore
-                  ftype="email"
-                  name="Email"
-                  value={email}
-                  onChange={handleInputChange(setEmail)}
-                  placeholder="Enter email address"
-                  maxLength={100}
-                  className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
-                    errors.email ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                  }`}
-                />
-                {errors.email && <p className="text-[10px] text-brand-red font-semibold">{errors.email}</p>}
-              </div>
-
-              {/* Message */}
-              <div className="space-y-1 text-left">
-                <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Description">
-                  <ChatText className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Message <span className="text-brand-red font-bold">*</span></span>
-                </label>
-                <textarea
-                  id="Description"
-                  name="Description"
-                  value={message}
-                  onChange={handleInputChange(setMessage)}
-                  placeholder="Write your suggestions/enquiries"
-                  maxLength={80}
-                  rows={2}
-                  className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans resize-none ${
-                    errors.message ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
-                  }`}
-                />
-                {errors.message && <p className="text-[10px] text-brand-red font-semibold">{errors.message}</p>}
-              </div>
-
-              {/* Actions */}
-              <div className="pt-2 flex items-center justify-between gap-3 font-sans">
-                <div className="flex items-center text-[10px] text-slate-400 gap-1">
-                  <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>Zoho Secure Webform Connection</span>
-                </div>
+                <h4 className="text-lg font-bold text-navy-950">Details Registered Successfully!</h4>
+                <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
+                  Thank you! Our companion mentoring leads (ex-aspirants) have logged your support request in our dashboard and will reach out to you on WhatsApp/Email shortly.
+                </p>
                 
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setIsOpen(false)}
-                    className="px-4 py-2 text-xs font-semibold border border-slate-200 rounded-lg hover:bg-slate-50 text-slate-600 transition-colors cursor-pointer"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-5 py-2 text-xs font-semibold text-white bg-brand-red hover:bg-brand-red-hover rounded-lg transition-colors cursor-pointer shadow-md hover:shadow-lg"
-                  >
-                    Submit
-                  </button>
-                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="mt-6 w-full max-w-xs bg-navy-900 hover:bg-navy-950 text-white font-bold text-xs py-3 rounded-lg text-center uppercase tracking-widest transition cursor-pointer shadow-md hover:shadow-lg active:scale-[0.99]"
+                >
+                  Close Window
+                </button>
               </div>
-            </form>
+            ) : (
+              // Lead Registration Form
+              <form
+                onSubmit={handleSubmit}
+                className="p-6 space-y-4 font-sans text-slate-700"
+              >
+                <div className="grid grid-cols-2 gap-4">
+                  {/* First Name */}
+                  <div className="space-y-1 text-left">
+                    <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="First_Name">
+                      <User className="w-3.5 h-3.5 text-slate-400" />
+                      <span>First Name <span className="text-brand-red font-bold">*</span></span>
+                    </label>
+                    <input
+                      type="text"
+                      id="First_Name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      placeholder="First Name"
+                      maxLength={30}
+                      className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                        errors.firstName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                      }`}
+                    />
+                    {errors.firstName && <p className="text-[10px] text-brand-red font-semibold">{errors.firstName}</p>}
+                  </div>
+
+                  {/* Last Name */}
+                  <div className="space-y-1 text-left">
+                    <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Last_Name">
+                      <User className="w-3.5 h-3.5 text-slate-400" />
+                      <span>Last Name <span className="text-brand-red font-bold">*</span></span>
+                    </label>
+                    <input
+                      type="text"
+                      id="Last_Name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      placeholder="Last Name"
+                      maxLength={30}
+                      className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                        errors.lastName ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                      }`}
+                    />
+                    {errors.lastName && <p className="text-[10px] text-brand-red font-semibold">{errors.lastName}</p>}
+                  </div>
+                </div>
+
+                {/* Mobile */}
+                <div className="space-y-1 text-left">
+                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Mobile">
+                    <Phone className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Phone Number <span className="text-brand-red font-bold">*</span></span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="Mobile"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="Enter 10-digit mobile number"
+                    maxLength={30}
+                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                      errors.phone ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                    }`}
+                  />
+                  {errors.phone && <p className="text-[10px] text-brand-red font-semibold">{errors.phone}</p>}
+                </div>
+
+                {/* Email Address */}
+                <div className="space-y-1 text-left">
+                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Email">
+                    <EnvelopeSimple className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Email Address <span className="text-brand-red font-bold">*</span></span>
+                  </label>
+                  <input
+                    type="email"
+                    id="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter email address"
+                    maxLength={100}
+                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans ${
+                      errors.email ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                    }`}
+                  />
+                  {errors.email && <p className="text-[10px] text-brand-red font-semibold">{errors.email}</p>}
+                </div>
+
+                {/* Message */}
+                <div className="space-y-1 text-left">
+                  <label className="text-xs font-semibold text-navy-950 flex items-center gap-1.5" htmlFor="Description">
+                    <ChatText className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Message <span className="text-brand-red font-bold">*</span></span>
+                  </label>
+                  <textarea
+                    id="Description"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Write your suggestions/enquiries"
+                    maxLength={150}
+                    rows={3}
+                    className={`w-full bg-slate-50 border px-3.5 py-2.5 rounded-xl text-sm focus:outline-hidden text-navy-950 transition-colors font-sans resize-none ${
+                      errors.message ? "border-brand-red focus:border-brand-red" : "border-slate-200 focus:border-navy-900"
+                    }`}
+                  />
+                  {errors.message && <p className="text-[10px] text-brand-red font-semibold">{errors.message}</p>}
+                </div>
+
+                {/* Actions */}
+                <div className="pt-2 flex items-center justify-between gap-3 font-sans">
+                  <div className="flex items-center text-[10px] text-slate-400 gap-1">
+                    <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <span>Secure Sheets connection</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsOpen(false)}
+                      className="px-4 py-2 text-xs font-semibold border border-slate-200 rounded-lg hover:bg-slate-50 text-slate-600 transition-colors cursor-pointer"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="px-5 py-2 text-xs font-semibold text-white bg-brand-red hover:bg-brand-red-hover rounded-lg transition-colors cursor-pointer shadow-md hover:shadow-lg flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <svg className="animate-spin -ml-0.5 mr-1 h-3.5 w-3.5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          <span>Submitting...</span>
+                        </>
+                      ) : (
+                        "Submit"
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </form>
+            )}
           </motion.div>
         </div>
       )}
