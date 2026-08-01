@@ -37,35 +37,35 @@ export const SURVIVAL_TRAITS: SurvivalTrait[] = [
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Oracle (Survivor 1)",
+    name: "Prashanth N",
     role: "Founder & CEO",
     bio: "Visionary behind the academys' student-first approach to UPSC preparation. An oracle in Ethics, Essay, and Mains Answer Writing, he is known for helping aspirants transform ideas into tech enabled impactful answers and develop the clarity, integrity, and analytical depth expected of future civil servants.",
     yearsOfStruggle: 6,
     specialization: "Ethics & Essay Oracle | Mains Answer Writing Coach"
   },
   {
-    name: "Companion (Survivor 2)",
+    name: "Anusha PC",
     role: "Managing Director",
     bio: "A trusted UPSC mentor known for simplifying Anthropology and mastering Prelims strategy. Beyond academics, she serves as a constant companion, emotional anchor, and unwavering supporter throughout the preparation journey. Her mission is to help aspirants build knowledge, confidence, resilience, and the determination needed for success.",
     yearsOfStruggle: 4,
     specialization: "Anthropology Expert | Prelims Wizard | Constant Companion"
   },
   {
-    name: "Strategist (Survivor 3)",
+    name: "Varun Amidal",
     role: "Vice President",
     bio: "A dedicated UPSC mentor specializing in Political Science & International Relations (PSIR) and CSAT. Known for his approachable nature, patient listening, and long-term mentorship, he helps aspirants navigate challenges with clarity and confidence. His guidance combines academic excellence, strategic preparation, and genuine care for every student's growth.",
     yearsOfStruggle: 5,
     specialization: "PSIR Expert | CSAT Strategist | Smiling Mentor"
   },
   {
-    name: "Architect (Survivor 4)",
+    name: "Sanjeeva Reddy",
     role: "CTO",
     bio: "A tech lead dedicated to engineering seamless learning workspaces and resilient cognitive tools. The Architect ensures that the platform delivers high-speed, interactive syllabus mapping and analytical workspaces for aspirants.",
     yearsOfStruggle: 3,
     specialization: "Tech Architecture | Platform Operations"
   },
   {
-    name: "Custodian (Survivor 5)",
+    name: "Riya P Kabadi",
     role: "CFO and HR",
     bio: "Manages the academy's fiscal operations and builds supportive mentor networks. The Custodian ensures that our trial companion cohorts remain highly affordable while selecting top-tier, empathetic mentors for handholding.",
     yearsOfStruggle: 3,

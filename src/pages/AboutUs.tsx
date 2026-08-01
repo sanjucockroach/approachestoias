@@ -7,20 +7,20 @@ import { TEAM_MEMBERS } from "../data";
 import { motion } from "motion/react";
 import { TeamMember } from "../types";
 
-// Photo imports kept for future use:
-// import prashanthPhoto from "../../assets/prashanth.jpg";
-// import anushaPhoto from "../../assets/anusha.jpg";
-// import varunPhoto from "../../assets/varun.png";
-// import riyaPhoto from "../../assets/riya.png";
-// import sanjeevaPhoto from "../../assets/sanjeeva.png";
+// Photo imports
+import prashanthPhoto from "../../assets/prashanth.jpg";
+import anushaPhoto from "../../assets/anusha.jpg";
+import varunPhoto from "../../assets/varun.png";
+import riyaPhoto from "../../assets/riya.png";
+import sanjeevaPhoto from "../../assets/sanjeeva.png";
 
-// const memberPhotos: Record<string, string> = {
-//   "Prashanth N": prashanthPhoto,
-//   "Anusha PC": anushaPhoto,
-//   "Varun Amidal": varunPhoto,
-//   "Sanjeeva Reddy": sanjeevaPhoto,
-//   "Riya P Kabadi": riyaPhoto
-// };
+const memberPhotos: Record<string, string> = {
+  "Prashanth N": prashanthPhoto,
+  "Anusha PC": anushaPhoto,
+  "Varun Amidal": varunPhoto,
+  "Sanjeeva Reddy": sanjeevaPhoto,
+  "Riya P Kabadi": riyaPhoto
+};
 
 export default function AboutUs() {
   const renderCard = (member: TeamMember | undefined) => {
@@ -66,6 +66,17 @@ export default function AboutUs() {
             <span className="relative z-10 text-[9px] font-mono font-bold tracking-widest text-brand-red bg-brand-red-light border border-brand-red/10 px-2.5 py-0.5 rounded-md uppercase">
               {member.role}
             </span>
+          </div>
+
+          {/* Profile Photo */}
+          <div className="relative -mt-10 mb-4 flex justify-center z-20">
+            <div className="w-16 h-16 rounded-full border-2 border-white shadow-sm overflow-hidden bg-slate-100 flex items-center justify-center shrink-0">
+              {memberPhotos[member.name] ? (
+                <img src={memberPhotos[member.name]} alt={member.name} className="w-full h-full object-cover" />
+              ) : (
+                <Users className="w-6 h-6 text-slate-400" />
+              )}
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -318,20 +329,20 @@ export default function AboutUs() {
           {/* Row 2: Companion (Left) and Strategist (Right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="team-row-2">
             <div className="w-full h-full">
-              {renderCard(TEAM_MEMBERS.find(m => m.name === "Companion (Survivor 2)"))}
+              {renderCard(TEAM_MEMBERS.find(m => m.name === "Anusha PC"))}
             </div>
             <div className="w-full h-full">
-              {renderCard(TEAM_MEMBERS.find(m => m.name === "Strategist (Survivor 3)"))}
+              {renderCard(TEAM_MEMBERS.find(m => m.name === "Varun Amidal"))}
             </div>
           </div>
 
           {/* Row 3: Architect (Left) and Custodian (Right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="team-row-3">
             <div className="w-full h-full">
-              {renderCard(TEAM_MEMBERS.find(m => m.name === "Architect (Survivor 4)"))}
+              {renderCard(TEAM_MEMBERS.find(m => m.name === "Sanjeeva Reddy"))}
             </div>
             <div className="w-full h-full">
-              {renderCard(TEAM_MEMBERS.find(m => m.name === "Custodian (Survivor 5)"))}
+              {renderCard(TEAM_MEMBERS.find(m => m.name === "Riya P Kabadi"))}
             </div>
           </div>
 
