@@ -59,7 +59,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-5 text-slate-400 py-1">
             <a
-              href="https://www.instagram.com/cockroachiasacademy?igsh=MTIydTk2djgwcHI4cw=="
+              href="https://www.instagram.com/approachestoias?igsh=MTIydTk2djgwcHI4cw=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-red transition-colors duration-200 cursor-pointer"
@@ -68,7 +68,7 @@ export default function Footer() {
               <InstagramLogo className="w-5 h-5 sm:w-6 h-6" />
             </a>
             <a
-              href="https://t.me/Cockroachias"
+              href="https://t.me/approachestoias"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-red transition-colors duration-200 cursor-pointer"

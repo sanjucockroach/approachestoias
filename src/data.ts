@@ -4,8 +4,8 @@ export const SURVIVAL_TRAITS: SurvivalTrait[] = [
   {
     id: "resilience",
     title: "Unrivaled Resilience",
-    tagline: "The 300-Million-Year Test",
-    biologyFact: "Cockroaches survived the Chicxulub asteroid that wiped out the dinosaurs. They can endure extreme radiation up to 15 times what is lethal to humans, and live for a week without a head.",
+    tagline: "The Test of Time",
+    biologyFact: "Throughout history, human resilience has survived extreme epochs, ice ages, and civilizations' rise and fall. Psychological resilience can endure extreme levels of stress, remaining unbroken under pressure.",
     aspirantLesson: "UPSC preparation is a grueling saga of repeated failures, isolation, and mental exhaustion. True selection doesn't require genielike brilliance; it requires a mental toughness that refuses to die, regardless of how many times you fall short of the cut-off.",
     iconName: "ShieldCheck"
   },
@@ -13,7 +13,7 @@ export const SURVIVAL_TRAITS: SurvivalTrait[] = [
     id: "adaptability",
     title: "Deep Adaptability",
     tagline: "Pattern Agnosticism",
-    biologyFact: "They possess an exceptionally fluid genetic structure, allowing them to rapidly evolve immunity to man-made chemical poisons within a single generation.",
+    biologyFact: "Adaptable biological systems possess exceptionally fluid structures, allowing them to rapidly adjust to environmental shifts within a single life cycle.",
     aspirantLesson: "The UPSC examiner will throw unexpected pattern changes, tricky current affairs questions, or completely revamp the CSAT paper. Do not build stiff, fragile study routines. Remain fluid. Adapt instantly to any shift in the terrain.",
     iconName: "Compass"
   },
@@ -21,7 +21,7 @@ export const SURVIVAL_TRAITS: SurvivalTrait[] = [
     id: "frugality",
     title: "Extreme Efficiency",
     tagline: "Resource Optimization",
-    biologyFact: "A survivor requires remarkably little to survive. They can stay active for over a month with absolute zero food, thriving in the quietest, darkest corners of the earth.",
+    biologyFact: "A true survivor optimizes resource usage, functioning efficiently on minimal intake while maintaining peak cognitive focus in demanding conditions.",
     aspirantLesson: "Living in a congested 8x8 foot room, breathing humid air, and eating simple mess food is not a sign of your defeat. It is your active training in resourcefulness. He who can govern his desires in a tiny cubicle can govern a district with absolute integrity.",
     iconName: "Flame"
   },
@@ -29,7 +29,7 @@ export const SURVIVAL_TRAITS: SurvivalTrait[] = [
     id: "pressure-resistance",
     title: "Exoskeletal Elasticity",
     tagline: "Thriving Under Heavy Load",
-    biologyFact: "Their bodies can compress by over 50% to slip through tiny crevices, resisting compressive forces up to 900 times their own body weight without getting hurt.",
+    biologyFact: "Elastic materials can absorb immense load and distribute pressure across their structures, returning to their original shape undamaged.",
     aspirantLesson: "You are constantly crushed under the weight of family expectations, societal comparisons, and heavy syllabi. Instead of breaking under the weight, compress your fears, absorb the stress, slip through the cracks of adversity, and emerge undamaged.",
     iconName: "Award"
   }

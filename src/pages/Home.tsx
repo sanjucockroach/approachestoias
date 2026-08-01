@@ -383,7 +383,7 @@ export default function Home() {
       </section>
 
       {/* 3. RESILIENCE WISDOM: Interactive biological facts to UPSC lessons */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="cockroach-wisdom">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="resilience-wisdom">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase">The Science of Success</span>
           <h2 className="text-3xl font-display font-bold text-navy-950 mt-2">

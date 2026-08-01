@@ -123,7 +123,7 @@ export default function IndiaMapSection() {
         <div className="mb-12 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-red-light px-4 py-1.5 text-xs font-mono font-bold text-brand-red border border-brand-red/10 uppercase tracking-wider">
             <ChatCircleText className="h-4 w-4 animate-pulse" />
-            CockroachIAS Samvad Map
+            Approaches to IAS Samvad Map
           </div>
           <h2 className="mb-3 font-display font-bold text-3xl sm:text-4xl text-navy-950">
             Ambition has no postal code.

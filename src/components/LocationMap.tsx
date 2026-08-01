@@ -24,7 +24,7 @@ export default function LocationMap() {
     <div className="relative h-[220px] w-full rounded-xl overflow-hidden shadow-xs border border-slate-200 mt-3 group">
       <Map
         ref={mapRef}
-        center={[77.523719, 12.9614475]} // Cockroach IAS Academy location
+        center={[77.523719, 12.9614475]} // Approaches to IAS location
         zoom={16}
         styles={
           selectedStyle

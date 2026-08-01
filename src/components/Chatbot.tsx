@@ -94,7 +94,7 @@ export default function Chatbot() {
     const blacklist = [
       "hi", "hello", "hey", "who are you", "what is this", "what is your name", 
       "testing", "help", "bot", "how are you", "good morning", "good afternoon", 
-      "good evening", "yes", "no", "chatbot", "cockroach", "ias", "upsc", "guess"
+      "good evening", "yes", "no", "chatbot", "approaches", "ias", "upsc", "guess"
     ];
     
     if (blacklist.some(item => clean === item || clean.includes(item))) return false;
@@ -148,7 +148,7 @@ export default function Chatbot() {
         {
           id: Math.random().toString(),
           sender: "bot",
-          text: `Aha! **${name}**! I knew it! (My cockroach antenna had a 99.9% hunch) 🎯`,
+          text: `Aha! **${name}**! I knew it! (My companion instinct had a 99.9% hunch) 🎯`,
           timestamp: new Date()
         },
         {
