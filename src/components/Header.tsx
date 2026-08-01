@@ -147,17 +147,6 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                             <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
                             <span>Companion Blogs</span>
                           </button>
-                          <div className="border-t border-slate-100 my-1"></div>
-                          <button
-                            onClick={() => {
-                              navigate("/admin");
-                              setShowDropdown(false);
-                            }}
-                            className="w-full text-left px-4 py-1.5 text-slate-400 hover:bg-slate-50 hover:text-navy-950 font-bold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[9px] font-mono"
-                          >
-                            <span className="w-1.5 h-1.5 bg-slate-400 rounded-full" />
-                            <span>Admin Console</span>
-                          </button>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -240,7 +229,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                 );
               })}
               
-              <div className="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-2">
+              <div className="pt-4 mt-2 border-t border-slate-100">
                 <a
                   href="https://login.approachestoias.com"
                   target="_blank"
@@ -249,15 +238,6 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                 >
                   <span>Login</span>
                 </a>
-                <button
-                  onClick={() => {
-                    navigate("/admin");
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="flex items-center justify-center w-full bg-navy-950 hover:bg-black text-white px-5 py-3 rounded-lg text-sm font-semibold tracking-wide uppercase transition-all duration-200 shadow-sm font-mono"
-                >
-                  <span>Admin Console</span>
-                </button>
               </div>
             </div>
           </motion.div>

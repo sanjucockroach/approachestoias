@@ -19,6 +19,18 @@ export default function AdminPanel() {
   const [editorials, setEditorials] = useState<EditorialItem[]>([]);
   const [blogs, setBlogs] = useState<BlogItem[]>([]);
   
+  // Authentication states
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [usernameInput, setUsernameInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+
+  useEffect(() => {
+    const authStatus = sessionStorage.getItem("approachestoias_admin_authenticated");
+    if (authStatus === "true") {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   // Feedback notification state
   const [notification, setNotification] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
@@ -51,6 +63,20 @@ export default function AdminPanel() {
     setEditorials(getEditorials());
     setBlogs(getBlogs());
   }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    const expectedUsername = import.meta.env.VITE_ADMIN_USERNAME || "admin";
+    const expectedPassword = import.meta.env.VITE_ADMIN_PASSWORD || "Approaches2026!";
+
+    if (usernameInput === expectedUsername && passwordInput === expectedPassword) {
+      setIsAuthenticated(true);
+      sessionStorage.setItem("approachestoias_admin_authenticated", "true");
+      showFeedback("success", "Access granted! Welcome to Companion Console.");
+    } else {
+      showFeedback("error", "Invalid administrative credentials.");
+    }
+  };
 
   const showFeedback = (type: "success" | "error", message: string) => {
     setNotification({ type, message });
@@ -220,6 +246,96 @@ export default function AdminPanel() {
       showFeedback("success", "Blog post deleted successfully.");
     }
   };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-[85vh] flex items-center justify-center px-4 py-12 relative" id="admin-login-container">
+        {/* Toast Notification */}
+        <AnimatePresence>
+          {notification && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className={`fixed top-6 right-6 z-50 p-4 rounded-xl shadow-lg border flex items-center gap-3 ${
+                notification.type === "success" 
+                  ? "bg-emerald-50 border-emerald-200 text-emerald-800" 
+                  : "bg-rose-50 border-rose-200 text-rose-800"
+              }`}
+            >
+              {notification.type === "success" ? <CheckCircle className="w-5 h-5 text-emerald-600" /> : <Warning className="w-5 h-5 text-rose-600" />}
+              <span className="text-xs font-bold font-mono">{notification.message}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="max-w-md w-full bg-white border border-slate-200 rounded-3xl p-8 space-y-6 shadow-md card-blueprint relative overflow-hidden text-left">
+          {/* Abstract Coordinates Graphic */}
+          <svg className="absolute inset-0 w-full h-full text-slate-700/5 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="pattern-login" width="16" height="16" patternUnits="userSpaceOnUse">
+              <path d="M 16 0 L 0 0 0 16" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#pattern-login)" />
+            <circle cx="90%" cy="10%" r="40" fill="none" stroke="#c91c1c" strokeWidth="1" strokeDasharray="3 3"/>
+          </svg>
+
+          <div className="space-y-2 relative z-10">
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-0.5 rounded-md border border-brand-red/10 uppercase">
+                Console Gate
+              </span>
+            </div>
+            <h2 className="text-xl font-display font-bold text-navy-950">
+              Administrative Access
+            </h2>
+            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+              Please log in to manage Daily Editorials and blogs. Only authorized team members should proceed.
+            </p>
+          </div>
+
+          <form onSubmit={handleLogin} className="space-y-4 relative z-10 text-xs text-navy-950 font-mono">
+            <div className="space-y-1.5">
+              <label className="font-bold text-[10px] text-slate-400 uppercase tracking-wider block">Username</label>
+              <input
+                type="text"
+                value={usernameInput}
+                onChange={(e) => setUsernameInput(e.target.value)}
+                placeholder="Enter username"
+                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-navy-300 font-semibold"
+                autoFocus
+              />
+            </div>
+            <div className="space-y-1.5">
+              <label className="font-bold text-[10px] text-slate-400 uppercase tracking-wider block">Password</label>
+              <input
+                type="password"
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                placeholder="••••••••••••"
+                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-navy-300 font-semibold"
+              />
+            </div>
+
+            <div className="flex gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => navigate("/resources")}
+                className="flex-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold uppercase tracking-wider py-3.5 px-4 rounded-xl transition duration-150 text-center font-mono cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 bg-brand-red hover:bg-brand-red-hover text-white text-[10px] font-bold uppercase tracking-wider py-3.5 px-4 rounded-xl transition duration-150 flex items-center justify-center gap-1.5 shadow-md font-mono cursor-pointer border border-brand-red"
+              >
+                Verify & Enter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 relative" id="admin-workspace-root">
