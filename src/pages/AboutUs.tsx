@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Users, Target, Compass, Sparkle,
-  Heart, Trophy, Coffee, BookOpen
+  Heart, Trophy, Coffee, BookOpen, Clock
 } from "@phosphor-icons/react";
 import { TEAM_MEMBERS } from "../data";
 import { motion } from "motion/react";
@@ -143,18 +143,22 @@ export default function AboutUs() {
           {/* Guiding Principles Flow */}
           <div className="pt-2 border-t border-slate-100">
             <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block mb-3">OUR GUIDING PRINCIPLE</span>
-            <div className="grid grid-cols-4 gap-2 text-center text-xs font-bold text-navy-950 font-mono">
-              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
-                <span className="block text-brand-red text-sm">1</span> APPROACH
+            <div className="grid grid-cols-4 gap-2 text-center text-[10px] sm:text-xs font-bold text-navy-950 font-mono">
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100 flex flex-col justify-center items-center gap-1">
+                <Compass className="w-5 h-5 text-brand-red shrink-0" />
+                <span>APPROACH</span>
               </div>
-              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
-                <span className="block text-brand-red text-sm">2</span> STRATEGY
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100 flex flex-col justify-center items-center gap-1">
+                <Target className="w-5 h-5 text-brand-red shrink-0" />
+                <span>STRATEGY</span>
               </div>
-              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
-                <span className="block text-brand-red text-sm">3</span> CONSISTENCY
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100 flex flex-col justify-center items-center gap-1">
+                <Clock className="w-5 h-5 text-brand-red shrink-0" />
+                <span>CONSISTENCY</span>
               </div>
-              <div className="bg-navy-900 text-white p-2.5 rounded-xl border border-navy-950">
-                <span className="block text-brand-red-light text-sm">4</span> SUCCESS
+              <div className="bg-navy-900 text-white p-2.5 rounded-xl border border-navy-950 flex flex-col justify-center items-center gap-1">
+                <Trophy className="w-5 h-5 text-brand-red-light shrink-0" />
+                <span>SUCCESS</span>
               </div>
             </div>
           </div>
