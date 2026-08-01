@@ -70,11 +70,11 @@ export default function AboutUs() {
 
           {/* Profile Photo */}
           <div className="relative -mt-10 mb-4 flex justify-center z-20">
-            <div className="w-16 h-16 rounded-full border-2 border-white shadow-sm overflow-hidden bg-slate-100 flex items-center justify-center shrink-0">
+            <div className="w-20 h-20 rounded-full border-4 border-white shadow-md overflow-hidden bg-slate-100 flex items-center justify-center shrink-0">
               {memberPhotos[member.name] ? (
                 <img src={memberPhotos[member.name]} alt={member.name} className="w-full h-full object-cover" />
               ) : (
-                <Users className="w-6 h-6 text-slate-400" />
+                <Users className="w-8 h-8 text-slate-400" />
               )}
             </div>
           </div>
