@@ -14,7 +14,7 @@ export default function Footer() {
           Your journey to the ultimate training ground.
         </h3>
         <div className="flex justify-center">
-          <div className="w-[120px] sm:w-[150px] h-[40px] sm:h-[50px] flex items-center justify-center shrink-0 cursor-pointer" onClick={() => navigate("/")}>
+          <div className="w-[144px] sm:w-[180px] h-[48px] sm:h-[60px] flex items-center justify-center shrink-0 cursor-pointer" onClick={() => navigate("/")}>
             <img src={logo} alt="Approaches to IAS Logo" className="w-full h-full object-contain" />
           </div>
         </div>

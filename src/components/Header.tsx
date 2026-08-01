@@ -38,7 +38,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
             className="flex items-center space-x-3 cursor-pointer group"
             id="header-logo-container"
           >
-            <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center shadow-xs transition-transform duration-300 group-hover:scale-105 shrink-0">
+            <div className="w-[58px] h-[58px] bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center shadow-xs transition-transform duration-300 group-hover:scale-105 shrink-0">
               <img src={logo} alt="Approaches to IAS Logo" className="w-full h-full object-contain" />
             </div>
             <div>
