@@ -79,7 +79,7 @@ ${formData.message}`;
                 <EnvelopeSimple className="w-5 h-5 text-navy-700 shrink-0 mt-0.5" />
                 <div className="text-xs leading-relaxed space-y-1">
                   <h4 className="font-bold text-navy-950 text-sm">Direct Companion Inbox</h4>
-                  <p className="text-slate-500">infocockroachias@gmail.com</p>
+                  <p className="text-slate-500">infoapproachestoias@gmail.com</p>
                   <p className="text-[10px] text-slate-400">Checked directly by our academic leads daily</p>
                 </div>
               </div>
@@ -124,10 +124,10 @@ ${formData.message}`;
                   <span>TRANSMITTING EMERGENCY CALM</span>
                 </div>
                 <p className="italic leading-relaxed font-serif text-slate-200">
-                  "Breathe. Just breathe. Look at your desk. You have fought through hundreds of silent nights. Your worth is not bound to a UPSC roll-number PDF. You are highly capable, highly resilient, and you are nature's ultimate survivor. You do not have to conquer the whole syllabus tonight. Close the books. Drink a glass of water. Turn off the light. Sleep peacefully. We are here holding your hands. Tomorrow is a fresh morning."
+                  "Breathe. Just breathe. Look at your desk. You have fought through hundreds of silent nights. Your worth is not bound to a UPSC roll-number PDF. You are highly capable, highly resilient, and you are built to survive. You do not have to conquer the whole syllabus tonight. Close the books. Drink a glass of water. Turn off the light. Sleep peacefully. We are here holding your hands. Tomorrow is a fresh morning."
                 </p>
                 <div className="flex justify-between items-center text-[10px] font-mono text-slate-400">
-                  <span>From your Cockroachias Companion Team</span>
+                  <span>From your Approaches to IAS Companion Team</span>
                   <button 
                     onClick={() => setSosActivated(false)} 
                     className="text-slate-500 hover:text-white underline cursor-pointer"

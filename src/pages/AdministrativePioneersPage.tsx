@@ -36,7 +36,7 @@ export default function AdministrativePioneersPage() {
   });
 
   useEffect(() => {
-    document.title = "Governance Pioneers: Ethics & Case Studies | CockroachIAS";
+    document.title = "Governance Pioneers: Ethics & Case Studies | Approaches to IAS";
   }, []);
 
   // Compute unique tag categories from values field

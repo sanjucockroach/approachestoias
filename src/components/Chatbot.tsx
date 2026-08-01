@@ -46,13 +46,13 @@ export default function Chatbot() {
         {
           id: "1",
           sender: "bot",
-          text: "Hi, I am your cockroach! 🪳",
+          text: "Hi! Welcome to Approaches to IAS! 🎯",
           timestamp: new Date()
         },
         {
           id: "2",
           sender: "bot",
-          text: "Let me guess your name... Wait, tell me your name below first and let's see if my antenna is calibrated today!",
+          text: "Let me guess your name... Wait, tell me your name below first and let's see if my companion intuition is calibrated today!",
           timestamp: new Date()
         }
       ]);
@@ -292,7 +292,7 @@ What would you like to explore first?`,
 
   const getMainMenuActions = () => [
     { label: "🗺️ Syllabus Metro Map", action: () => selectResource("metro_map") },
-    { label: "📝 Mains Cockroach Answers", action: () => selectResource("mains_answers") },
+    { label: "📝 Mains Approach Answers", action: () => selectResource("mains_answers") },
     { label: "🔍 Prelims PYQ Analysis", action: () => selectResource("prelims_pyq") },
     { label: "🏛️ Constitution Explorer", action: () => selectResource("constitution") },
     { label: "📖 Trial Courses", action: () => selectResource("courses") },
@@ -316,11 +316,11 @@ What would you like to explore first?`,
         };
         break;
       case "mains_answers":
-        userText = "Tell me about Mains Cockroach Answers";
-        botResponse = `We have loaded detailed blueprints for **UPSC Mains PYQs (2023, 2024, and 2025)** under the **Cockroach Answers** section. Instead of unachievable academic model answers, we show you how to write structured, honest answers in exactly 7 minutes under exam pressure! Check them out on our resources page.`;
-        routeLabel = "📝 View Cockroach Answers";
+        userText = "Tell me about Mains Approach Answers";
+        botResponse = `We have loaded detailed blueprints for **UPSC Mains PYQs (2023, 2024, and 2025)** under the **Approach Answers** section. Instead of unachievable academic model answers, we show you how to write structured, honest answers in exactly 7 minutes under exam pressure! Check them out on our resources page.`;
+        routeLabel = "📝 View Approach Answers";
         routeAction = () => {
-          navigate("/mains-cockroach-answers");
+          navigate("/mains-approach-answers");
           setIsOpen(false);
         };
         break;
@@ -403,7 +403,7 @@ What would you like to explore first?`,
 
     setStep("main_menu");
     simulateBotResponse(
-      "Sure thing! Here are the core navigation options and resources of Cockroach IAS:",
+      "Sure thing! Here are the core navigation options and resources of Approaches to IAS:",
       600,
       getMainMenuActions()
     );
@@ -414,13 +414,13 @@ What would you like to explore first?`,
       {
         id: "1",
         sender: "bot",
-        text: "Hi, I am your cockroach! 🪳",
+        text: "Hi! Welcome to Approaches to IAS! 🎯",
         timestamp: new Date()
       },
       {
         id: "2",
         sender: "bot",
-        text: "Let me guess your name... Wait, tell me your name below first and let's see if my antenna is calibrated today!",
+        text: "Let me guess your name... Wait, tell me your name below first and let's see if my companion intuition is calibrated today!",
         timestamp: new Date()
       }
     ]);
@@ -466,10 +466,10 @@ What would you like to explore first?`,
             <div className="bg-navy-950 px-3 py-2 flex items-center justify-between border-b border-slate-800 text-white shrink-0">
               <div className="flex items-center space-x-2.5">
                 <div className="w-7.5 h-7.5 rounded-full bg-white p-0.5 overflow-hidden flex items-center justify-center border border-slate-200/20">
-                  <img src={chatbotIcon} alt="Cockroach Assistant" className="w-full h-full object-cover rounded-full" />
+                  <img src={chatbotIcon} alt="Approaches to IAS Assistant" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-bold font-mono tracking-wider text-brand-red-light uppercase leading-none">Cockroach Bot</h4>
+                  <h4 className="text-[11px] font-bold font-mono tracking-wider text-brand-red-light uppercase leading-none">Approaches Bot</h4>
                   <div className="flex items-center space-x-1 mt-0.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                     <span className="text-[9px] text-slate-400 font-medium leading-none">Companion - Online</span>

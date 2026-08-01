@@ -27,7 +27,7 @@ export default function MythologyEthicsPage() {
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    document.title = "Mythology for Ethics: Dilemmas & Cases | CockroachIAS";
+    document.title = "Mythology for Ethics: Dilemmas & Cases | Approaches to IAS";
   }, []);
 
   // Compute unique sources for filtering

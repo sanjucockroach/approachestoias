@@ -23,17 +23,17 @@ export default function RefundPolicy() {
 
       <div className="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-8">
         <p className="text-base sm:text-lg text-slate-600 bg-slate-50 p-5 rounded-xl border border-slate-100">
-          At <strong className="text-navy-950">CockroachIAS Companion Institute</strong>, we believe in absolute transparency and fairness. We do not demand upfront lakhs or push aggressive sales. Our pricing is designed to be as affordable as what a regular student pays for tea daily. This refund policy reflects our commitment to your trust.
+          At <strong className="text-navy-950">Approaches to IAS</strong>, we believe in absolute transparency and fairness. We do not demand upfront lakhs or push aggressive sales. Our pricing is designed to be as affordable as what a regular student pays for tea daily. This refund policy reflects our commitment to your trust.
         </p>
 
         <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-10 mb-4 font-display">1. Free Resources — No Payment Required</h2>
-        <p>The following tools and resources on CockroachIAS are <strong className="text-navy-950">completely free</strong> and require no payment or login:</p>
+        <p>The following tools and resources on Approaches to IAS are <strong className="text-navy-950">completely free</strong> and require no payment or login:</p>
         <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base">
           <li><strong>Prelims PYQ Analysis Engine</strong> — Interactive year-wise and subject-wise analysis of UPSC Preliminary examination questions.</li>
           <li><strong>UPSC Metro Map</strong> — Visual syllabus navigator for Prelims and Mains preparation.</li>
           <li><strong>Constitution Explorer</strong> — Full interactive exploration of the Indian Constitution with articles, amendments, and schedules.</li>
           <li><strong>Mains PYQ Analysis &amp; Theme-Wise Analysis</strong> — Comprehensive Mains question bank with topic clustering.</li>
-          <li><strong>Cockroach Model Answers</strong> — Sample model answers for Mains GS papers.</li>
+          <li><strong>Approach Model Answers</strong> — Sample model answers for Mains GS papers.</li>
           <li><strong>Administrative Pioneers Module</strong> — Case studies of exemplary civil servants and governance innovations.</li>
           <li><strong>Mythology &amp; Ethics Case Studies</strong> — Indian mythology-based ethical dilemma explorations for GS Paper IV.</li>
           <li><strong>Survivor Resilience Quiz</strong> — Interactive quiz to assess your UPSC survival quotient.</li>
@@ -80,7 +80,7 @@ export default function RefundPolicy() {
         <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-10 mb-4 font-display">5. How to Request a Refund</h2>
         <p>To initiate a refund request:</p>
         <ol className="list-decimal pl-6 space-y-2 text-sm sm:text-base">
-          <li>Email us at <strong className="text-navy-950">infocockroachias@gmail.com</strong> with the subject line: <em>"Refund Request — [Your Name]"</em></li>
+          <li>Email us at <strong className="text-navy-950">infoapproachestoias@gmail.com</strong> with the subject line: <em>"Refund Request — [Your Name]"</em></li>
           <li>Include your registered name, email, phone number, and the course/cohort name.</li>
           <li>Briefly describe the reason for your refund request.</li>
           <li>Our team will review your request and respond within <strong>3–5 business days</strong>.</li>
@@ -103,7 +103,7 @@ export default function RefundPolicy() {
           <p className="text-navy-900 font-serif italic text-sm sm:text-base leading-relaxed">
             "If this platform resolves your conceptual gridlocks, we will guide you forward with absolute fairness. If you are unsatisfied, your hand-holding fees are returned with a thank you note. We believe in earning your trust, not locking you in."
           </p>
-          <p className="text-xs text-slate-500 text-right mt-2 font-medium">— CockroachIAS Founding Manifesto</p>
+          <p className="text-xs text-slate-500 text-right mt-2 font-medium">— Approaches to IAS Founding Manifesto</p>
         </div>
 
         <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-10 mb-4 font-display">9. Changes to This Policy</h2>
@@ -116,7 +116,7 @@ export default function RefundPolicy() {
             Last updated: July 2025
           </p>
           <p className="text-sm text-slate-500">
-            Contact: infocockroachias@gmail.com
+            Contact: infoapproachestoias@gmail.com
           </p>
         </div>
       </div>

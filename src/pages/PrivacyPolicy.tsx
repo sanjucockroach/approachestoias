@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
 
       <div className="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-8">
         <p className="text-base sm:text-lg text-slate-600 bg-slate-50 p-5 rounded-xl border border-slate-100">
-          At <strong className="text-navy-950">CockroachIAS Companion Institute</strong>, your privacy is sacred. We are committed to protecting your personal information and being transparent about what we collect and how we use it. We understand the immense trust you place in us as an aspirant navigating the UPSC journey.
+          At <strong className="text-navy-950">Approaches to IAS</strong>, your privacy is sacred. We are committed to protecting your personal information and being transparent about what we collect and how we use it. We understand the immense trust you place in us as an aspirant navigating the UPSC journey.
         </p>
 
         <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-10 mb-4 font-display">1. Information We Collect</h2>
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
           <li>Raise a complaint if you believe your data has been mishandled.</li>
         </ul>
         <p>
-          For any privacy-related requests, please reach out to us at <strong className="text-navy-950">infocockroachias@gmail.com</strong> or through our Contact page.
+          For any privacy-related requests, please reach out to us at <strong className="text-navy-950">infoapproachestoias@gmail.com</strong> or through our Contact page.
         </p>
 
         <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-10 mb-4 font-display">7. Children's Privacy</h2>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             Last updated: July 2025
           </p>
           <p className="text-sm text-slate-500">
-            Contact: infocockroachias@gmail.com
+            Contact: infoapproachestoias@gmail.com
           </p>
         </div>
       </div>

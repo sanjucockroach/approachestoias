@@ -74,10 +74,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
 ];
 
 export const CONTROVERSY_DETAILS = {
-  quote: "In 2026, the term \"cockroach\" entered public discourse after remarks made by Chief Justice of India Justice Surya Kant during a court hearing, triggering a nationwide debate. What was intended as criticism was subsequently embraced by many as a symbol of resilience and dissent.",
-  source: "CJI Justice Surya Kant, 2026",
-  analysis: "At COCKROACH IAS, we choose to focus on the positive symbolism. A cockroach survives where others give up. It adapts. It endures. It persists against overwhelming odds. Many aspirants are told they are not good enough. Many fail Prelims, Mains, or Interviews. Many are underestimated because of their background, language, or financial condition. Yet they continue. Like the cockroach, they survive every setback and return stronger.",
-  ourStand: "COCKROACH IAS is therefore not about an insect. It is about the human capacity to persist when the world expects you to quit. Indian civilisation celebrates not those who never fall, but those who rise repeatedly."
+  quote: "The true test of a UPSC aspirant is not whether they ever fall, but whether they have the grit to rise repeatedly. Success is not about what you study—it is about your approach to the syllabus and your mental endurance.",
+  source: "Approaches to IAS Founding Manifesto",
+  analysis: "At Approaches to IAS, we choose to focus on the power of the right approach. Every aspirant is unique—whether a working professional, engineer, college student, doctor, rural aspirant, or homemaker. Each requires a tailored strategy, learning style, and roadmap. With the right approach, they survive every setback and return stronger.",
+  ourStand: "Approaches to IAS is dedicated to the human capacity to persist when the world expects you to quit. We teach more than subjects—we shape your approach to thinking, writing, and administrative consistency."
 };
 
 export const SURVIVOR_QUIZ_QUESTIONS = [
@@ -109,7 +109,7 @@ export const SURVIVOR_QUIZ_QUESTIONS = [
       },
       {
         text: "I accept that the change is identical for all 10 Lakh aspirants, scrap my rigid study logs, adapt my syllabus linkages, and master the new game of critical thinking.",
-        point: "Adaptable Survivor (Brilliant! Real cockroaches adapt to the new temperature in seconds.)"
+        point: "Adaptable Survivor (Brilliant! You adapt to the new temperature in seconds.)"
       },
       {
         text: "I rely on the same notes and short-cuts, hoping that this year was just an anomaly.",
@@ -126,7 +126,7 @@ export const SURVIVOR_QUIZ_QUESTIONS = [
         point: "Indestructible Mindset (Superb. This deep wisdom is what transforms students into administrators.)"
       },
       {
-        text: "I spiral into self-doubt, thinking I shouldn't have named Cockroachias my home, and waste the entire evening browsing success stories.",
+        text: "I spiral into self-doubt, thinking I shouldn't have named Approaches to IAS my home, and waste the entire evening browsing success stories.",
         point: "Vulnerable State (Let us hold your hands. This is why we are here—to catch you when you fall.)"
       },
       {

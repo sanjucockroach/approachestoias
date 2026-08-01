@@ -31,7 +31,7 @@ export default function MainsPYQAnalysisPage() {
 
   // Set document title and track analytics
   useEffect(() => {
-    document.title = "UPSC Mains PYQ Weightage Analysis (2013-2025) | CockroachIAS";
+    document.title = "UPSC Mains PYQ Weightage Analysis (2013-2025) | Approaches to IAS";
   }, [selectedPaper]);
 
   const rawItems = useMemo(() => {

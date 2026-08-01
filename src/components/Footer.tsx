@@ -15,7 +15,7 @@ export default function Footer() {
         </h3>
         <div className="flex justify-center">
           <div className="w-[120px] sm:w-[150px] h-[40px] sm:h-[50px] flex items-center justify-center shrink-0 cursor-pointer" onClick={() => navigate("/")}>
-            <img src={logo} alt="CockroachIAS Logo" className="w-full h-full object-contain" />
+            <img src={logo} alt="Approaches to IAS Logo" className="w-full h-full object-contain" />
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               onClick={() => navigate("/resources")}
               className="hover:text-white transition duration-200 cursor-pointer"
             >
-              Survivor's Resources
+              Aspirant's Resources
             </button>
             <span className="text-slate-700 hidden sm:inline">|</span>
             <button
@@ -90,13 +90,13 @@ export default function Footer() {
           {/* SEO FOOTER INJECTION */}
           <div className="w-full text-[10px] sm:text-xs text-slate-400 text-center max-w-4xl mx-auto border-t border-navy-900 pt-6 pb-2">
             <p className="mb-4 leading-relaxed">
-              <strong>Cockroachias</strong> is India's leading empathy-driven <strong>UPSC preparation companion platform</strong>. Unlike traditional coaching academies, we focus on what truly matters: providing <strong>affordable UPSC courses</strong>, honest hand-holding guidance from ex-aspirants, and <strong>24/7 mental health support for IAS candidates</strong>. We stand firmly with every aspirant who refuses to quit.
+              <strong>Approaches to IAS</strong> is India's leading empathy-driven <strong>UPSC preparation companion platform</strong>. Unlike traditional coaching academies, we focus on what truly matters: providing <strong>affordable UPSC courses</strong>, honest hand-holding guidance from ex-aspirants, and <strong>personalized strategy for IAS candidates</strong>. We stand firmly with every aspirant who refuses to quit.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-medium">
               <span className="text-slate-500">Popular Searches:</span>
               <button onClick={() => navigate("/resources")} className="hover:text-white transition duration-200 cursor-pointer underline underline-offset-2">Affordable UPSC Courses</button>
               <button onClick={() => navigate("/about")} className="hover:text-white transition duration-200 cursor-pointer underline underline-offset-2">UPSC Mentorship India</button>
-              <button onClick={() => navigate("/contact")} className="hover:text-white transition duration-200 cursor-pointer underline underline-offset-2">UPSC Mental Support</button>
+              <button onClick={() => navigate("/contact")} className="hover:text-white transition duration-200 cursor-pointer underline underline-offset-2">UPSC Strategy & Guidance</button>
               <button onClick={() => navigate("/")} className="hover:text-white transition duration-200 cursor-pointer underline underline-offset-2">IAS Preparation Guidance</button>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function Footer() {
               UPSC is a marathon. Walk slow, walk long.
             </p>
             <p className="order-1 md:order-2 font-medium">
-              © {new Date().getFullYear()} CockroachIAS Companion Institute. Built on the bedrock of Resilience.
+              © {new Date().getFullYear()} Approaches to IAS. Built on the bedrock of Resilience & Strategy.
             </p>
             <p className="order-3 flex gap-2">
               <button 

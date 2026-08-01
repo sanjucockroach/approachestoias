@@ -42,7 +42,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
       {/* Page Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase bg-brand-red-light px-3.5 py-1 rounded-full border border-brand-red/10">
-          CockroachIAS Repository
+          Approaches to IAS Repository
         </span>
         <h1 className="text-3xl sm:text-4xl font-display font-bold text-navy-950">
           Explore the Unexplored
@@ -370,7 +370,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
                 </div>
               </motion.div>
 
-              {/* Card 5: UPSC Mains Cockroach Answers */}
+              {/* Card 5: UPSC Mains Approach Answers */}
               <motion.div 
                 variants={cardVariants}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
@@ -385,7 +385,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
                     <div className="space-y-2">
                       <span className="text-[10px] font-mono font-bold text-brand-red uppercase tracking-wider">High Scoring Blueprints</span>
                       <h3 className="text-xl font-display font-bold text-navy-950">
-                        UPSC Mains Cockroach Answers
+                        UPSC Mains Approach Answers
                       </h3>
                       <p className="text-xs text-slate-500 leading-relaxed">
                         Step-by-step expert solutions covering UPSC GS Mains questions. Analyze the structural flow, logical layout, data insertions, and high-impact conclusions.
@@ -396,10 +396,10 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
                     </div>
                   </div>
                   <button
-                    onClick={() => navigate("/mains-cockroach-answers")}
+                    onClick={() => navigate("/mains-approach-answers")}
                     className="mt-8 bg-brand-red hover:bg-brand-red-hover text-white text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-xl transition duration-150 flex items-center justify-center gap-2 cursor-pointer w-full shadow-md"
                   >
-                    <span>Explore Cockroach Answers</span>
+                    <span>Explore Approach Answers</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -568,7 +568,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
           <Sparkle className="w-6 h-6 animate-pulse" />
         </div>
         <div>
-          <h4 className="text-sm font-bold text-navy-950">CockroachIAS Support Integrity</h4>
+          <h4 className="text-sm font-bold text-navy-950">Approaches to IAS Support Integrity</h4>
           <p className="text-xs text-slate-500 mt-1 leading-relaxed">
             All primary mapping tools and analytical platforms remain completely open-access and free. No paywalls, no popups, and no advertising. We stand with you as companions through the journey.
           </p>

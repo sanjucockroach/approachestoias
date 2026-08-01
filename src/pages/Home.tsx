@@ -28,7 +28,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Cockroachias: For Those Who Refused to Quit";
+    document.title = "Approaches to IAS: For Those Who Refused to Quit";
   }, []);
   
   // Selected trait for philosophy viewer
@@ -213,7 +213,7 @@ export default function Home() {
           </button>
           
           <a
-            href="https://3d-atlas.cockroachias.com"
+            href="https://3d-atlas.approachestoias.com"
             className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-semibold text-base px-8 py-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition duration-200 flex items-center justify-center space-x-2 cursor-pointer"
             id="hero-secondary-cta"
           >
@@ -267,9 +267,9 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 border-t border-navy-800 pt-4 space-y-3">
-                  <h5 className="text-sm font-bold tracking-tight text-white">At COCKROACH IAS, we focus on the positive symbolism:</h5>
+                  <h5 className="text-sm font-bold tracking-tight text-white">At Approaches to IAS, we focus on the positive symbolism:</h5>
                   <ul className="space-y-2 text-xs text-slate-300">
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-red shrink-0" /><span>A cockroach <strong className="text-white">survives</strong> where others give up.</span></li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-red shrink-0" /><span>An aspirant <strong className="text-white">survives</strong> where others give up.</span></li>
                     <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-red shrink-0" /><span>It <strong className="text-white">adapts</strong>.</span></li>
                     <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-red shrink-0" /><span>It <strong className="text-white">endures</strong>.</span></li>
                     <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-red shrink-0" /><span>It <strong className="text-white">persists</strong> against overwhelming odds.</span></li>
@@ -287,7 +287,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase block">Why we named ourselves Cockroachias</span>
+              <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase block">Why the name Approaches to IAS</span>
               
               <h2 className="text-3xl sm:text-4xl font-display font-bold text-navy-950 leading-tight">
                 India’s First Academy Dedicated to the Science of Resilience.
@@ -307,7 +307,7 @@ export default function Home() {
               <div className="p-6 bg-white/40 backdrop-blur-xl rounded-xl border border-white/60 shadow-sm relative">
                 <Quotes className="w-6 h-6 text-brand-red/20 absolute top-3 left-3" />
                 <p className="text-sm text-slate-700 leading-relaxed italic pl-4">
-                  Many aspirants are told they are not good enough. Many fail Prelims, Mains, or Interviews. Many are underestimated because of their background, language, or financial condition. Yet <strong className="text-navy-950 not-italic">they continue.</strong> Like the cockroach, they survive every setback and return stronger.
+                  Many aspirants are told they are not good enough. Many fail Prelims, Mains, or Interviews. Many are underestimated because of their background, language, or financial condition. Yet <strong className="text-navy-950 not-italic">they continue.</strong> With the right approach, they survive every setback and return stronger.
                 </p>
               </div>
             </motion.div>
@@ -382,15 +382,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. COCKROACH WISDOM: Interactive biological facts to UPSC lessons */}
+      {/* 3. RESILIENCE WISDOM: Interactive biological facts to UPSC lessons */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="cockroach-wisdom">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase">The Biology of Success</span>
+          <span className="text-xs font-mono font-bold text-brand-red tracking-widest uppercase">The Science of Success</span>
           <h2 className="text-3xl font-display font-bold text-navy-950 mt-2">
             The Indestructible Survival Blueprint: Adapting Nature's Ultimate Instincts
           </h2>
           <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-            While we fiercely believe you are <strong className="text-navy-950 underline decoration-slate-300">NOT</strong> a cockroach to be treated like a commodity, we proudly borrow the biological blueprint of nature's most indomitable survivor to withstand the UPSC grind. Click any trait below to see its UPSC lesson:
+            While we fiercely believe that success requires more than just reading books, we proudly build personalized learning roadmaps to withstand the UPSC grind. Click any trait below to see its UPSC lesson:
           </p>
         </div>
 
@@ -893,9 +893,9 @@ export default function Home() {
                     </p>
 
                     <div className="bg-slate-50 p-4 border border-emerald-100 rounded-xl space-y-1 text-xs text-left text-slate-600 font-sans">
-                      <span className="font-bold text-navy-900 block font-mono text-[9px] uppercase text-emerald-800">COVENANT PACT</span>
+                      <span className="font-bold text-navy-900 block font-mono text-[9px] uppercase text-emerald-800">GUIDING PRINCIPLE</span>
                       <p className="text-[11px] leading-relaxed">
-                        "Remember, you are not cockroach. You are entering this platform as a student building unbreakable grit, but you will leave it as an administrator ready to build this nation."
+                        "Remember, every rank begins with the right approach. You are entering this platform as a student building unbreakable grit, and you will leave it as an administrator ready to build this nation."
                       </p>
                     </div>
 

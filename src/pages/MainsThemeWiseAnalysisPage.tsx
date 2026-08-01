@@ -41,7 +41,7 @@ export default function MainsThemeWiseAnalysisPage() {
 
   // Set document title
   useEffect(() => {
-    document.title = "UPSC Mains Theme Wise Analysis | CockroachIAS";
+    document.title = "UPSC Mains Theme Wise Analysis | Approaches to IAS";
   }, []);
 
   // Get current dataset based on selected paper

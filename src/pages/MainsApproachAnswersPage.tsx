@@ -35,7 +35,7 @@ const cockroachAnswersData = [
   ...(raw2023 as CockroachAnswerItem[])
 ];
 
-export default function MainsCockroachAnswersPage() {
+export default function MainsApproachAnswersPage() {
   const navigate = useNavigate();
   const [selectedPaper, setSelectedPaper] = useState<string>("All");
   const [selectedTag, setSelectedTag] = useState<string>("All");
@@ -45,7 +45,7 @@ export default function MainsCockroachAnswersPage() {
 
   // Set document title
   useEffect(() => {
-    document.title = "UPSC Mains Cockroach Answers | CockroachIAS";
+    document.title = "UPSC Mains Approach Answers | Approaches to IAS";
   }, []);
 
   // Compute unique filters dynamically
@@ -118,7 +118,7 @@ export default function MainsCockroachAnswersPage() {
               <ShieldCheck className="w-5 h-5" />
             </span>
             <h1 className="text-2xl sm:text-3xl font-display font-bold text-navy-950">
-              UPSC Mains Cockroach Answers
+              UPSC Mains Approach Answers
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-3xl">
@@ -134,7 +134,7 @@ export default function MainsCockroachAnswersPage() {
             <Trophy className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Cockroach Answers</span>
+            <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Approach Answers</span>
             <span className="text-2xl font-display font-bold text-navy-950 font-mono mt-0.5 block">
               {stats.totalCount}
             </span>
@@ -254,7 +254,7 @@ export default function MainsCockroachAnswersPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6" id="mains-cockroach-answers-list">
         {filteredQuestions.length === 0 ? (
           <div className="col-span-full bg-white border border-slate-200/80 rounded-xl p-12 text-center text-sm text-slate-400 font-medium">
-            No Cockroach Answers match your filters. Reset search query or selection filters to browse all items.
+            No Approach Answers match your filters. Reset search query or selection filters to browse all items.
           </div>
         ) : (
           filteredQuestions.map((item, idx) => (
@@ -301,7 +301,7 @@ export default function MainsCockroachAnswersPage() {
                   onClick={() => setSelectedQuestion(item)}
                   className="bg-navy-900 hover:bg-black text-white text-[11px] font-bold uppercase tracking-wider py-2 px-3.5 rounded-lg transition-colors cursor-pointer shrink-0"
                 >
-                  Cockroach Answer
+                  Approach Answer
                 </button>
               </div>
             </motion.div>
@@ -473,7 +473,7 @@ export default function MainsCockroachAnswersPage() {
 
               {/* Drawer footer information block */}
               <div className="p-4 border-t border-slate-100 bg-slate-50 text-[10px] text-center text-slate-400 font-medium font-mono">
-                COCKROACH IAS • SOURCE: COCKROACHMAINSANSWERS
+                APPROACHES TO IAS • SOURCE: MAINS APPROACH ANSWERS
               </div>
             </motion.div>
           </>

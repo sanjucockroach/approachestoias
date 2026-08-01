@@ -36,7 +36,7 @@ export default function ConstitutionExplorerPage() {
   }, []);
 
   useEffect(() => {
-    document.title = "Constitution Explorer | CockroachIAS";
+    document.title = "Constitution Explorer | Approaches to IAS";
   }, []);
 
   return (

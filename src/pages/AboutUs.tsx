@@ -123,22 +123,41 @@ export default function AboutUs() {
         </p>
       </section>
 
-      {/* 2. OUR DEEP STORY (The Genesis Story) */}
+      {/* 2. OUR DEEP STORY (Why Approaches to IAS?) */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white border border-slate-200 p-8 sm:p-12 rounded-3xl shadow-xs" id="genesis-story-layout">
         <div className="space-y-6">
-          <span className="text-[10px] font-mono font-bold text-navy-500 uppercase tracking-widest">CHAPTER ONE</span>
+          <span className="text-[10px] font-mono font-bold text-navy-500 uppercase tracking-widest">WHY THE NAME "APPROACHES TO IAS"?</span>
           <h2 className="text-2xl sm:text-3xl font-display font-bold text-navy-950">
-            Born out of deep empathy, built on absolute honesty.
+            Success is not about what you study. It is about your approach.
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            In recent years, nationwide discussions on civil service exam pressure highlighted the extreme environments and challenges aspirants navigate daily. The intense competition often pushes students to their limits, highlighting the need for real, empathetic ecosystems that protect student dignity and mental endurance.
+            Every year, lakhs of aspirants dream of becoming an IAS officer. Most have the same books, attend similar classes, and study the same syllabus. Yet only a few succeed. Why? Because success is not about what you study. It is about <strong>how you study</strong>. It is about your approach. That is why we are called <strong>Approaches to IAS</strong>.
           </p>
           <p className="text-slate-600 text-sm leading-relaxed">
-            We realized that competitive preparation demands far more than just study materials—it demands absolute mental support and a community that acts as a secure shoulder. We chose the name <strong>Cockroachias</strong> to honor the ultimate metaphor of survival, adaptability, and unbreakable resilience.
+            We do not believe there is only one path to success. Every aspirant is unique—whether you are a <strong>working professional, an engineer, a college student, a doctor, a rural aspirant, or a homemaker</strong>. Each requires a different strategy, a different learning style, and a different roadmap. Our mission is to help every aspirant discover <strong>their unique approach to success</strong>.
           </p>
           <p className="text-slate-600 text-sm leading-relaxed">
-            The cockroach represents the ultimate survivor in the natural world: <strong>absolute endurance, unbeatable adaptability to any environment, and high physical resilience.</strong> We empower students to cultivate these exact traits—turning pressure into structured, unbreakable focus to master the syllabus.
+            At <strong>Approaches to IAS</strong>, we teach more than subjects. We teach you how to think, how to analyse, how to write, how to revise, how to stay consistent, how to face failure, and how to improve every single day. Because UPSC is not merely an examination—it is a test of discipline, judgement, patience, and perspective.
           </p>
+          
+          {/* Guiding Principles Flow */}
+          <div className="pt-2 border-t border-slate-100">
+            <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block mb-3">OUR GUIDING PRINCIPLE</span>
+            <div className="grid grid-cols-4 gap-2 text-center text-xs font-bold text-navy-950 font-mono">
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
+                <span className="block text-brand-red text-sm">1</span> APPROACH
+              </div>
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
+                <span className="block text-brand-red text-sm">2</span> STRATEGY
+              </div>
+              <div className="bg-navy-50 p-2.5 rounded-xl border border-navy-100">
+                <span className="block text-brand-red text-sm">3</span> CONSISTENCY
+              </div>
+              <div className="bg-navy-900 text-white p-2.5 rounded-xl border border-navy-950">
+                <span className="block text-brand-red-light text-sm">4</span> SUCCESS
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200/80" id="mission-vision-boxes">
@@ -149,7 +168,7 @@ export default function AboutUs() {
             <div className="space-y-1">
               <h4 className="text-sm font-bold text-navy-950 uppercase tracking-widest">OUR ACTIVE MISSION</h4>
               <p className="text-xs text-slate-500 leading-relaxed">
-                To replace impersonal, commercial formats with supportive, highly affordable, and honest companionship. We seek to protect your well-being and mental health while building pure conceptual mastery.
+                To replace impersonal, commercial coaching formats with personalized, highly affordable, and honest companion roadmaps. We ensure every aspirant discovers the exact learning approach tailored to their profile and life context.
               </p>
             </div>
           </div>
@@ -163,7 +182,7 @@ export default function AboutUs() {
             <div className="space-y-1">
               <h4 className="text-sm font-bold text-navy-950 uppercase tracking-widest">OUR GROUND-LEVEL VISION</h4>
               <p className="text-xs text-slate-500 leading-relaxed">
-                To ensure every single officer entering the Indian bureaucracy has spent a chapter of their life learning ground-level survival. When an alumnus of Cockroachias becomes an administrator of a district, they will understand the exact weight of a poor citizen's struggle—for they spent their training years on the ground level.
+                That is why our name is not "IAS Academy." It is <strong>APPROACHES TO IAS</strong>. Because there are many paths. But every rank begins with the right approach—shaping future civil servants equipped with discipline, perspective, and ground-level empathy.
               </p>
             </div>
           </div>

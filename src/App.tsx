@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import PYQAnalysisPage from "./pages/PYQAnalysisPage";
 import UPSCMetroMapPage from "./pages/UPSCMetroMapPage";
 import MainsPYQAnalysisPage from "./pages/MainsPYQAnalysisPage";
-import MainsCockroachAnswersPage from "./pages/MainsCockroachAnswersPage";
+import MainsApproachAnswersPage from "./pages/MainsApproachAnswersPage";
 import MainsThemeWiseAnalysisPage from "./pages/MainsThemeWiseAnalysisPage";
 import ConstitutionExplorerPage from "./pages/ConstitutionExplorerPage";
 import AdministrativePioneersPage from "./pages/AdministrativePioneersPage";
@@ -44,7 +44,7 @@ export default function App() {
           <div className="flex items-center gap-2 max-w-4xl mx-auto text-left sm:text-center leading-relaxed">
             <Handshake className="w-4 h-4 text-white/70 shrink-0 hidden sm:inline" />
             <span>
-              COCKROACH IAS is not about an insect — it is about the human capacity to persist when the world expects you to quit. We are your companions.
+              Approaches to IAS is dedicated to the human capacity to persist when the world expects you to quit. We are your companions.
             </span>
           </div>
           <button 
@@ -76,7 +76,8 @@ export default function App() {
               <Route path="/resources" element={<Resources activePhase={resourcePhase} setActivePhase={setResourcePhase} />} />
               <Route path="/pyq-analysis" element={<PYQAnalysisPage />} />
               <Route path="/mains-pyq" element={<MainsPYQAnalysisPage />} />
-              <Route path="/mains-cockroach-answers" element={<MainsCockroachAnswersPage />} />
+              <Route path="/mains-approach-answers" element={<MainsApproachAnswersPage />} />
+              <Route path="/mains-cockroach-answers" element={<MainsApproachAnswersPage />} />
               <Route path="/mains-theme-analysis" element={<MainsThemeWiseAnalysisPage />} />
               <Route path="/constitution-explorer" element={<ConstitutionExplorerPage />} />
               <Route path="/governance-pioneers" element={<AdministrativePioneersPage />} />

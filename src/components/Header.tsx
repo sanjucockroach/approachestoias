@@ -39,11 +39,14 @@ export default function Header({ setResourcePhase }: HeaderProps) {
             id="header-logo-container"
           >
             <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center shadow-xs transition-transform duration-300 group-hover:scale-105 shrink-0">
-              <img src={logo} alt="Cockroach IAS Logo" className="w-full h-full object-contain" />
+              <img src={logo} alt="Approaches to IAS Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <span className="font-display font-bold text-2xl tracking-tight text-brand-red block leading-none">
-                CockroachIAS
+              <span className="font-display font-bold text-xl sm:text-2xl tracking-tight text-navy-950 block leading-none">
+                Approaches to IAS
+              </span>
+              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block mt-0.5">
+                UPSC and Beyond
               </span>
             </div>
           </div>
@@ -69,7 +72,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                         if (setResourcePhase) setResourcePhase("none");
                       }}
                       className={`flex items-center space-x-1.5 py-1 transition-all duration-200 cursor-pointer ${
-                        activePage === "resources" || activePage === "pyq-analysis" || activePage === "mains-pyq" || activePage === "mains-cockroach-answers" || activePage === "mains-theme-analysis" || activePage === "metro-map" || activePage === "constitution-explorer" || activePage === "governance-pioneers" || activePage === "mythology-ethics"
+                        activePage === "resources" || activePage === "pyq-analysis" || activePage === "mains-pyq" || activePage === "mains-approach-answers" || activePage === "mains-cockroach-answers" || activePage === "mains-theme-analysis" || activePage === "metro-map" || activePage === "constitution-explorer" || activePage === "governance-pioneers" || activePage === "mythology-ethics"
                           ? "text-brand-red border-b-2 border-brand-red font-bold"
                           : "text-slate-500 hover:text-brand-red font-medium"
                       }`}
