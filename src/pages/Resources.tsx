@@ -1,18 +1,35 @@
-import React, { useState } from "react";
-import { Compass, Brain, ArrowRight, ArrowLeft, Sparkle, TrendUp, ShieldCheck, ListNumbers, Scales, Trophy, BookOpen } from "@phosphor-icons/react";
+import React, { useState, useEffect, useMemo } from "react";
+import { Compass, Brain, ArrowRight, ArrowLeft, Sparkle, TrendUp, ShieldCheck, ListNumbers, Scales, Trophy, BookOpen, Clock, FileText, MagnifyingGlass, Tag } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from "react-router-dom";
+import { getEditorials, getBlogs, EditorialItem, BlogItem } from "../data/resourcesDb";
 
 interface ResourcesProps {
-  activePhase?: "none" | "prelims" | "mains" | "integrity";
-  setActivePhase?: (phase: "none" | "prelims" | "mains" | "integrity") => void;
+  activePhase?: "none" | "prelims" | "mains" | "integrity" | "editorials" | "blog";
+  setActivePhase?: (phase: "none" | "prelims" | "mains" | "integrity" | "editorials" | "blog") => void;
 }
 
 export default function Resources({ activePhase: propActivePhase, setActivePhase: propSetActivePhase }: ResourcesProps) {
   const navigate = useNavigate();
-  const [localActivePhase, setLocalActivePhase] = useState<"none" | "prelims" | "mains" | "integrity">("none");
+  const [localActivePhase, setLocalActivePhase] = useState<"none" | "prelims" | "mains" | "integrity" | "editorials" | "blog">("none");
   const activePhase = propSetActivePhase && propActivePhase !== undefined ? propActivePhase : localActivePhase;
   const setActivePhase = propSetActivePhase || setLocalActivePhase;
+
+  // Stateful resources data hooks
+  const [editorials, setEditorials] = useState<EditorialItem[]>([]);
+  const [blogs, setBlogs] = useState<BlogItem[]>([]);
+  const [selectedEdId, setSelectedEdId] = useState<string | null>(null);
+  const [selectedBlogId, setSelectedBlogId] = useState<string | null>(null);
+  const [edSearch, setEdSearch] = useState("");
+
+  useEffect(() => {
+    const eds = getEditorials();
+    setEditorials(eds);
+    if (eds.length > 0 && !selectedEdId) {
+      setSelectedEdId(eds[0].id);
+    }
+    setBlogs(getBlogs());
+  }, [activePhase]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -69,7 +86,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
             </div>
 
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               initial="hidden"
               animate="visible"
               variants={containerVariants}
@@ -159,6 +176,66 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
                   </div>
                   <button className="mt-8 bg-[#171717] hover:bg-black text-white text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-xl transition duration-150 flex items-center justify-center gap-2 cursor-pointer w-full shadow-xs">
                     <span>Enter Integrity Space</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* Card 4: Daily Editorial Analysis */}
+              <motion.div 
+                variants={cardVariants}
+                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                onMouseMove={handleMouseMove}
+                onClick={() => setActivePhase("editorials")}
+                className="spotlight-card shadow-xs hover:shadow-md group transition-all duration-300 cursor-pointer"
+              >
+                <div className="spotlight-card-inner card-blueprint p-8 bg-white flex flex-col justify-between h-full">
+                  <div className="space-y-5">
+                    <div className="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center text-brand-red border border-brand-red/10">
+                      <FileText className="w-6 h-6 animate-pulse" />
+                    </div>
+                    <div className="space-y-2">
+                      <span className="text-[10px] font-mono font-bold text-brand-red uppercase tracking-wider">GS Syllabus Linkages</span>
+                      <h3 className="text-lg font-display font-bold text-navy-950">
+                        Daily Editorial Analysis
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        Stay ahead with professional, syllabus-mapped analysis of daily newspaper editorials. Cite legal cases, stats, and structures.
+                      </p>
+                    </div>
+                  </div>
+                  <button className="mt-8 bg-[#171717] hover:bg-black text-white text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-xl transition duration-150 flex items-center justify-center gap-2 cursor-pointer w-full shadow-xs">
+                    <span>Enter Editorials</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* Card 5: Blogs & Motivation */}
+              <motion.div 
+                variants={cardVariants}
+                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                onMouseMove={handleMouseMove}
+                onClick={() => setActivePhase("blog")}
+                className="spotlight-card shadow-xs hover:shadow-md group transition-all duration-300 cursor-pointer"
+              >
+                <div className="spotlight-card-inner card-blueprint p-8 bg-white flex flex-col justify-between h-full">
+                  <div className="space-y-5">
+                    <div className="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center text-brand-red border border-brand-red/10">
+                      <BookOpen className="w-6 h-6" />
+                    </div>
+                    <div className="space-y-2">
+                      <span className="text-[10px] font-mono font-bold text-brand-red uppercase tracking-wider">Companion Chronicles</span>
+                      <h3 className="text-lg font-display font-bold text-navy-950">
+                        Companion Blogs
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        Read strategic advice, mental resilience blueprints, and honest experience logs from ex-aspirants who survived the UPSC grind.
+                      </p>
+                    </div>
+                  </div>
+                  <button className="mt-8 bg-[#171717] hover:bg-black text-white text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-xl transition duration-150 flex items-center justify-center gap-2 cursor-pointer w-full shadow-xs">
+                    <span>Enter Blogs</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -441,7 +518,7 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
               </motion.div>
             </motion.div>
           </motion.div>
-        ) : (
+        ) : activePhase === "integrity" ? (
           <motion.div
             key="integrity-phase"
             initial={{ opacity: 0, y: 10 }}
@@ -558,6 +635,304 @@ export default function Resources({ activePhase: propActivePhase, setActivePhase
                 </div>
               </motion.div>
             </motion.div>
+          </motion.div>
+        ) : activePhase === "editorials" ? (
+          <motion.div
+            key="editorials-phase"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-6"
+          >
+            <button
+              onClick={() => setActivePhase("none")}
+              className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand-red uppercase tracking-wider transition-colors cursor-pointer group mb-4"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+              <span>Back to Overview</span>
+            </button>
+
+            <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
+              <span className="text-[10px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-1 rounded-md border border-brand-red/10 uppercase">
+                Daily Analytica
+              </span>
+              <h2 className="text-base font-display font-bold text-navy-950">
+                Daily Editorial Analysis & GS Linkages
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+              {/* Left Panel: Search & List */}
+              <div className="lg:col-span-1 bg-white border border-slate-200 rounded-3xl p-6 space-y-4 shadow-xs">
+                <div className="relative">
+                  <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                    <MagnifyingGlass className="w-4 h-4" />
+                  </span>
+                  <input
+                    type="text"
+                    value={edSearch}
+                    onChange={(e) => setEdSearch(e.target.value)}
+                    placeholder="Search editorials..."
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-xs focus:outline-none focus:border-navy-300 font-semibold text-navy-950"
+                  />
+                </div>
+
+                <div className="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+                  {editorials.filter(ed => 
+                    ed.title.toLowerCase().includes(edSearch.toLowerCase()) || 
+                    ed.syllabusTag.toLowerCase().includes(edSearch.toLowerCase()) ||
+                    ed.summary.toLowerCase().includes(edSearch.toLowerCase())
+                  ).map(ed => (
+                    <div
+                      key={ed.id}
+                      onClick={() => setSelectedEdId(ed.id)}
+                      className={`p-4 rounded-2xl border transition duration-200 cursor-pointer text-left space-y-2 ${
+                        selectedEdId === ed.id 
+                          ? "bg-navy-950 border-navy-950 text-white shadow-xs" 
+                          : "bg-slate-50 border-slate-100 hover:border-slate-200 text-navy-950"
+                      }`}
+                    >
+                      <div className="flex justify-between items-center gap-2">
+                        <span className={`text-[8px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${
+                          selectedEdId === ed.id
+                            ? "bg-navy-900 border-navy-800 text-brand-red-light"
+                            : "bg-brand-red-light border-brand-red/10 text-brand-red"
+                        }`}>
+                          {ed.syllabusTag.split(" (")[0] || ed.syllabusTag}
+                        </span>
+                        <span className={`text-[9px] font-mono ${selectedEdId === ed.id ? "text-slate-400" : "text-slate-500"}`}>
+                          {ed.date}
+                        </span>
+                      </div>
+                      <h4 className="text-xs font-bold font-display leading-snug line-clamp-2">
+                        {ed.title}
+                      </h4>
+                      <p className={`text-[10px] line-clamp-2 leading-relaxed ${selectedEdId === ed.id ? "text-slate-300" : "text-slate-500"}`}>
+                        {ed.summary}
+                      </p>
+                    </div>
+                  ))}
+                  {editorials.length === 0 && (
+                    <p className="text-center text-xs text-slate-500 py-6 font-mono">No editorials published yet.</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Right Panel: Detail View */}
+              <div className="lg:col-span-2 bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xs">
+                {(() => {
+                  const ed = editorials.find(x => x.id === selectedEdId) || editorials[0];
+                  if (!ed) {
+                    return (
+                      <div className="p-12 text-center text-slate-400 font-mono text-xs">
+                        Select an editorial to read the complete diagnostic analysis.
+                      </div>
+                    );
+                  }
+                  return (
+                    <div className="flex flex-col">
+                      {ed.image && (
+                        <div className="h-48 w-full overflow-hidden border-b border-slate-100">
+                          <img src={ed.image} alt={ed.title} className="w-full h-full object-cover" />
+                        </div>
+                      )}
+                      <div className="p-6 sm:p-8 space-y-6 text-left">
+                        <div className="space-y-3">
+                          <div className="flex flex-wrap items-center gap-3">
+                            <span className="text-[9px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-0.5 rounded-md border border-brand-red/10 uppercase">
+                              {ed.syllabusTag}
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5" /> Published {ed.date} via {ed.source}
+                            </span>
+                          </div>
+                          <h3 className="text-xl sm:text-2xl font-bold font-display text-navy-950 leading-tight">
+                            {ed.title}
+                          </h3>
+                        </div>
+
+                        {/* Summary Quote Box */}
+                        <div className="p-4 bg-slate-50 rounded-2xl border-l-4 border-navy-900 text-xs text-slate-600 leading-relaxed italic">
+                          <strong>Focus:</strong> {ed.summary}
+                        </div>
+
+                        {/* Article Body */}
+                        <div 
+                          className="text-xs text-slate-700 leading-relaxed space-y-4 font-sans prose prose-slate max-w-none"
+                          dangerouslySetInnerHTML={{ __html: ed.content }}
+                        />
+
+                        {/* Takeaways Section */}
+                        {ed.takeaways && ed.takeaways.length > 0 && (
+                          <div className="p-5 bg-navy-50 rounded-2xl border border-navy-100 space-y-3.5 text-left">
+                            <h4 className="text-[11px] font-mono font-bold text-navy-950 uppercase tracking-widest flex items-center gap-1.5">
+                              <Sparkle className="w-4 h-4 text-brand-red animate-pulse" />
+                              Companion Takeaway Checklists
+                            </h4>
+                            <ul className="space-y-2.5">
+                              {ed.takeaways.map((takeaway, tIdx) => (
+                                <li key={tIdx} className="flex gap-2.5 items-start text-xs text-navy-900 leading-relaxed font-semibold">
+                                  <span className="text-brand-red font-mono shrink-0">✔</span>
+                                  <span>{takeaway}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="blogs-phase"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-6"
+          >
+            <button
+              onClick={() => {
+                if (selectedBlogId) {
+                  setSelectedBlogId(null);
+                } else {
+                  setActivePhase("none");
+                }
+              }}
+              className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand-red uppercase tracking-wider transition-colors cursor-pointer group mb-4"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+              <span>{selectedBlogId ? "Back to Blogs List" : "Back to Overview"}</span>
+            </button>
+
+            <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
+              <span className="text-[10px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-1 rounded-md border border-brand-red/10 uppercase">
+                Chronicles
+              </span>
+              <h2 className="text-base font-display font-bold text-navy-950">
+                Companion Blogs & Aspirant Journeys
+              </h2>
+            </div>
+
+            {selectedBlogId ? (
+              /* Full Blog Reader Layout */
+              (() => {
+                const blog = blogs.find(x => x.id === selectedBlogId);
+                if (!blog) return null;
+                return (
+                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                    <div className="lg:col-span-3 bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xs">
+                      {blog.image && (
+                        <div className="h-64 w-full overflow-hidden border-b border-slate-100">
+                          <img src={blog.image} alt={blog.title} className="w-full h-full object-cover" />
+                        </div>
+                      )}
+                      <div className="p-6 sm:p-10 space-y-6 text-left">
+                        <div className="space-y-3">
+                          <div className="flex flex-wrap items-center gap-3">
+                            <span className="text-[9px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-0.5 rounded-md border border-brand-red/10 uppercase">
+                              {blog.category}
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5" /> {blog.readTime} • Published {blog.date}
+                            </span>
+                          </div>
+                          <h1 className="text-2xl sm:text-3xl font-bold font-display text-navy-950 leading-tight">
+                            {blog.title}
+                          </h1>
+                          <div className="text-[10px] font-mono text-slate-500">
+                            By <span className="font-bold text-navy-950">{blog.author}</span>
+                          </div>
+                        </div>
+
+                        <div className="p-4 bg-slate-50 rounded-2xl border-l-4 border-brand-red text-xs text-slate-600 leading-relaxed italic font-semibold">
+                          Abstract: {blog.summary}
+                        </div>
+
+                        <div 
+                          className="text-xs text-slate-700 leading-relaxed space-y-4 font-sans prose prose-slate max-w-none"
+                          dangerouslySetInnerHTML={{ __html: blog.content }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Blog Side Support Widget */}
+                    <div className="lg:col-span-1 space-y-6">
+                      <div className="p-6 bg-navy-950 text-white rounded-3xl border border-navy-900 text-left space-y-4">
+                        <div className="w-10 h-10 bg-brand-red-light rounded-xl flex items-center justify-center text-brand-red">
+                          <Sparkle className="w-5 h-5 animate-pulse" />
+                        </div>
+                        <h4 className="text-sm font-bold font-display">Need Profile Mentorship?</h4>
+                        <p className="text-[11px] text-slate-400 leading-relaxed">
+                          UPSC prep shouldn't be a lonely journey. Chat with our Companion chatbot for customized learning approaches or drop us an email for direct team support.
+                        </p>
+                        <button
+                          onClick={() => navigate("/contact")}
+                          className="w-full py-2.5 bg-brand-red hover:bg-brand-red-hover text-white text-[10px] font-mono font-bold uppercase tracking-widest rounded-xl transition duration-150 cursor-pointer text-center block shadow-md"
+                        >
+                          Contact Companion Line
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()
+            ) : (
+              /* Blog Masonry Grid */
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {blogs.map(blog => (
+                  <motion.div
+                    key={blog.id}
+                    onClick={() => setSelectedBlogId(blog.id)}
+                    whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                    className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition duration-300 flex flex-col justify-between cursor-pointer text-left h-full"
+                  >
+                    <div>
+                      {blog.image ? (
+                        <div className="h-44 w-full overflow-hidden border-b border-slate-100">
+                          <img src={blog.image} alt={blog.title} className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="h-3 bg-brand-red w-full"></div>
+                      )}
+                      <div className="p-6 space-y-4">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[9px] font-mono font-bold text-brand-red bg-brand-red-light px-2.5 py-0.5 rounded-md border border-brand-red/10 uppercase">
+                            {blog.category}
+                          </span>
+                          <span className="text-[9px] font-mono text-slate-400 flex items-center gap-1">
+                            <Clock className="w-3 h-3" /> {blog.readTime}
+                          </span>
+                        </div>
+                        <h3 className="text-base font-bold font-display text-navy-950 leading-snug line-clamp-2 hover:text-brand-red transition-colors">
+                          {blog.title}
+                        </h3>
+                        <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                          {blog.summary}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-6 pt-0 border-t border-slate-50 mt-4 flex items-center justify-between text-[10px] font-mono">
+                      <div className="text-slate-500">
+                        By <span className="font-bold text-navy-950">{blog.author}</span>
+                      </div>
+                      <div className="text-slate-400">
+                        {blog.date}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+                {blogs.length === 0 && (
+                  <div className="col-span-full py-12 text-center text-xs text-slate-400 font-mono">No blogs published yet.</div>
+                )}
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

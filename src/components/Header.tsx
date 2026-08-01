@@ -5,7 +5,7 @@ import logo from "../../assets/logo.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 
 interface HeaderProps {
-  setResourcePhase?: (phase: "none" | "prelims" | "mains" | "integrity") => void;
+  setResourcePhase?: (phase: "none" | "prelims" | "mains" | "integrity" | "editorials" | "blog") => void;
 }
 
 export default function Header({ setResourcePhase }: HeaderProps) {
@@ -72,7 +72,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                         if (setResourcePhase) setResourcePhase("none");
                       }}
                       className={`flex items-center space-x-1.5 py-1 transition-all duration-200 cursor-pointer ${
-                        activePage === "resources" || activePage === "pyq-analysis" || activePage === "mains-pyq" || activePage === "mains-approach-answers" || activePage === "mains-theme-analysis" || activePage === "metro-map" || activePage === "constitution-explorer" || activePage === "governance-pioneers" || activePage === "mythology-ethics"
+                        activePage === "resources" || activePage === "pyq-analysis" || activePage === "mains-pyq" || activePage === "mains-approach-answers" || activePage === "mains-theme-analysis" || activePage === "metro-map" || activePage === "constitution-explorer" || activePage === "governance-pioneers" || activePage === "mythology-ethics" || activePage === "admin"
                           ? "text-brand-red border-b-2 border-brand-red font-bold"
                           : "text-slate-500 hover:text-brand-red font-medium"
                       }`}
@@ -90,7 +90,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ type: "spring", stiffness: 350, damping: 25 }}
                           style={{ transformOrigin: "top" }}
-                          className="absolute top-full left-0 mt-1 w-56 bg-white/70 backdrop-blur-xl border border-white/60 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.08)] py-1.5 z-50 font-sans"
+                          className="absolute top-full left-0 mt-1 w-60 bg-white/80 backdrop-blur-xl border border-white/60 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.08)] py-1.5 z-50 font-sans"
                         >
                           <button
                             onClick={() => {
@@ -98,7 +98,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                               if (setResourcePhase) setResourcePhase("prelims");
                               setShowDropdown(false);
                             }}
-                            className="w-full text-left px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[11px]"
+                            className="w-full text-left px-4 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[10px]"
                           >
                             <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
                             <span>Prelims Command System</span>
@@ -109,7 +109,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                               if (setResourcePhase) setResourcePhase("mains");
                               setShowDropdown(false);
                             }}
-                            className="w-full text-left px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[11px]"
+                            className="w-full text-left px-4 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[10px]"
                           >
                             <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
                             <span>Mains Blueprint Engine</span>
@@ -120,10 +120,43 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                               if (setResourcePhase) setResourcePhase("integrity");
                               setShowDropdown(false);
                             }}
-                            className="w-full text-left px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[11px]"
+                            className="w-full text-left px-4 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[10px]"
                           >
                             <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
-                            <span>Administrative Integrity Workspace</span>
+                            <span>Integrity Workspace</span>
+                          </button>
+                          <button
+                            onClick={() => {
+                              navigate("/resources");
+                              if (setResourcePhase) setResourcePhase("editorials");
+                              setShowDropdown(false);
+                            }}
+                            className="w-full text-left px-4 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[10px]"
+                          >
+                            <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
+                            <span>Daily Editorial Analysis</span>
+                          </button>
+                          <button
+                            onClick={() => {
+                              navigate("/resources");
+                              if (setResourcePhase) setResourcePhase("blog");
+                              setShowDropdown(false);
+                            }}
+                            className="w-full text-left px-4 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-brand-red font-semibold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[10px]"
+                          >
+                            <span className="w-1.5 h-1.5 bg-brand-red rounded-full" />
+                            <span>Companion Blogs</span>
+                          </button>
+                          <div className="border-t border-slate-100 my-1"></div>
+                          <button
+                            onClick={() => {
+                              navigate("/admin");
+                              setShowDropdown(false);
+                            }}
+                            className="w-full text-left px-4 py-1.5 text-slate-400 hover:bg-slate-50 hover:text-navy-950 font-bold uppercase tracking-wider transition-colors duration-150 flex items-center gap-2 cursor-pointer text-[9px] font-mono"
+                          >
+                            <span className="w-1.5 h-1.5 bg-slate-400 rounded-full" />
+                            <span>Admin Console</span>
                           </button>
                         </motion.div>
                       )}
@@ -207,7 +240,7 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                 );
               })}
               
-              <div className="pt-4 mt-2 border-t border-slate-100">
+              <div className="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-2">
                 <a
                   href="https://login.approachestoias.com"
                   target="_blank"
@@ -216,6 +249,15 @@ export default function Header({ setResourcePhase }: HeaderProps) {
                 >
                   <span>Login</span>
                 </a>
+                <button
+                  onClick={() => {
+                    navigate("/admin");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="flex items-center justify-center w-full bg-navy-950 hover:bg-black text-white px-5 py-3 rounded-lg text-sm font-semibold tracking-wide uppercase transition-all duration-200 shadow-sm font-mono"
+                >
+                  <span>Admin Console</span>
+                </button>
               </div>
             </div>
           </motion.div>

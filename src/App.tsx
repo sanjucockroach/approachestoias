@@ -16,6 +16,7 @@ import AdministrativePioneersPage from "./pages/AdministrativePioneersPage";
 import MythologyEthicsPage from "./pages/MythologyEthicsPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
+import AdminPanel from "./pages/AdminPanel";
 import { X, Handshake } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "motion/react";
 import Chatbot from "./components/Chatbot";
@@ -23,7 +24,7 @@ import { ReactLenis } from "lenis/react";
 
 export default function App() {
   const location = useLocation();
-  const [resourcePhase, setResourcePhase] = useState<"none" | "prelims" | "mains" | "integrity">("none");
+  const [resourcePhase, setResourcePhase] = useState<"none" | "prelims" | "mains" | "integrity" | "editorials" | "blog">("none");
   const [showTopToast, setShowTopToast] = useState<boolean>(true);
 
   // Scroll to top on page change
@@ -87,6 +88,7 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/admin" element={<AdminPanel />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
