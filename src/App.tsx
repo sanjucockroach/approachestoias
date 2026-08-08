@@ -17,6 +17,7 @@ import MythologyEthicsPage from "./pages/MythologyEthicsPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import AdminPanel from "./pages/AdminPanel";
+import ThreeDAtlas from "./pages/ThreeDAtlas";
 import { X, Handshake } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "motion/react";
 import Chatbot from "./components/Chatbot";
@@ -32,12 +33,14 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
+  const showHeaderFooter = location.pathname !== "/3d-atlas" && location.pathname !== "/atlas";
+
   return (
     <ReactLenis root options={{ lerp: 0.08, smoothWheel: true }}>
       <div className="min-h-screen flex flex-col relative selection:bg-brand-red-light selection:text-navy-950 text-slate-800 bg-white">
       
       {/* 1. EMOTIONAL BANNER AT THE TOP (Dismissible) */}
-      {showTopToast && (
+      {showHeaderFooter && showTopToast && (
         <div 
           id="top-empathy-toast" 
           className="bg-brand-red text-white text-xs py-3.5 px-4 sm:px-6 relative text-center border-b border-brand-red-hover flex items-center justify-center gap-3"
@@ -59,7 +62,7 @@ export default function App() {
       )}
 
       {/* 2. THE SIGNATURE HEADER */}
-      <Header setResourcePhase={setResourcePhase} />
+      {showHeaderFooter && <Header setResourcePhase={setResourcePhase} />}
 
       {/* 3. CORE DYNAMIC VIEWPORT (Main container) */}
       <main className="flex-1 w-full overflow-hidden" id="main-content-viewport">
@@ -89,16 +92,18 @@ export default function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/3d-atlas" element={<ThreeDAtlas />} />
+              <Route path="/atlas" element={<ThreeDAtlas />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
       </main>
 
       {/* 4. THE TRUSTED FOOTER */}
-      <Footer />
+      {showHeaderFooter && <Footer />}
 
       {/* 5. FLOATING COMPANION CHATBOT */}
-      <Chatbot />
+      {showHeaderFooter && <Chatbot />}
 
       </div>
     </ReactLenis>

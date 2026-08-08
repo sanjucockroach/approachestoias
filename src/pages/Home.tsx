@@ -212,14 +212,14 @@ export default function Home() {
             <ArrowRight className="w-5 h-5 animate-bounce-right" />
           </button>
           
-          <a
-            href="https://3d-atlas.approachestoias.com"
+          <button
+            onClick={() => navigate("/3d-atlas")}
             className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-semibold text-base px-8 py-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition duration-200 flex items-center justify-center space-x-2 cursor-pointer"
             id="hero-secondary-cta"
           >
             <Globe className="w-5 h-5 text-slate-400" />
             <span>Indigenous 3D Atlas</span>
-          </a>
+          </button>
         </div>
  
         {/* Handholding reassuring ribbon */}
