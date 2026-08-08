@@ -132,8 +132,6 @@ export async function getEonetHotspots(opts?: {
 
   try {
     const res = await fetch(url, {
-      // Next.js fetch cache hint — revalidate at most every 20 min
-      next: { revalidate: 1200 },
       headers: { Accept: 'application/json' },
     })
     if (!res.ok) {

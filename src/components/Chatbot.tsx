@@ -274,6 +274,7 @@ What would you like to explore first?`,
   };
 
   const submitLead = async (name: string, stage: string, phone: string) => {
+    // @ts-expect-error — intentional guard: check if URL is still the default placeholder
     if (WEBHOOK_URL === "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL") {
       console.log("Mock Lead Logging:", { name, stage, phone });
       return;

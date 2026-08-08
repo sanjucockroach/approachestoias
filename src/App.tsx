@@ -74,7 +74,7 @@ export default function App() {
             exit={{ opacity: 0, scale: 1.02, filter: "blur(8px)" }}
             transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
           >
-            <Routes location={location} key={location.pathname}>
+            <Routes location={location}>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/resources" element={<Resources activePhase={resourcePhase} setActivePhase={setResourcePhase} />} />

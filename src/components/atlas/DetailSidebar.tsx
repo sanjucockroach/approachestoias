@@ -5,7 +5,7 @@
  * Shows full detail for the selected hotspot: description, syllabus tags,
  * coords, status, magnitude, sources. Slides in (framer-motion).
  */
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink, MapPin, Calendar, Activity, Tag } from 'lucide-react'
 import { useAtlasStore, colorOf } from '@/src/store/atlas'
